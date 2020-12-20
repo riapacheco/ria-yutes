@@ -1,4 +1,4 @@
-# Ria Kit
+# Yutes
 
 Bare bones scss kit utilities (yutes) for basic structure & color experimentation.
 > Actual demo page / cheatsheet available soon (when I find time)
