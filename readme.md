@@ -1,9 +1,10 @@
 # Yutes
 
 Bare bones scss kit utilities (yutes) for basic structure & color experimentation.
-> Actual demo page / cheatsheet available soon (when I find time)
+> Actual demo page / cheatsheet available soon (when I find time).
+> I'll be updating with a LOT of patches while discovering querks or additional clutch selectors.
 
-<br><br>
+<br>
 Like bootstrap, you can add basic margin and padding with classes.<br>
 e.g. `pt-1` is `padding-top: 1rem`
 <br><br>
@@ -11,7 +12,7 @@ Since elements like buttons were sized based on key variables at the top of thei
 e.g. a button's padding is determined by a font-size variable.
 <br><br><br>
 
-### Install
+## Install
 
 #### Terminal:
 <code>
@@ -32,18 +33,22 @@ e.g. a button's padding is determined by a font-size variable.
 
 ## Usage:
 
-> This was made for me to personally get up and running faster.<br> If you're just looking for some scss code to get you started, you can take them from the files. <br> E.g. take padding and margin arguments from `scss/_foundation/utilities.scss`
-
-I'll be updating a LOT of patch versions while I'm finding querks or adding more clutch selectors.
+> This was made for me to personally get up and running faster.<br> If you're just looking for basic utility scss, copy it from the files (I don't care). 
+<br>
+E.g. take padding and margin arguments from `scss/_foundation/utilities.scss`
+<br>
 
 ### Margins & Padding
 Add margins through classes (like all bootstrap) with 'mb-1' [meaning margin-bottom: 1 rem] or 'pl-2' [meaning paddling-left: 2rem]; and so on.
+<br>
 
 ### Containers
 Put contents in containers [`.container`] for added automatic margins to the left and right of content
+<br>
 
 ### Experiment with Theme Colors
 Go to `scss/_foundation/colors.scss` to play with a simple theme of primary, secondary, and accent colors. 
+<br>
 
 ### Experiment with Breakpoints
 Add media queries to specific classes as you go:
@@ -80,6 +85,7 @@ If certain scss styles aren't being picked up, you can import the files directly
 <code>
   @import '~@riapacheco/yutes/_foundation/colors.scss';
 </code>
+<br>
 
 ### Recommendation: SASS's `@use` decorator
 Jussayin: to keep things tidy, so that you know where things come from when reading the code (or someone else is reading your code), I suggest using SASS's `@use` decorator over the (soon to be deprecated) `@import`. This is because it creates a <strong>namespace</strong> for easier origin tracing. E.g:
@@ -96,5 +102,5 @@ Jussayin: to keep things tidy, so that you know where things come from when read
 <br><br><br>
 
 
-## Flexbox Not included
+## Flexbox (mostly) not included
 Since I usually work with packages like `@angular/flex-box` from `@angular/cdk`, I did not include flex boxes that much in here. 
