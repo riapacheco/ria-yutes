@@ -1,0 +1,74 @@
+@use '../_foundation/colors.scss' as _color;
+@use '../_foundation/typography.scss' as _font;
+@forward '../_foundation/colors.scss';
+@forward '../_foundation/typography.scss';
+
+$label-text-size: 0.96rem;
+$input-text-size: 0.96rem;
+
+.form-group {
+  display: flex;
+  flex-flow: column nowrap;
+
+  label {
+    padding-left: 0.2rem;
+    padding-bottom: 0.2rem;
+
+    font-size: $label-text-size;
+    &.sm {
+      font-size: _font.$sm-body-font;
+      text-transform: uppercase;
+      letter-spacing: _font.$loose-letter-spacing;
+    }
+    &.md { font-size: _font.$md-body-font; }
+    &.lg { font-size: _font.$lg-body-font; }
+  }
+
+  input {
+    display: inline-block;
+    
+    font-size: $input-text-size;
+    height: $input-text-size * 1.8;
+    background-color: _color.$accent-light-color;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    
+    &.sm {
+      font-size: _font.$sm-body-font;
+      text-transform: uppercase;
+      letter-spacing: _font.$loose-letter-spacing;
+    }
+    &.md { font-size: _font.$md-body-font; }
+    &.lg { font-size: _font.$lg-body-font; }
+  }
+
+  select {
+    font-size: $input-text-size;
+    height: $input-text-size * 1.8;
+    background-color: _color.$accent-light-color;
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    &.sm {
+      font-size: _font.$md-body-font;
+      &.header {
+        text-transform: uppercase;
+        letter-spacing: _font.$loose-letter-spacing;
+      }
+    }
+    &.md { font-size: _font.$md-body-font; }
+    &.lg { font-size: _font.$lg-body-font; }
+  }
+
+  textarea {
+    font-size: _font.$md-body-font;
+    &.sm {
+      font-size: _font.$md-body-font;
+      &.header {
+        text-transform: uppercase;
+        letter-spacing: _font.$loose-letter-spacing;
+      }
+    }
+    &.md { font-size: _font.$md-body-font; }
+    &.lg { font-size: _font.$lg-body-font; }
+  }
+}

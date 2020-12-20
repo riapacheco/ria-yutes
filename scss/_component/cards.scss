@@ -1,0 +1,14 @@
+@use '../../scss/_foundation/colors.scss' as _color;
+@use '../../scss/_foundation/alt-colors.scss' as _alt;
+.card {
+  background-color: _color.$accent-light-color;
+  border-radius: 0.2rem;
+  
+  &.raised {
+    border: 1px solid rgba(0,0,0,0.01);
+    box-shadow: 6px 12px 24px #00000040;
+  }
+}
+.card-body {
+  padding: 1rem;
+}

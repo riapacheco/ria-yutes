@@ -1,0 +1,185 @@
+// Imports for styled blocks (e.g. code block)
+@use './colors.scss' as _color;
+
+// Safety imports
+/* Add just in case the browser doesn't accept */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/* ------------------------------- Properties ------------------------------- */
+// Default Properties
+$font-family: "Nanum Gothic", sans-serif;
+$base-rem: 15.5px;
+
+$tight-letter-spacing: -0.3rem;
+$loose-letter-spacing: 0.07rem;
+$default-letter-spacing: 0;
+
+// Sizes (used in arguments for btns)
+$sm-body-font: 0.76rem;
+$md-body-font: 1rem;
+$lg-body-font: 1.1rem;
+
+// Weight Variations
+%thin { font-weight: 200; font-weight: 100; }
+%light { font-weight: 300; }
+%bold { font-weight: bold; font-weight: 600; }
+
+// Letter Spacing Variations
+%tight-letter-spacing { letter-spacing: -0.03rem; }
+%loose-letter-spacing { letter-spacing: 0.7rem; }
+%loose { letter-spacing: 0.07rem; }
+%default-spacing { letter-spacing: 0 }
+
+
+/* --------------------------------- Classes -------------------------------- */
+// Reset from browser default
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+// Classes
+h1 {
+  font-size: 2.3rem;
+  &.thin {
+    @extend %thin;
+  }
+  &.light {
+    @extend %light;
+  }
+  &.bold {
+    @extend %bold;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  &.thin {
+    @extend %thin;
+  }
+  &.light {
+    @extend %light;
+  }
+  &.bold {
+    @extend %bold;
+  }
+}
+
+h3 {
+  font-size: 1.6rem;
+  &.thin {
+    @extend %thin;
+  }
+  &.light {
+    @extend %light;
+  }
+  &.bold {
+    @extend %bold;
+  }
+}
+
+h4 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  @extend %loose;
+
+  &.thin {
+    @extend %thin;
+  }
+  &.light {
+    @extend %light;
+  }
+  &.bold {
+    @extend %bold;
+  }
+}
+
+h5 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  @extend %loose;
+
+  &.thin {
+    @extend %thin;
+  }
+  &.light {
+    @extend %light;
+  }
+  &.bold {
+    @extend %bold;
+  }
+}
+
+h6 {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  @extend %loose;
+
+  &.thin {
+    @extend %thin;
+  }
+  &.light {
+    @extend %light;
+  }
+  &.bold {
+    @extend %bold;
+  }
+}
+
+// Helpful overrides
+.lowercase {
+  text-transform: lowercase;
+}
+.default-text-transform {
+  text-transform: none;
+}
+.default-letter-spacing {
+  letter-spacing: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   Special                                  */
+/* -------------------------------------------------------------------------- */
+samp {
+  font-family: "DM Mono", monospace;
+  @extend %tight-letter-spacing;
+}
+code {
+  font-family: "DM Mono", monospace;
+  display: inline-block;
+  padding: 1rem;
+  background-color: _color.$accent-light-color;
+  border-radius: 0.2rem;
+  font-size: 0.9rem;
+  @extend %tight-letter-spacing;
+
+  &.primary {
+    background-color: _color.$primary-color;
+    &.light { background-color: _color.$primary-light-color; }
+    &.medium { background-color: _color.$primary-medium-color; }
+    &.dark { background-color: _color.$primary-dark-color; }
+  }
+
+  &.secondary {
+    background-color: _color.$secondary-color;
+    &.light { background-color: _color.$secondary-light-color; }
+    &.medium { background-color: _color.$secondary-medium-color; }
+    &.dark { background-color: _color.$secondary-dark-color; }
+  }
+
+  &.accent {
+    background-color: _color.$accent-color;
+    &.light { background-color: _color.$accent-light-color; }
+    &.medium { background-color: _color.$accent-medium-color; }
+    &.dark { background-color: _color.$accent-dark-color; }
+  }
+}
+.space-mono {
+  font-family: "Space Mono", sans-serif;
+}
+.dm-mono {
+  font-family: "DM Mono", monospace;
+  letter-spacing: -0.05rem;
+}

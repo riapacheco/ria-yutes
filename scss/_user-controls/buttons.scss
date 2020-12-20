@@ -1,0 +1,71 @@
+@use '../_foundation/colors.scss' as _color;
+@use '../_foundation/typography.scss' as _font;
+@forward '../_foundation/colors.scss';
+@forward '../_foundation/typography.scss';
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-size: 0.95rem;
+
+  // Shadow
+  &.raised {
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 4px 6px 12px rgba(0,0,0,0.4);
+    &:hover { box-shadow: 4px 6px 12px rgba(0,0,0,0.2); }
+    &:active { box-shadow: 4px 6px 12px rgba(0,0,0,0.1); }
+  }
+
+  // Sizes
+  &.btn-sm {
+    padding: 0rem;
+    font-size: _font.$sm-body-font;
+    height: _font.$sm-body-font * 2.5;
+    padding-left: _font.$sm-body-font * 1.2;
+    padding-right: _font.$sm-body-font * 1.2;
+    text-transform: uppercase;
+    letter-spacing: _font.$sm-body-font / 9;
+    font-weight: bold;
+    font-weight: 500;
+    &.round { border-radius: _font.$sm-body-font * 1.5; }
+  }
+  &.btn-lg {
+    padding: 0rem;
+    font-size: _font.$lg-body-font;
+    height: _font.$lg-body-font * 2.5;
+    padding-left: _font.$lg-body-font * 1.5;
+    padding-right: _font.$lg-body-font * 1.5;
+    &.round { border-radius: _font.$lg-body-font * 1.5; }
+  }
+  // Colors
+  &.primary {
+    background-color: _color.$primary-color;
+    color: white;
+    &.light { background-color: _color.$primary-light-color; }
+    &.medium { background-color: _color.$primary-medium-color; }
+    &.dark { background-color: _color.$primary-dark-color; }
+  }
+  &.secondary {
+    background-color: _color.$secondary-color;
+    color: white;
+    &.light { background-color: _color.$secondary-light-color; }
+    &.medium { background-color: _color.$secondary-medium-color; }
+    &.dark { background-color: _color.$secondary-dark-color; }
+  }
+  &.accent {
+    background-color: _color.$accent-color;
+    &.light { background-color: _color.$accent-light-color; }
+    &.medium { background-color: _color.$accent-medium-color; }
+    &.dark { background-color: _color.$accent-dark-color; }
+  }
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+  &:active {
+    filter: brightness(0.85);
+  }
+}
+

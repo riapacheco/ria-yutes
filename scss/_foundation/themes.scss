@@ -1,0 +1,24 @@
+@use './alt-colors.scss' as _alt;
+@use './colors.scss' as _color;
+
+.dark-theme-bg {
+  background-image: linear-gradient(to left, _alt.$alt-primary-medium, _alt.$alt-primary-dark);
+  background-attachment: fixed;
+  height: 100%;
+  color: _alt.$alt-text;
+
+  .card {
+    background-color: _alt.$alt-primary-medium;
+    background-image: linear-gradient(to right, _alt.$alt-primary-medium, _alt.$alt-primary-dark);
+    color: _alt.$alt-text;
+  }
+  hr {
+    opacity: 0.03;
+    
+  }
+  code {
+    color: _alt.$alt-text;
+    background-color: _alt.$alt-secondary-medium;
+    
+  }
+}

@@ -1,0 +1,52 @@
+
+/* ------------------------ Padding & Margin Classes ------------------------ */
+@each $abbr, $name in ("t": "top", "r": "right", "b": "bottom", "l": "left") {
+  @for $i from 1 through 20 {
+    .m#{$abbr}-#{$i} {
+      margin-#{$name}: 1rem * $i;
+    }
+  }
+}
+
+@each $abbr, $name in ("t": "top", "r": "right", "b": "bottom", "l": "left") {
+  @for $i from 1 through 20 {
+    .p#{$abbr}-#{$i} {
+      padding-#{$name}: 1rem * $i;
+    }
+  }
+}
+
+/* ------------------------------- Sizing Args ------------------------------ */
+// In the event of NOT using breakpoint observer
+$break-small: 370px;
+$break-medium: 920px;
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == smartphones {
+    @media only screen and (max-width: $break-small) {
+      @content;
+    }
+  } @else if $media == tablets {
+    @media only screen and (min-width: $break-small + 1px) and (max-width: $break-medium) {
+      @content;
+    }
+  } @else if $media == desktops {
+    @media only screen and (min-width: $break-medium + 1) {
+      @content;
+    }
+  }
+}
+
+/* ------------------------------- Containers ------------------------------- */
+.container {
+  width: 65%;
+  margin: auto;
+
+  @include respond-to(tablets) {
+    width: 80%;
+  }
+  @include respond-to(smartphones) {
+    width: 95%;
+  }
+}
