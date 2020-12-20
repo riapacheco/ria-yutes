@@ -2,6 +2,7 @@
 
 Bare bones scss kit utilities (yutes) for basic structure & color experimentation.
 > Actual demo page / cheatsheet available soon (when I find time)
+
 <br><br>
 Like bootstrap, you can add basic margin and padding with classes.<br>
 e.g. `pt-1` is `padding-top: 1rem`
@@ -11,13 +12,18 @@ e.g. a button's padding is determined by a font-size variable.
 <br><br><br>
 
 ### Install
+
+#### Terminal:
 <code>
   npm install @riapacheco/yutes
 </code>
 
 <br><br>
-In your apps json file, (e.g. `angular.json` for angular apps), add the file path to the styles object. <br>
-`"projects" > "your-project" > "architect" > "build" > "options" > "styles" > "node_modules/@riapacheco/yutes/yutes.scss"`
+
+#### In your main scss file:
+<code>
+  @import '~@riapacheco/yutes/yutes.scss';
+</code>
 
 
 <br>
@@ -26,7 +32,9 @@ In your apps json file, (e.g. `angular.json` for angular apps), add the file pat
 
 ## Usage:
 
-> Note: Again, this was made for me to personally get up and running faster.<br> If you're just looking for some scss code to get you started, you can take them from the files. <br> E.g. take padding and margin arguments from `scss/_foundation/utilities.scss`
+> This was made for me to personally get up and running faster.<br> If you're just looking for some scss code to get you started, you can take them from the files. <br> E.g. take padding and margin arguments from `scss/_foundation/utilities.scss`
+
+I'll be updating a LOT of patch versions while I'm finding querks or adding more clutch selectors.
 
 ### Margins & Padding
 Add margins through classes (like all bootstrap) with 'mb-1' [meaning margin-bottom: 1 rem] or 'pl-2' [meaning paddling-left: 2rem]; and so on.
@@ -37,7 +45,7 @@ Put contents in containers [`.container`] for added automatic margins to the lef
 ### Experiment with Theme Colors
 Go to `scss/_foundation/colors.scss` to play with a simple theme of primary, secondary, and accent colors. 
 
-### Experiement with Breakpoints
+### Experiment with Breakpoints
 Add media queries to specific classes as you go:
 ```scss
 .some-element {
@@ -68,9 +76,22 @@ i.e. All typography (including the base HTML body size) will be in `scss/_founda
 <br><br>
 
 ## Notes for usage
-If a certain scss file's styles aren't showing, you can `@import` or `@use` the file at the top of the scss file you're trying to bring it into.<br><br>
-Again, I made this so that I could personally get up and running fast; and my thought is that even if I still need to import paths, predictable file paths from the node_modules folder is a lot easier with the complexity of the component system.
-<br><br> This wasn't meant for public use... but why not!
+If certain scss styles aren't being picked up, you can import the files directly into your local scss file. For example, if you want to import a color variable:
+<code>
+  @import '~@riapacheco/yutes/_foundation/colors.scss';
+</code>
+
+### Recommendation: SASS's `@use` decorator
+Jussayin: to keep things tidy, so that you know where things come from when reading the code (or someone else is reading your code), I suggest using SASS's `@use` decorator over the (soon to be deprecated) `@import`. This is because it creates a <strong>namespace</strong> for easier origin tracing. E.g:
+`src/components/some-component.scss`:
+<code>
+@use `~@riapacheco/yutes/_foundation/colors.scss' as _color;
+
+.some-element {
+  background-color: _color.$primary-color;
+}
+</code>
+(just looking out)
 
 <br><br><br>
 
