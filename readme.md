@@ -1,6 +1,7 @@
 # Ria Kit
 
 Bare bones scss kit utilities (yutes) for basic structure & color experimentation.
+> Actual demo page / cheatsheet available soon (when I find time)
 <br><br>
 Like bootstrap, you can add basic margin and padding with classes.<br>
 e.g. `pt-1` is `padding-top: 1rem`
