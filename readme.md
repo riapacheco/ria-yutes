@@ -214,8 +214,9 @@ These are experimental files, where you can add custom alternative colors and ap
 Again, this was meant for the 'discover as you go' model; whereby I tend to design components one-by-one. One component might look similar to another, but might require a different interpretation of a 'dark' version. 
 <br><br>
 To use, import into your main.scss file (along with the original import):
+
 ```scss
-  @import '~@riapacheco/yutes/_foundation/themes.scss';
+  @import '~@riapacheco/yutes/scss/_foundation/themes.scss';
 ```
 
 <br><br>
