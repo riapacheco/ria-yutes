@@ -1,6 +1,9 @@
 @use './alt-colors.scss' as _alt;
 @use './colors.scss' as _color;
 
+@forward './alt-colors.scss';
+@forward './colors.scss';
+
 .dark-theme-bg {
   background-image: linear-gradient(to left, _alt.$alt-primary-medium, _alt.$alt-primary-dark);
   background-attachment: fixed;

@@ -1,3 +1,5 @@
+// FIXME remove shadow from link hover
+
 # Yutes
 
 Yutes is a collection of bare bones scss utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). 
@@ -189,13 +191,13 @@ If certain scss styles aren't being picked up, you can import the files directly
 Jussayin: to keep things tidy, so that you know where things come from when reading the code (or someone else is reading your code), I suggest using SASS's `@use` decorator over the (soon to be deprecated) `@import`. This is because it creates a <strong>namespace</strong> for easier origin tracing. E.g:<br><br>
 `src/components/some-component.scss`:
 
-<code>
+```scss
 @use `~@riapacheco/yutes/_foundation/colors.scss' as _color;
 
 .some-element {
   background-color: _color.$primary-color;
 }
-</code>
+```
 
 (just looking out)
 
@@ -207,8 +209,15 @@ Jussayin: to keep things tidy, so that you know where things come from when read
 
 ## The `alt-colors.scss` and `themes.scss` files: Just an FYI
 These are experimental files, where you can add custom alternative colors and apply them as a theme later with your own actual programming logic. The idea is that when a class (at the top of each component) is changed to a different boolean outcome (e.g. `isDarkTheme = true`), you can add `.dark-theme` globally to apply an alternative dark-theme style.
-<br><br>
+<br>
+<br>
 Again, this was meant for the 'discover as you go' model; whereby I tend to design components one-by-one. One component might look similar to another, but might require a different interpretation of a 'dark' version. 
+<br><br>
+To use, import into your main.scss file (along with the original import):
+```scss
+  @import '~@riapacheco/yutes/_foundation/themes.scss';
+```
+
 <br><br>
 
 ### If you're curious about this:
