@@ -1,5 +1,3 @@
-// FIXME remove shadow from link hover
-
 # Yutes
 
 Yutes is a collection of bare bones scss utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). 
