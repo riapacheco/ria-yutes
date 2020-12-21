@@ -151,3 +151,28 @@ nav {
       background-blend-mode: lighten | 
   */
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                 DARK THEME                                 */
+/* -------------------------------------------------------------------------- */
+
+.dark-theme-bg {
+  background-image: linear-gradient(to left, $alt-primary-medium, $alt-primary-dark);
+  background-attachment: fixed;
+  height: 100%;
+  color: $alt-text;
+
+  .card {
+    background-color: $alt-primary-medium;
+    background-image: linear-gradient(to right, $alt-primary-medium, $alt-primary-dark);
+    color: $alt-text;
+  }
+  hr {
+    opacity: 0.03;
+    
+  }
+  code {
+    color: $alt-text;
+    background-color: $alt-secondary-medium;
+  }
+}
