@@ -1,6 +1,11 @@
 @use './scss/_foundation/colors.scss' as _color;
 @forward './scss/_foundation/colors.scss';
 
+$footer-font-size: 0.86rem;
+$footer-font-color: #000000;
+$footer-item-hover-color: _color.$primary-color;
+
+// Flex Row
 .footer,
 .footer-content,
 .footer-items {
@@ -12,8 +17,9 @@
 }
 .footer {
   height: 1.4rem;
-  font-size: 0.9rem;
-  line-height: 0.9rem;
+  font-size: $footer-font-size;
+  line-height: $footer-font-size;
+  color: $footer-font-color;
   width: 100%;
   background-color: _color.$accent-light-color;
   position: fixed;
@@ -33,5 +39,16 @@
 
   &.right {
     justify-content: flex-end;
+  }
+}
+
+a,
+.footer-item {
+  font-size: $footer-font-size;
+  color: $footer-font-color;
+
+  &:hover {
+    cursor: pointer;
+    color: $footer-item-hover-color;
   }
 }
