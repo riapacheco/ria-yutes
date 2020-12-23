@@ -19,13 +19,7 @@ Yutes is a collection of bare bones scss utility (yutes) classes for basic struc
 > 
 
 
-function profile() {
-    return(
-        <img src="../static/img/ria.jpeg" />
-    )
-}
-
-profile()
+ 
 
 
 
