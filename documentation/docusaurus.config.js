@@ -11,7 +11,7 @@ module.exports = {
   title: 'Yutes',
   tagline: 'Wanna use some Yutes?',
   url: 'https://patkellydesigns.github.io',
-  baseUrl: '/',
+  baseUrl: '/ria-yutes/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -26,7 +26,7 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/',
+          to: 'docs/doc1',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
@@ -34,7 +34,7 @@ module.exports = {
         {to: 'blog', label: 'Blog', position: 'left'},
         // Please keep GitHub link to the right for consistency.
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/riapacheco/ria-yutes',
           label: 'GitHub',
           position: 'right',
         },
@@ -47,12 +47,12 @@ module.exports = {
           title: 'Learn',
           items: [
             {
-              label: 'Style Guide',
-              to: 'docs/',
+              label: 'Our Style Guide',
+              to: 'docs/doc2',
             },
             {
-              label: 'Second Doc',
-              to: 'docs/doc2',
+              label: 'Yutes',
+              to: 'docs/doc1',
             },
           ],
         },
@@ -82,7 +82,7 @@ module.exports = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/riapacheco/ria-yutes',
             },
           ],
         },
@@ -118,13 +118,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
 
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
+            'https://github.com/riapacheco/ria-yutes/edit/master/documentation/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+            'https://github.com/riapacheco/ria-yutes/edit/master/documentation/blog/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
