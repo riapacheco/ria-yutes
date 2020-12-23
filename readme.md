@@ -1,8 +1,20 @@
 # Yutes
 
-Yutes is a collection of bare bones scss utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). 
 
-<br>
+
+Yutes is a collection of bare bones scss utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). 
+ 
+![Yutes Logo](documentation/static/img/dark-logo.png)
+![Yutes Logo](documentation/static/img/light-logo.png) 
+ 
+<style>
+  img {
+    border-radius:5%;
+    width:200px;
+  }
+</style>
+
+ 
 
 I created this so I could: <br>
 <ul>

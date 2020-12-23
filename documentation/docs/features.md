@@ -3,17 +3,15 @@ id: features
 title: Features
 ---
 
- 
+## Forms
 
-## Forms 
+```scss
+@forward './scss/_user-controls/forms.scss';
+```
 
- ```scss 
- @forward './scss/_user-controls/forms.scss';
- ```
+### Example
 
- ### Example
-```jsx live
-function Clock(props) {
+```jsx live function Clock(props) {
   const [date, setDate] = useState(new Date());
   useEffect(() => {
     var timerID = setInterval(() => tick(), 1000);
@@ -34,38 +32,51 @@ function Clock(props) {
   );
 }
 ```
-  
-## Buttons 
- ```scss
- @forward './scss/_user-controls/buttons.scss';
+
+## Buttons
+
+```scss
+@forward './scss/_user-controls/buttons.scss';
 ```
 
 ## Colors
-```scss 
+
+```scss
 @import './scss/_foundation/colors.scss';
 ```
+
 ## Alternative Colors
-```scss 
+
+```scss
 @import './scss/_foundation/alt-colors.scss';
 ```
 
 ## Typography
+
 ```scss
- @import './scss/_foundation/typography.scss';
- ```
+@import './scss/_foundation/typography.scss';
+```
+
 ## Themes
+
 ```scss
- @import './scss/_foundation/themes.scss';
- ```
- ## Utilities
+@import './scss/_foundation/themes.scss';
+```
+
+## Utilities
+
 ```scss
- @import './scss/_foundation/utilities.scss';
- ```
- ## Cards
+@import './scss/_foundation/utilities.scss';
+```
+
+## Cards
+
 ```scss
- @import './scss/_component/cards.scss';
- ```
- ## Mixins
+@import './scss/_component/cards.scss';
+```
+
+## Mixins
+
 ```scss
- @import './scss/_component/feature-mixins.scss';
- ``` 
+@import './scss/_component/feature-mixins.scss';
+```

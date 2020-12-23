@@ -10,6 +10,6 @@
 module.exports = {
   someSidebar: {
     Yutes: ['what', 'installation', 'usage'],
-    Features: ['features', 'style'],
+    Learn: ['features', 'style'],
   },
 };
