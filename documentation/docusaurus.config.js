@@ -20,13 +20,15 @@ module.exports = {
   themeConfig: {
     navbar: {
       title: 'Yutes',
+
       logo: {
         alt: 'Yutes Logo',
-        src: 'img/light-logo.png',
+        src: 'img/dark-logo.png',
+        srcDark: 'img/light-logo.png',
       },
       items: [
         {
-          to: 'docs/doc1',
+          to: 'docs/',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
@@ -47,12 +49,12 @@ module.exports = {
           title: 'Learn',
           items: [
             {
-              label: 'Our Style Guide',
-              to: 'docs/doc2',
-            },
-            {
               label: 'Yutes',
               to: 'docs/what',
+            },
+            {
+              label: 'Our Style Guide',
+              to: 'docs/',
             },
           ],
         },
@@ -126,6 +128,7 @@ module.exports = {
           editUrl:
             'https://github.com/riapacheco/ria-yutes/edit/master/documentation/blog/',
         },
+        themes: ['@docusaurus/theme-live-codeblock'],
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },

@@ -5,5 +5,8 @@
   "main": "index.js",
   "scripts": {},
   "author": "Ria Pacheco",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@docusaurus/theme-live-codeblock": "^2.0.0-alpha.70"
+  }
 }
