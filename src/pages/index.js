@@ -31,7 +31,7 @@ const features = [
     imageUrl: 'img/fonts.svg',
     description: (
       <>
-        Yutes let's you focus on design and takes care of the heavy lifting for
+        Yutes lets you focus on design and takes care of the heavy lifting for
         you - without the bloat. Standardized Type System ez as 1,2, npm install
       </>
     ),
@@ -73,6 +73,7 @@ function Home() {
           <img
             src="./../../static/img/light-logo.png"
             style={{borderRadius: '200%', width: '300px'}}
+            alt="logo"
           />
           {/* conditionally set this according to darkMode
           DARK LOGO - TODO 
