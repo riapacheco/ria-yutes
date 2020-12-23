@@ -1,3 +1,4 @@
+import React from 'react';
 export default features = [
   {
     title: 'Yutes is easy to Use',

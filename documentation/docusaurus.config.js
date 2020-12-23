@@ -8,22 +8,6 @@
  */
 
 module.exports = {
-  customFields: {
-    ria: {
-      businessUrls: {
-        portfolio: '',
-        steer: 'https://steer.software',
-      },
-      socialUrls: {
-        linkdin: '',
-        github: 'https://github.com/riapacheco',
-        twitter: '',
-      },
-      avatar:
-        'https://avatars2.githubusercontent.com/u/53801436?s=460&u=24a361c7cb532e96ff36122fae9d593c73897066&v=4',
-    },
-  },
-
   title: 'Yutes',
   tagline: 'Wanna use some Yutes?',
   url: 'https://patkellydesigns.github.io',
@@ -33,7 +17,23 @@ module.exports = {
   favicon: 'img/light-logo.png',
   organizationName: 'patkellydesigns', // Usually your GitHub org/user name.
   projectName: 'ria-yutes', // Usually your repo name.
+
   themeConfig: {
+    customFields: {
+      ria: {
+        businessUrls: {
+          portfolio: '',
+          steer: 'https://steer.software',
+        },
+        socialUrls: {
+          linkdin: '',
+          github: 'https://github.com/riapacheco',
+          twitter: '',
+        },
+        avatar:
+          'https://avatars2.githubusercontent.com/u/53801436?s=460&u=24a361c7cb532e96ff36122fae9d593c73897066&v=4',
+      },
+    },
     navbar: {
       title: 'Yutes',
 
@@ -70,7 +70,7 @@ module.exports = {
             },
             {
               label: 'Our Style Guide',
-              to: 'docs/',
+              to: 'docs/style',
             },
           ],
         },
@@ -148,6 +148,32 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
+      },
+    ],
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-pwa',
+      {
+        debug: true,
+        offlineModeActivationStrategies: ['appInstalled', 'queryString'],
+        pwaHead: [
+          {
+            tagName: 'link',
+            rel: 'icon',
+            href: '/img/.png',
+          },
+          {
+            tagName: 'link',
+            rel: 'manifest',
+            href: '/manifest.json', // your PWA manifest
+          },
+          {
+            tagName: 'meta',
+            name: 'theme-color',
+            content: 'rgb(37, 194, 160)',
+          },
+        ],
       },
     ],
   ],

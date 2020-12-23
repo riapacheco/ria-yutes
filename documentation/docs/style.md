@@ -1,7 +1,7 @@
 ---
 id: style
 title: Style Guide
-sidebar_label: Style Guide
+sidebar_label: MarkDown Style Guide
 slug: /
 ---
 
