@@ -78,13 +78,13 @@ module.exports = {
       },
       items: [
         {
-          to: 'docs/',
+          to: 'docs/style',
           activeBasePath: 'docs',
           label: 'Docs',
           position: 'left',
         },
         {to: 'blog', label: 'Blog', position: 'left'},
-        // Please keep GitHub link to the right for consistency.
+
         {
           href: 'https://github.com/riapacheco/ria-yutes',
           label: 'GitHub',
@@ -178,7 +178,7 @@ module.exports = {
           editUrl:
             'https://github.com/riapacheco/ria-yutes/edit/master/documentation/blog/',
         },
-        themes: ['@docusaurus/theme-live-codeblock'],
+
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
