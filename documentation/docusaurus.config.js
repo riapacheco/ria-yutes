@@ -14,7 +14,7 @@ module.exports = {
   baseUrl: '/ria-yutes/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/light-logo.png',
   organizationName: 'patkellydesigns', // Usually your GitHub org/user name.
   projectName: 'ria-yutes', // Usually your repo name.
   themeConfig: {
@@ -22,7 +22,7 @@ module.exports = {
       title: 'Yutes',
       logo: {
         alt: 'Yutes Logo',
-        src: 'img/logo.svg',
+        src: 'img/light-logo.png',
       },
       items: [
         {
@@ -52,7 +52,7 @@ module.exports = {
             },
             {
               label: 'Yutes',
-              to: 'docs/doc1',
+              to: 'docs/what',
             },
           ],
         },
@@ -102,9 +102,9 @@ module.exports = {
         },
       ],
       logo: {
-        alt: 'Facebook Open Source Logo',
-        src: 'img/oss_logo.png',
-        href: 'https://opensource.facebook.com',
+        alt: 'Yutes Logo',
+        src: 'img/light-logo.png',
+        href: 'https://riapacheco.github.io/ria-yutes',
       },
 
       copyright: `Copyright © ${new Date().getFullYear()} Yutes, Inc. Built with Docusaurus.`,
