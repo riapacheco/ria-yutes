@@ -19,6 +19,40 @@ module.exports = {
   projectName: 'ria-yutes', // Usually your repo name.
 
   themeConfig: {
+    plugins: [
+      [
+        '@docusaurus/plugin-pwa',
+        {
+          injectManifestConfig: {
+            manifestTransforms: [],
+            modifyURLPrefix: {},
+
+            globPatterns: ['**/*.{pdf,docx,xlsx}'],
+          },
+        },
+        {
+          debug: true,
+          offlineModeActivationStrategies: ['appInstalled', 'queryString'],
+          pwaHead: [
+            {
+              tagName: 'link',
+              rel: 'icon',
+              href: '/img/light-logo.png',
+            },
+            {
+              tagName: 'link',
+              rel: 'manifest',
+              href: '/documentation/static/manifest.json', // your PWA manifest
+            },
+            {
+              tagName: 'meta',
+              name: 'theme-color',
+              content: 'rgb(37, 194, 160)',
+            },
+          ],
+        },
+      ],
+    ],
     customFields: {
       ria: {
         businessUrls: {
@@ -148,32 +182,6 @@ module.exports = {
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
-      },
-    ],
-  ],
-  plugins: [
-    [
-      '@docusaurus/plugin-pwa',
-      {
-        debug: true,
-        offlineModeActivationStrategies: ['appInstalled', 'queryString'],
-        pwaHead: [
-          {
-            tagName: 'link',
-            rel: 'icon',
-            href: '/img/.png',
-          },
-          {
-            tagName: 'link',
-            rel: 'manifest',
-            href: '/manifest.json', // your PWA manifest
-          },
-          {
-            tagName: 'meta',
-            name: 'theme-color',
-            content: 'rgb(37, 194, 160)',
-          },
-        ],
       },
     ],
   ],

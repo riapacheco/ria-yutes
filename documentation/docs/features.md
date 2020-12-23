@@ -11,8 +11,7 @@ title: Features
 
 ### Example
 
-```jsx
-function Clock(props) {
+```jsx live function Clock(props) {
   const [date, setDate] = useState(new Date());
   useEffect(() => {
     var timerID = setInterval(() => tick(), 1000);
