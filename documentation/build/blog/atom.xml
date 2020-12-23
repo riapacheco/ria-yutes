@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://patkellydesigns.github.io/blog</id>
+    <title>Yutes Blog</title>
+    <updated>2020-12-23T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://patkellydesigns.github.io/blog"/>
+    <subtitle>Yutes Blog</subtitle>
+    <icon>https://patkellydesigns.github.io/img/light-logo.png</icon>
+    <entry>
+        <title type="html"><![CDATA[Hello World]]></title>
+        <id>hello-universe</id>
+        <link href="https://patkellydesigns.github.io/ria-yutes/blog/hello-universe"/>
+        <updated>2020-12-23T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet]]></summary>
+    </entry>
+</feed>

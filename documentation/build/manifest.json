@@ -1,0 +1,22 @@
+{
+  "short_name": "YutesApp",
+  "name": "YutesApp",
+  "description": "SCSS library",
+  "icons": [
+    {
+      "src": "./img/light-logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "./img/light-logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#8e67ba",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#8e67ba"
+}
