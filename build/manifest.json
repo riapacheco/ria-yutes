@@ -4,12 +4,12 @@
   "description": "SCSS library",
   "icons": [
     {
-      "src": "./img/light-logo.png",
+      "src": "img/light-logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "./img/light-logo.png",
+      "src": "img/light-logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
