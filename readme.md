@@ -1,6 +1,10 @@
 # Yutes Website
-<!-- readme: contributors -start -->
-<!-- readme: contributors -end -->
+ 
+
+
+
+![documentation](https://github.com/patkellydesigns/ria-yutes/workflows/documentation/badge.svg?branch=documentation)
+
 This branch is where our website lives. Simply pushing or pulling this repo will trigger a **GitHub Action**
 
 This [documentation.yml](.github/workflows/documentation.yml) file gives instructions on how to i.e
@@ -70,3 +74,8 @@ button {
     padding:12px;
 }
 </style>
+
+
+
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
