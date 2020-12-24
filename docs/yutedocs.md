@@ -1,7 +1,7 @@
 ---
 id: yutedocs
 title: What is Yutes
- 
+slug: /
  
 ---
 
