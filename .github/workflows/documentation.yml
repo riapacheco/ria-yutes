@@ -47,6 +47,7 @@ jobs:
           IdentityFile ~/.ssh/id_rsa
           EOT
       - name: Release to GitHub Pages
+      - uses: akhilmhdh/contributors-readme-action@v2.1
         env:
           USE_SSH: true
           GIT_USER: git
