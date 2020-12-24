@@ -11,15 +11,6 @@ const path = require('path');
 
 const customFields = {
   ria: {
-    businessUrls: {
-      portfolio: '',
-      steer: 'https://steer.software',
-    },
-    socialUrls: {
-      linkdin: '',
-      github: 'https://github.com/riapacheco',
-      twitter: '',
-    },
     avatar:
       'https://avatars2.githubusercontent.com/u/53801436?s=460&u=24a361c7cb532e96ff36122fae9d593c73897066&v=4',
   },
@@ -48,7 +39,7 @@ module.exports = {
           {
             tagName: 'link',
             rel: 'icon',
-            href: '/img/icons-light/512.pngn',
+            href: '/img/icons-light/512.png',
           },
           {
             tagName: 'link',

@@ -14,7 +14,7 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
+  ], 
   "start_url": "/?source=pwa",
   "background_color": "#8e67ba",
   "display": "standalone",
