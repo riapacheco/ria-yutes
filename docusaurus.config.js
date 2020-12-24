@@ -19,40 +19,6 @@ module.exports = {
   projectName: 'ria-yutes', // Usually your repo name.
 
   themeConfig: {
-    plugins: [
-      [
-        '@docusaurus/plugin-pwa',
-        {
-          injectManifestConfig: {
-            manifestTransforms: [],
-            modifyURLPrefix: {},
-
-            globPatterns: ['**/*.{pdf,docx,xlsx}'],
-          },
-        },
-        {
-          debug: true,
-          offlineModeActivationStrategies: ['appInstalled', 'queryString'],
-          pwaHead: [
-            {
-              tagName: 'link',
-              rel: 'icon',
-              href: '/img/light-logo.png',
-            },
-            {
-              tagName: 'link',
-              rel: 'manifest',
-              href: '/documentation/static/manifest.json', // your PWA manifest
-            },
-            {
-              tagName: 'meta',
-              name: 'theme-color',
-              content: 'rgb(37, 194, 160)',
-            },
-          ],
-        },
-      ],
-    ],
     customFields: {
       ria: {
         businessUrls: {
@@ -162,16 +128,91 @@ module.exports = {
       copyright: `Copyright © ${new Date().getFullYear()} Yutes, Inc. Built with Docusaurus.`,
     },
   },
+
   presets: [
     [
       '@docusaurus/preset-classic',
       {
+        plugins: [
+          [
+            '@docusaurus/plugin-pwa',
+            {
+              injectManifestConfig: {
+                manifestTransforms: [],
+                modifyURLPrefix: {},
+
+                globPatterns: ['**/*.{pdf,docx,xlsx}'],
+              },
+              debug: false,
+              offlineModeActivationStrategies: ['appInstalled', 'queryString'],
+              pwaHead: [
+                {
+                  tagName: 'link',
+                  rel: 'icon',
+                  href: 'img/light-logo.png',
+                },
+                {
+                  tagName: 'link',
+                  rel: 'manifest',
+                  href: 'manifest.json',
+                },
+                {
+                  tagName: 'meta',
+                  name: 'theme-color',
+                  content: 'rgb(37, 194, 160)',
+                },
+              ],
+            },
+          ],
+
+          [
+            '@docusaurus/plugin-content-pages',
+            {
+              /**
+               * Path to data on filesystem
+               * relative to site dir
+               * components in this directory will be automatically converted to pages
+               */
+              path: 'src/pages',
+              /**
+               * URL route for the page section of your site
+               * do not include trailing slash
+               */
+              routeBasePath: '',
+              include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+              /**
+               * No Route will be created for matching files
+               */
+              exclude: [
+                '**/_*.{js,jsx,ts,tsx,md,mdx}',
+                '**/*.test.{js,ts}',
+                '**/__tests__/**',
+              ],
+              /**
+               * Theme component used by markdown pages.
+               */
+              mdxPageComponent: '@theme/MDXPage',
+              /**
+               * Remark and Rehype plugins passed to MDX
+               */
+              remarkPlugins: [],
+              rehypePlugins: [],
+              /**
+               * Custom Remark and Rehype plugins passed to MDX before
+               * the default Docusaurus Remark and Rehype plugins.
+               */
+              beforeDefaultRemarkPlugins: [],
+              beforeDefaultRehypePlugins: [],
+            },
+          ],
+        ],
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
 
           editUrl:
             'https://github.com/riapacheco/ria-yutes/edit/master/documentation/',
         },
+
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
