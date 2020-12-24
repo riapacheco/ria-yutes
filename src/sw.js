@@ -12,7 +12,7 @@ import {StaleWhileRevalidate} from 'workbox-strategies';
 
 export default function swCustom(params) {
   if (params.debug) {
-    console.log('[Docusaurus-PWA][SW]: running swCustom code', params);
+    console.log('[Docusaurus-PWA][SW]: running swCustom code!', params);
   }
 
   // Cache responses from external resources

@@ -4,12 +4,13 @@
   "description": "SCSS library",
   "icons": [
     {
-      "src": "img/light-logo.png",
+      "src": "img/icons-light/android-icon-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "img/light-logo.png",
+ 
+      "src": "img/icons-light/512.png",
       "type": "image/png",
       "sizes": "512x512"
     }

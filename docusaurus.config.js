@@ -48,7 +48,7 @@ module.exports = {
           {
             tagName: 'link',
             rel: 'icon',
-            href: '/img/dark-logo.png',
+            href: '/img/icons-light/512.pngn',
           },
           {
             tagName: 'link',
@@ -73,18 +73,13 @@ module.exports = {
           {
             tagName: 'link',
             rel: 'apple-touch-icon',
-            href: '/img/dark-logo.png',
+            href: '/img/icons-light/512.png',
           },
-          {
-            tagName: 'link',
-            rel: 'mask-icon',
-            href: '/img/dark-logo.png',
-            color: 'rgb(37, 194, 160)',
-          },
+
           {
             tagName: 'meta',
             name: 'msapplication-TileImage',
-            content: '/img/dark-logo.png',
+            content: '/img/icons-light/512.png',
           },
           {
             tagName: 'meta',
