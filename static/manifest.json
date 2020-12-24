@@ -15,7 +15,7 @@
       "sizes": "512x512"
     }
   ], 
-  "start_url": "/?source=pwa",
+  "start_url": "/ria-yutes",
   "background_color": "#8e67ba",
   "display": "standalone",
   "scope": "/",
