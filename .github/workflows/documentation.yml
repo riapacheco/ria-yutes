@@ -46,8 +46,11 @@ jobs:
           HostName github.com
           IdentityFile ~/.ssh/id_rsa
           EOT
+      - name: Contribute List
+        uses: akhilmhdh/contributors-readme-action@v2.1
+        with:
+            image_size: 100    
       - name: Release to GitHub Pages
-      - uses: akhilmhdh/contributors-readme-action@v2.1
         env:
           USE_SSH: true
           GIT_USER: git

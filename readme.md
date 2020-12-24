@@ -1,5 +1,6 @@
 # Yutes Website
-
+<!-- readme: contributors -start -->
+<!-- readme: contributors -end -->
 This branch is where our website lives. Simply pushing or pulling this repo will trigger a **GitHub Action**
 
 This [documentation.yml](.github/workflows/documentation.yml) file gives instructions on how to i.e
