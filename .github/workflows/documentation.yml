@@ -7,6 +7,14 @@ on:
     branches: [documentation]
 
 jobs:
+  contrib-readme-job:
+        runs-on: ubuntu-latest
+        name: A job to automate contrib in readme
+        steps:
+            - name: Contribute List
+              uses: akhilmhdh/contributors-readme-action@v2.1
+              env:
+                  GITHUB_TOKEN:  "${{ secrets.GH_PAGES_DEPLOY }}"
   checks:
     if: github.event_name != 'push'
     runs-on: ubuntu-latest
@@ -46,16 +54,7 @@ jobs:
           HostName github.com
           IdentityFile ~/.ssh/id_rsa
           EOT
-      - name: Contribute List
-        uses: akhilmhdh/contributors-readme-action@v2.1
-        with:
-            image_size: 100
-        env:
-          USE_SSH: true
-          GIT_USER: git
-        run: |
-          git config --global user.email "actions@gihub.com"
-          git config --global user.name "gh-actions"          
+            
       - name: Release to GitHub Pages
         env:
           USE_SSH: true
