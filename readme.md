@@ -1,14 +1,38 @@
-# Yutes
+# Yutes Website
+
+This branch is where our website lives. Simply pushing or pulling this repo will trigger a **GitHub Action**
+
+This [documentation.yml](.github/workflows/documentation.yml) file gives instructions on how to i.e
+
+  - Run Tests
+  - Check Code for errors
+  - Enforce a style guide
+  - Build the production app
+  - Deploy to hosting
+
+In this cse we're using [GitHub Pages](https://pages.github.com/)
+
+There are many static hosting providers to chose from and most will have a free option. 
+
 
 This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
 
+
 ### Installation
+
+- We use yarn here so if you don't have it you can install the  [Yarn Package Manager](https://yarnpkg.org)
+
+or using NPM
+
+`
+sudo npm install -g yarn
+`
 
 ```
 $ yarn
 ```
 
-### Local Development
+### Local Development of this site
 
 ```
 $ yarn start
@@ -26,16 +50,22 @@ This command generates static content into the `build` directory and can be serv
 
 ### Deployment
 
-```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## [Yutes Website is currently being hosted here](https://patkellydesigns.github.io/ria-yutes/)
+ 
+<button onclick="https://patkellydesigns.github.io/ria-yutes/">
+Go to Yutes App
+</button>
 
-### Continuous Integration
+We have Continuous integration set up for this and more can be found in the wiki.
 
-Some common defaults for linting/formatting have been set for you. If you integrate your project with an open source Continuous Integration system (e.g. Travis CI, CircleCI), you may check for issues using the following command.
 
-```
-$ yarn ci
-```
+<style>
+button {
+    color:#f9f9f9;
+    border:none;
+    border-radius:12px;
+    background-color:#8e67ba;
+    padding:12px;
+}
+</style>
