@@ -1,7 +1,8 @@
+node_modules
 # Dependencies
-node_modules/
+node_modules
 # //Crickets
-build/
+build
 
 # Generated files
 .docusaurus
@@ -20,3 +21,6 @@ yarn-error.log*
 
 # ESLint
 .eslintcache
+
+
+.hi
