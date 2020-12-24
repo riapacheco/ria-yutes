@@ -1,20 +1,8 @@
 # Yutes
 
-
-
 Yutes is a collection of bare bones scss utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). 
  
 ![Yutes Logo](documentation/static/img/dark-logo.png)
-![Yutes Logo](documentation/static/img/light-logo.png) 
- 
-<style>
-  img {
-    border-radius:5%;
-    width:200px;
-  }
-</style>
-
- 
 
 I created this so I could: <br>
 <ul>
@@ -33,46 +21,24 @@ I created this so I could: <br>
     </small>
   </li>
 </ul>
-
-<br>
-
-> Note:
-> * Demo page / cheatsheet coming soon (when I find time) <br>
-> * Lots of patch updating (while discovering errors or new clutch selectors) <br>
-
-<br><br>
-
----
-
-<br><br>
-
+ 
 ## Install
 
 #### Terminal:
-<code>
+```
   npm install @riapacheco/yutes
-</code>
-
-<br>
+```
 
 #### In your main scss file:
-<code>
+```
   @import '~@riapacheco/yutes/yutes.scss';
-</code>
-
-
-<br><br>
-
----
-
-<br><br>
-
+```
+ 
 ## Usage:
 
 > This was made for me to personally get up and running faster.<br> If you're just looking for basic utility scss, copy it from the files (I don't care).<br><br> E.g. take padding and margin arguments from `scss/_foundation/utilities.scss`
-
-<br>
-
+ 
+ 
 ### Margins & Padding Syntax
 Add margins and padding with syntax that's similar to all bootstrap frameworks; where the first letter defines if it's a margin or padding property, the second letter defines the direction of that property, and a dash numeric value defines how many rems (1 rem = base body text size).
 ```html
@@ -80,9 +46,7 @@ Add margins and padding with syntax that's similar to all bootstrap frameworks; 
     This div has a padding-top of 1rem and padding-left of 1rem.
   </div>
 ```
-
-<br><br>
-
+ 
 ### Container
 Though I'm not messing around too much with set layout structures, the `.container` class is always helpful, since it helps you automatically center your content with decent responsive re-sizing. You can find the class in the `scss/_foundation/utilities.scss` file and can change it to whatever you like:
 ```scss
@@ -98,9 +62,7 @@ Though I'm not messing around too much with set layout structures, the `.contain
   }
 }
 ```
-
-<br><br>
-
+ 
 ### Buttons 
 Life is just easier with pre-created `.btn` classes. You can find them in `scss/_user-controls/buttons.scss`; and can be used like this:
 ```html
@@ -125,9 +87,7 @@ Life is just easier with pre-created `.btn` classes. You can find them in `scss/
   </button>
 
 ```
-
-<br><br>
-
+ 
 ### Experiment with Theme Colors
 The `scss/_foundation/color.scss` file contains a simple theme of 3 different colors (with 4 shades each). Though these variables do impact more feature-focused classes like `.btn`, the bottom of the file shows how they can be applied anywhere for quick styling (as you discover what you like):
 ```scss
@@ -208,24 +168,15 @@ Jussayin: to keep things tidy, so that you know where things come from when read
   background-color: _color.$primary-color;
 }
 ```
-
-(just looking out)
-
-<br><br>
-
----
-
-<br><br>
-
+ 
 ## The `alt-colors.scss` and `themes.scss` files: Just an FYI
 These are experimental files, where you can add custom alternative colors and apply them as a theme later with your own actual programming logic. The idea is that when a class (at the top of each component) is changed to a different boolean outcome (e.g. `isDarkTheme = true`), you can add `.dark-theme` globally to apply an alternative dark-theme style.
-<br>
-<br>
+ 
 Again, this was meant for the 'discover as you go' model; whereby I tend to design components one-by-one. One component might look similar to another, but might require a different interpretation of a 'dark' version. 
-<br><br>
+ 
 To change it up, the `.dark-theme` class is found at the bottom of `yutes.scss`.
 
-<br><br>
+ 
 
 ### If you're curious about this:
 Using Angular, I'm creating a light and dark version of each component as I create them. Their different versions can be turned on or off using the `[ngClass]` directive. <br><br>
@@ -237,8 +188,7 @@ HTML:
     Where the component goes
   </div>
 ```
-
-<br>
+ 
 TS:
 
 ```typescript
@@ -246,9 +196,6 @@ TS:
     isDarkMode = false;
   }
 ```
-
-<br><br>
-
-
+ 
 ## Flexbox (mostly) not included
 Since I usually work with packages like `@angular/flex-box` from `@angular/cdk`, I did not include flex boxes that much in here. 
