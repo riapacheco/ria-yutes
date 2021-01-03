@@ -109,11 +109,15 @@ a {
     cursor: pointer;
   }
 }
-ul, li {
-  list-style-type: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
+
+.list-unstyled {
+  ul,
+  li {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 input {
   outline: none;
@@ -132,6 +136,10 @@ nav {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+p {
+  line-height: 1.8rem;
 }
 
 /* ------------------------------ Quick Mixins ------------------------------ */
