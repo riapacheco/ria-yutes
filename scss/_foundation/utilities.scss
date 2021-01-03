@@ -113,3 +113,10 @@ $break-large: 1024px;
 .justify-self-center    { justify-self: center; }
 .justify-self-stretch   { justify-self: stretch; }
 .justify-self-baseline  { justify-self: baseline; }
+
+/* -------------------------------------------------------------------------- */
+/*                                    OTHER                                   */
+/* -------------------------------------------------------------------------- */
+section {
+  min-height: calc(100vh - 5rem); // 5 rem is the height of the navbar
+}
