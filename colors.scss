@@ -35,7 +35,7 @@ $danger-dark: #a2322c;
 
 $info: $accent-medium-color;
 $info-light: $accent-light-color;
-$infor-dark: $accent-dark-color;
+$info-dark: $accent-dark-color;
 
 .success {
   color: $success;
@@ -70,10 +70,10 @@ $infor-dark: $accent-dark-color;
   &.dark { color: $primary-dark-color }
 
   // And background
-  &.bg { color: $primary-text-color; background-color: $primary-color; }
-  &.light-bg { color: $primary-text-color; background-color: $primary-light-color; }
-  &.medium-bg { color: $primary-text-color; background-color: $primary-medium-color; }
-  &.dark-bg { color: $primary-text-color; background-color: $primary-dark-color; }
+  &.bg { background-color: $primary-color; }
+  &.light-bg { background-color: $primary-light-color; }
+  &.medium-bg { background-color: $primary-medium-color; }
+  &.dark-bg { background-color: $primary-dark-color; }
 }
 .secondary-color {
   color: $secondary-color;
@@ -82,10 +82,10 @@ $infor-dark: $accent-dark-color;
   &.dark { color: $secondary-dark-color }
 
   // Backgrounds
-  &.bg { color: $secondary-text-color; background-color: $secondary-color; }
-  &.light-bg { color: $secondary-text-color; background-color: $secondary-light-color; }
-  &.medium-bg { color: $secondary-text-color; background-color: $secondary-medium-color; }
-  &.dark-bg { color: $secondary-text-color; background-color: $secondary-dark-color; }
+  &.bg { background-color: $secondary-color; }
+  &.light-bg { background-color: $secondary-light-color; }
+  &.medium-bg { background-color: $secondary-medium-color; }
+  &.dark-bg { background-color: $secondary-dark-color; }
 }
 .accent-color {
   color: $accent-color;
@@ -94,8 +94,8 @@ $infor-dark: $accent-dark-color;
   &.dark { color: $accent-dark-color }
 
   // Backgrounds
-  &.bg { color: $accent-text-color; background-color: $accent-color; }
-  &.light-bg { color: $accent-text-color; background-color: $accent-light-color; }
-  &.medium-bg { color: $accent-text-color; background-color: $accent-medium-color; }
-  &.dark-bg { color: $accent-text-color; background-color: $accent-dark-color; }
+  &.bg { background-color: $accent-color; }
+  &.light-bg { background-color: $accent-light-color; }
+  &.medium-bg { background-color: $accent-medium-color; }
+  &.dark-bg { background-color: $accent-dark-color; }
 }

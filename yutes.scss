@@ -145,14 +145,14 @@ nav {
 /* -------------------------------------------------------------------------- */
 
 .dark-theme {
-  background-image: linear-gradient(to left, $alt-primary-medium, $alt-primary-dark);
+  background-image: linear-gradient(to left, $alt-primary-medium-color, $alt-primary-dark-color);
   background-attachment: fixed;
   height: 100%;
   color: $alt-text;
 
   .card {
-    background-color: $alt-primary-medium;
-    background-image: linear-gradient(to right, $alt-primary-medium, $alt-primary-dark);
+    background-color: $alt-primary-medium-color;
+    background-image: linear-gradient(to right, $alt-primary-medium-color, $alt-primary-dark-color);
     color: $alt-text;
   }
   hr {
@@ -161,6 +161,6 @@ nav {
   }
   code {
     color: $alt-text;
-    background-color: $alt-secondary-medium;
+    background-color: $alt-secondary-medium-color;
   }
 }

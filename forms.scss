@@ -1,7 +1,5 @@
-@use '../_foundation/colors.scss' as _color;
-@use '../_foundation/typography.scss' as _font;
-@forward '../_foundation/colors.scss';
-@forward '../_foundation/typography.scss';
+@use './colors.scss' as _color;
+@use './typography.scss' as _font;
 
 $label-text-size: 0.96rem;
 $input-text-size: 0.96rem;
