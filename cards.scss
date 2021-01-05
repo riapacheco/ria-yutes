@@ -1,5 +1,6 @@
-@use '../../scss/_foundation/colors.scss' as _color;
-@use '../../scss/_foundation/alt-colors.scss' as _alt;
+@use './colors.scss' as _color;
+@use './alt-colors.scss' as _alt;
+
 .card {
   background-color: _color.$accent-light-color;
   border-radius: 0.2rem;
@@ -9,7 +10,7 @@
     box-shadow: 6px 12px 24px #00000040;
   }
 }
-.card-body {
+.card-content {
   padding: 1rem;
 }
 .card-header {

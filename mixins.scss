@@ -1,3 +1,5 @@
+
+/* --------------------------------- Styles --------------------------------- */
 @mixin nav-text {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -12,4 +14,22 @@
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+/* -------------------------------- Functions ------------------------------- */
+@mixin parallax-hero {
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*
+    ----- Requirements -----
+      background-image: url('https://imagesite./image_slug.png');
+
+    ----- Options -----
+    Add tint
+      background-image: linear-gradient(to bottom right, $color, $second-color), url('https://imagesite./image_slug.png');
+      background-blend-mode: lighten | 
+  */
 }

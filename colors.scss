@@ -1,3 +1,6 @@
+/*
+    Choose 3 colors
+*/
 /* ----------------------------- Main Variables ----------------------------- */
 // Colors
 $primary-color: #b88d9b;
@@ -16,26 +19,6 @@ $accent-medium-color: #727272;
 $accent-dark-color: #414141;
 $accent-darkest-color: #262626;
 
-$primary-text-color: white;
-$primary-text-alt-color: black;
-
-$secondary-text-color: white;;
-$secondary-text-alt-color: black;
-
-$accent-text-color: #ffffff50;
-$accent-text-alt-color: #00000050;
-
-$dark-mode-text: #ffffff90;
-
-// Backgrounds
-$primary-background-color: white;
-$secondary-background-color: white;
-$accent-background-color: white;
-
-// Background Accents
-$primary-background-accent: $primary-dark-color;
-$secondary-background-accent: $secondary-dark-color;
-$accent-background-color: $accent-dark-color;;
 
 // States
 $success: #2ecc71;
@@ -50,10 +33,32 @@ $danger: #ff554c;
 $danger-light: #ffb3af;
 $danger-dark: #a2322c;
 
+$info: $accent-medium-color;
+$info-light: $accent-light-color;
+$infor-dark: $accent-dark-color;
+
+.success {
+  color: $success;
+  &.light { color: $success-light; }
+  &.dark { color: $success-dark; }
+}
+
+.warning {
+  color: $warning;
+  &.light { color: $warning-light; }
+  &.dark { color: $warning-dark; }
+}
+
 .danger {
   color: $danger;
   &.light { color: $danger-light; }
   &.dark { color: $danger-dark; }
+}
+
+.info {
+  color: $info;
+  &.light { color: $info-light; }
+  &.dark { color: $info-dark; }
 }
 
 /* ---------------------------- Impacted Classes ---------------------------- */
@@ -94,9 +99,3 @@ $danger-dark: #a2322c;
   &.medium-bg { color: $accent-text-color; background-color: $accent-medium-color; }
   &.dark-bg { color: $accent-text-color; background-color: $accent-dark-color; }
 }
-
-/* ----------------------------- Text Shortcuts ----------------------------- */
-.light-text { color: white; }
-.medium-text { color: #ffffff90 }
-.dark-text { color: black }
-.dark-mode-text { color: #ffffff90 };

@@ -1,242 +1,196 @@
-# Yutes
+# @riapacheco/yutes
 
-Yutes is a collection of bare bones scss utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). 
-
-<br>
-
-I created this so I could: <br>
-<ul>
-  <li> 
-    Get up and running fast.<br>
-    <small>
-      Lots of scss frameworks have too much bloat with flex-box / column styling.
-    </small>
-    <br>
-  </li>
-  <br>
-  <li> 
-    Let the design evolve on its own.<br>
-    <small>
-      Design, for me, tends to evolve with patterns that do repeat themselves, but sometimes fall outside 'norms'. Because of this, I enjoy having the ability to adjust things like breakpoints and color from a set standard, but with the ability to customize on a *per-element* or *per-selector* basis; because sometimes it's the actual utility of something that tells you what the standard should be.
-    </small>
-  </li>
-</ul>
-
-<br>
-
-> Note:
-> * Demo page / cheatsheet coming soon (when I find time) <br>
-> * Lots of patch updating (while discovering errors or new clutch selectors) <br>
+- 
 
 <br><br>
 
----
+Yutes is a collection of bare bones scss utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). Feel free to just take the code from any of the files. It's pretty bare bones already but you may just be looking for utility code snippets.
 
 <br><br>
 
-## Install
+My philosophy experiments with design to come up with a standard _afterwards_. The basic theme of 3 colors (and alt colors) help you figure it out as you go; and the responsive sizing arguments help you add quick media queries to classes as you code. The idea is that with adjustments, you'll be able to find the breakpoints that work for you/the design.
 
-#### Terminal:
+<br><br>
+
+The `alt-colors` is experimental and meant for creating an alternative `dark-mode` theme. Disregard if you don't want to use. <br>
+
+Example:
+```html
+  <div [ngClass]="(themeService.darkThemeStatus$ | async) ? 'container dark-theme' : 'container' ">
+    Some stuff...
+  </div>
+```
+<br><br><br><br><br>
+
+# Install
+
+### Terminal:
 <code>
   npm install @riapacheco/yutes
 </code>
 
 <br>
 
-#### In your main scss file:
+### In your main scss file:
 <code>
   @import '~@riapacheco/yutes/yutes.scss';
 </code>
 
+<br><br><br><br><br>
 
-<br><br>
+# Usage
+> The main yutes.scss file imports the others, but you may need to import specific files (e.g. colors.scss) for using those colors in separate component files. Further, the main `yutes.scss` files contain all browser overrides for quicker convenience -- from stripping buttons/links, to ensuring that `100%` width in future classes will truly be `100%`.
 
----
-
-<br><br>
-
-## Usage:
-
-> This was made for me to personally get up and running faster.<br> If you're just looking for basic utility scss, copy it from the files (I don't care).<br><br> E.g. take padding and margin arguments from `scss/_foundation/utilities.scss`
-
-<br>
-
-### Margins & Padding Syntax
-Add margins and padding with syntax that's similar to all bootstrap frameworks; where the first letter defines if it's a margin or padding property, the second letter defines the direction of that property, and a dash numeric value defines how many rems (1 rem = base body text size).
-```html
-  <div class="pt-1 pl-1">
-    This div has a padding-top of 1rem and padding-left of 1rem.
-  </div>
-```
-
-<br><br>
-
-### Container
-Though I'm not messing around too much with set layout structures, the `.container` class is always helpful, since it helps you automatically center your content with decent responsive re-sizing. You can find the class in the `scss/_foundation/utilities.scss` file and can change it to whatever you like:
-```scss
-.container {
-  width: 65%;
-  margin: auto;
-
-  @include respond-to(tablets) {
-    width: 80%;
-  }
-  @include respond-to(smartphones) {
-    width: 95%;
-  }
-}
-```
-
-<br><br>
-
-### Buttons 
-Life is just easier with pre-created `.btn` classes. You can find them in `scss/_user-controls/buttons.scss`; and can be used like this:
-```html
-  <!-- Basic button (no borders just padding)-->
-  <button class="btn">
-    Click!
-  </button>
-
-  <!--use .btn-sm or .btn-lg for size-->
-  <button class="btn btn-sm">
-    Click!
-  </button>
-
-  <!--use colors (and their variations) to add background-color-->
-  <button class="btn btn-sm primary">
-    Click!
-  </button>
-  
-  <!--or-->
-  <button class="btn btn-sm primary light">
-    Click again!
-  </button>
-
-```
-
-<br><br>
-
-### Experiment with Theme Colors
-The `scss/_foundation/color.scss` file contains a simple theme of 3 different colors (with 4 shades each). Though these variables do impact more feature-focused classes like `.btn`, the bottom of the file shows how they can be applied anywhere for quick styling (as you discover what you like):
-```scss
-.primary-color {
-  color: $primary-color;
-  &.light { color: $primary-light-color }
-  &.medium { color: $primary-medium-color }
-  &.dark { color: $primary-dark-color }
-
-  // And background
-  &.bg { color: $primary-text-color; background-color: $primary-color; }
-  &.light-bg { color: $primary-text-color; background-color: $primary-light-color; }
-  &.medium-bg { color: $primary-text-color; background-color: $primary-medium-color; }
-  &.dark-bg { color: $primary-text-color; background-color: $primary-dark-color; }
-}
-```
-<br>
-An example of using this would be 
-
-```html
-  <div class="primary-color">
-    This div's TEXT will be primary
-  </div>
-
-  <div class="primary-color bg">
-    This div's BACKGROUND will be primary, with the color's text color.
-  </div>
-```
-
-<br><br>
-
-### Experiment with Breakpoints
-Add media queries to specific classes as you go:
-```scss
-.some-element {
-  width: 300px;
-  margin: auto;
-
-  @include respond-to(smartphones) {
-    width: 100%;
-  }
-}
-```
-<br><br>
-
-Based on your own style, change breakpoints in `scss/_foundation/utilities.scss`
-Go to `scss/_foundation/utilities.scss` to change the three different breakpoints:
-```scss
-$break-small: 370px;
-$break-medium: 920px;
-$break-large: 1024px;
-```
 <br><br><br>
 
+## Padding and Margin
 
-## Basic Schema
-All styles are contained with the file having its associated name. 
-i.e. All typography (including the base HTML body size) will be in `scss/_foundation/typography.scss`, since it's pulled as a variable into the main scss file with the sass decoration `@import`.
+> Import Details: `./utilities.scss` will not need a direct import
 
-<br>
+Syntax: first letter of padding or margin (`p` or `m`) + first letter of direction (e.g `r` for right) + hyphen number of rems (1 rem = body base font size).
 
-### Notes for usage
-If certain scss styles aren't being picked up, you can import the files directly into your local scss file. For example, if you want to import a color variable:
-<br>
-<code>
-  @import '~@riapacheco/yutes/_foundation/colors.scss';
-</code>
-<br><br>
-
-#### Recommendation: SASS's `@use` decorator
-Jussayin: to keep things tidy, so that you know where things come from when reading the code (or someone else is reading your code), I suggest using SASS's `@use` decorator over the (soon to be deprecated) `@import`. This is because it creates a <strong>namespace</strong> for easier origin tracing. E.g:<br><br>
-`src/components/some-component.scss`:
-
-```scss
-@use `~@riapacheco/yutes/_foundation/colors.scss' as _color;
-
-.some-element {
-  background-color: _color.$primary-color;
-}
-```
-
-(just looking out)
-
-<br><br>
-
----
-
-<br><br>
-
-## The `alt-colors.scss` and `themes.scss` files: Just an FYI
-These are experimental files, where you can add custom alternative colors and apply them as a theme later with your own actual programming logic. The idea is that when a class (at the top of each component) is changed to a different boolean outcome (e.g. `isDarkTheme = true`), you can add `.dark-theme` globally to apply an alternative dark-theme style.
-<br>
-<br>
-Again, this was meant for the 'discover as you go' model; whereby I tend to design components one-by-one. One component might look similar to another, but might require a different interpretation of a 'dark' version. 
-<br><br>
-To change it up, the `.dark-theme` class is found at the bottom of `yutes.scss`.
-
-<br><br>
-
-### If you're curious about this:
-Using Angular, I'm creating a light and dark version of each component as I create them. Their different versions can be turned on or off using the `[ngClass]` directive. <br><br>
-Later, when the app is more complete, I pull out the directives' input properties (that decide this default state) and put them into a global service. This way, the whole app can have a dark-mode switched on all at once, but with a thoughtful design that wasn't a half-assed "black versus white".<br><br>
-HTML:
 ```html
-  <!--A component's super div-->
-  <div [ngClass]="isDarkMode ? 'dark-theme' : 'some-normal-class'">
-    Where the component goes
+  <div class="mb-5 ml-2">
+    This div has margin-bottom of 5 rem, and margin-left of 2 rem
   </div>
 ```
 
-<br>
-TS:
+<br><br><br>
 
-```typescript
-  export class SomeComponent implements OnInit {
-    isDarkMode = false;
+## Breakpoints
+
+> Import Details: `@import '@riapacheco/yutes/utilities.scss';` may need a direct import
+
+Adjust breakpoint properties in `utilities.scss` file. 
+
+Usage:
+```scss
+  .some-class {
+    width: 500px;
+    margin: auto;
+
+    @include respond-to(tablets) {
+      width: 700px;
+      // Doesn't cancel out margin
+    }
+    @include respond-to(smartphones) {
+      width: 90%;
+    }
   }
 ```
+Note: When reseting a parent property, it has to be an exact match. (e.g. margin-right won't override a parent's geneeral 'margin')
 
-<br><br>
+<br><br><br>
+
+## Containers
+
+> Import Details `./utilities.scss` will not need a direct import
+
+Use the four sizes of containers to add padding to the left and right of content while centering it: .container-sm, .container, .container-lg, .container-mobile
+
+```html
+  <div class="container">
+    Medium sized container
+  </div>
+
+  <div class="container-sm">
+    Small container
+  </div>
+```
+
+<br><br><br>
+
+## Flexbox
+
+> Import Details: `./utilities.scss` will not need a direct import
+
+1. Choose either `.flex-column` or `.flex-row`
+2. Optional if it's `.nowrap`
+3. Choose alignment: `.align-` + last word of different options (e.g. `.align-end` for align: flex-end)
+4. Choose justify-content value: `.justify-` + last word of different options (e.g. `.justify-between` for justify-content: space-between)
+5. Optional if you want to use align/justify `self` class which follows the same pattern but with `self-` added after the initial word. (e.g. `.align-self-start` for align-self: flex-start)
+
+<br><br><br>
+
+## Typography
+
+> Import Details `@import '~@riapacheco/yutes/typography.scss;` may need a direct import
+
+Sets font styles and heading classes with additional classes for adjustments:
+
+<br><br><br>
+
+### Weight
+
+Note: depending on the font you choose, `thin` may not work.
+```html
+  <h2 class="light"> This heading is light </h2>
+  <h2 class="bold"> This heading is bold</h2>
+```
+
+<br><br><br>
+
+### Overrides
+`.lowercase` for making text lowercase
+`.default-text-transform` to override unexpected transformations from browser or otherwise
+`.default-letter-spacing` bring letter spacing back to 0
 
 
-## Flexbox (mostly) not included
-Since I usually work with packages like `@angular/flex-box` from `@angular/cdk`, I did not include flex boxes that much in here. 
+Note: go to file for special `samp` and `code` block adjustments.
+
+<br><br><br>
+
+## Colors
+
+> Import Details: `@import '~@riapacheco/yutes/colors.scss'` will need a direct import
+
+3 theme colors: primary, secondary, accent
+4 state colors: success, warning, danger, info (based on accent color)
+
+Can add colors as classes with `.primary-color`, `.secondary-color`, etc.
+To make light, add to same class list `.light`. (e.g. `<div class="primary-color light"></div>)
+
+Can add background-colors as classes with the same initial (e.g. `.primary-color`) class, and by adding to that class list `.bg`, `.light-bg`, `.medium-bg`, `.dark-bg`, etc.
+
+<!-- ----------------------------- Alt Colors ------------------------------ -->
+> Import Details; `@import '~@riapacheco/yutes/alt-colors.scss';` will need direct import
+
+Same color scheme as `colors.scss` but without state colors and with additional `.alt-text` class for text color.
+
+Same classes, but with `alt` added to the beginning of each, so `.alt-primary-color .light` on an element makes it's color `$alt-primary-light-color`
+
+<br><br><br>
+
+## Buttons
+
+> Import Details: `./buttons.scss` will not need a direct import 
+
+1. Add `.btn` to element
+2. Optionally add `.raised` if you want shadow
+3. For sizing add additional class of `btn-sm`, `btn-md` or `btn-lg` (padding of buttons depend on global )
+4. To add color, add the color category name for the default color `primary` and an additional class of its variant e.g:
+```html
+  <button class="btn btn-md primary dark"> Click me </button>
+```
+
+<br><br><br>
+
+## Forms
+
+> Import Details: `./forms.scss` will not need a direct import
+
+Add `form-group` to every div that holds a label and input (this will make them stack as a column)
+
+Adjust input styles and colors here (or delete to style somehwere else)
+
+<br><br><br>
+
+## Cards
+
+> Import Details: `./cards.scss` will not need a direct import
+
+To have a card with a background color, add `card` class and an optional shadow an additional `raised` class.
+
+To add padding, add the class `card-content` or add it to an enclosed div
+
+Additional class of `card-header` has a flex space-between for title and close icon placement in the future; and `card-footer` does the same

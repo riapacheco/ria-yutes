@@ -1,0 +1,55 @@
+@use './colors.scss' as _color;
+@forward './colors.scss';
+
+$alt-primary-color: #363539;
+$alt-primary-light-color: #3e3d41;
+$alt-primary-medium-color: #282729;
+$alt-primary-dark-color: #1e1d1f;
+
+$alt-secondary-color: #393131;
+$alt-secondary-light-color: #655c5c;
+$alt-secondary-medium-color: #393737;
+$alt-secondary-dark-color: #2b2727;
+
+$alt-accent-color: white;
+$alt-accent-light-color: white;
+$alt-accent-medium-color: white;
+$alt-accent-dark-color: white;
+
+$alt-text: #b8b8b8;
+
+
+// Quick classes
+.alt-primary-color { color: $alt-primary-color; 
+  &.light { color: $alt-primary-light-color; }
+  &.medium { color: $alt-primary-medium-color; }
+  &.dark { color: $alt-primary-dark-color }
+
+  &.bg { background-color: $alt-primary-color; }
+  &.light-bg { background-color: $alt-primary-color; }
+  &.medium-bg { background-color: $alt-primary-medium-color; }
+  &.dark-bg { background-color: $alt-primary-dark-color; }
+}
+
+.alt-secondary-color { color: $alt-secondary-color;
+  &.light { color: $alt-secondary-light-color; }
+  &.medium { color: $alt-secondary-medium-color; }
+  &.dark { color: $alt-secondary-dark-color; }
+
+  &.bg { background-color: $alt-secondary-color; }
+  &.light-bg { background-color: $alt-secondary-light-color; }
+  &.medium-bg { background-color: $alt-secondary-medium-color; }
+  &.dark-bg { background-color: $alt-secondary-dark-color; }
+}
+
+.alt-accent { color: $alt-accent-color; 
+  &.light { color: $alt-accent-light-color; }
+  &.medium { color: $alt-accent-medium-color; }
+  &.dark { color: $alt-accent-dark-color; }
+
+  &.bg {background-color: $alt-accent-color;}
+  &.light-bg { background-color: $alt-accent-light-color; }
+  &.medium-bg { background-color: $alt-accent-medium-color; }
+  &.dark-bg  { background-color: $alt-accent-dark-color; }
+}
+

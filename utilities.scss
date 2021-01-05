@@ -16,7 +16,7 @@
   }
 }
 
-/* ------------------------------- Sizing Args ------------------------------ */
+/* -------------------------- Breakpoint Arguments -------------------------- */
 // In the event of NOT using breakpoint observer
 $break-small: 370px;
 $break-medium: 920px;
@@ -50,7 +50,6 @@ $break-large: 1024px;
     width: 95%;
   }
 }
-
 .container {
   width: 65%;
   margin: auto;
@@ -72,6 +71,10 @@ $break-large: 1024px;
   @include respond-to(smartphones) {
     width: 95%;
   }
+}
+.container-mobile {
+  width: 95%;
+  margin: auto;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -115,10 +118,3 @@ $break-large: 1024px;
 .justify-self-center    { justify-self: center; }
 .justify-self-stretch   { justify-self: stretch; }
 .justify-self-baseline  { justify-self: baseline; }
-
-/* -------------------------------------------------------------------------- */
-/*                                    OTHER                                   */
-/* -------------------------------------------------------------------------- */
-section {
-  min-height: calc(100vh - 5rem); // 5 rem is the height of the navbar
-}

@@ -1,15 +1,20 @@
-@forward './scss/_user-controls/forms.scss';
-@forward './scss/_user-controls/buttons.scss';
-@import './scss/_foundation/colors.scss';
-@import './scss/_foundation/alt-colors.scss';
-@import './scss/_foundation/typography.scss';
-@import './scss/_foundation/themes.scss';
-@import './scss/_foundation/utilities.scss';
-@import './scss/_user-controls/buttons.scss';
-@import './scss/_user-controls/forms.scss';
-@import './scss/_component/cards.scss';
-@import './scss/_component/feature-mixins.scss';
+@import './mixins.scss'; // Mixins
+@import './colors.scss'; // 3 main colors + State colors
+@import './typography.scss'; // Includes base font-size, google imports, and heading adjustments
+@import './utilities.scss'; // Padding&Margin, breakpoint args, container-sm, container, and container-lg
+@import './alt-colors.scss'; // 3 alternative colors for .dark-theme (found in main file below)
+@import './cards.scss'; // Card styling 
+@import './buttons.scss'; // Includes button sizes (based on font calcs) and color variation classes
+@import './forms.scss'; // Form control: Sizing based on font calcs + colors
 
+/*
+    For easy import into component style files
+    @use '~@riapacheco/yutes/FILE_NAME.scss' as _abbr;
+
+    OR
+
+    @import '~@riapacheco/yutes/FILE_NAME.scss';
+*/
 
 
 html {
@@ -134,27 +139,6 @@ nav {
   width: 100%;
 }
 
-p {
-  line-height: 1.8rem;
-}
-
-/* ------------------------------ Quick Mixins ------------------------------ */
-@mixin parallax {
-  width: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /*
-    ----- Requirements -----
-      background-image: url('https://imagesite./image_slug.png');
-
-    ----- Options -----
-    Add tint
-      background-image: linear-gradient(to bottom right, $color, $second-color), url('https://imagesite./image_slug.png');
-      background-blend-mode: lighten | 
-  */
-}
 
 /* -------------------------------------------------------------------------- */
 /*                                 DARK THEME                                 */
