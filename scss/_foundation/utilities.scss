@@ -106,6 +106,8 @@ $break-large: 1024px;
 .justify-center   { justify-content: center; }
 .justify-stretch  { justify-content: stretch; }
 .justify-baseline { justify-content: baseline; }
+.justify-between  { justify-content: space-between; }
+.justify-around   { justify-content: space-around; }
 
 // Justify Self
 .justify-self-start     { justify-self:flex-start; }
