@@ -21,7 +21,7 @@
 
 Yutes is a collection of bare bones __scss__ utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). Feel free to just take the code from any of the files. It's pretty bare bones already but you may just be looking for utility code snippets.
 
-<br><br>
+<br>
 
 ### Bottom-Up _Helper_ Philosophy
 My philosophy _experiments_ with design to come up with a standard _afterwards_ (bottom up). 
@@ -71,7 +71,7 @@ Syntax: first letter of padding or margin (`p` or `m`) + first letter of directi
 
 ## Breakpoints
 
-> Import Details: `@import '@riapacheco/yutes/utilities.scss';` may need a direct import
+> Import Details: `@import '@riapacheco/yutes/utilities.scss';` may need a direct import 
 
 Adjust breakpoint properties in `utilities.scss` file. 
 
@@ -126,7 +126,7 @@ Use the four sizes of containers to add padding to the left and right of content
 
 ## Typography
 
-> Import Details `@import '~@riapacheco/yutes/typography.scss;` may need a direct import
+> Import Details `@import '~@riapacheco/yutes/typography.scss;` may need a direct import if using variables instead of classes
 
 Sets font styles and heading classes with additional classes for adjustments:
 
@@ -154,7 +154,7 @@ Note: go to file for special `samp` and `code` block adjustments.
 
 ## Colors
 
-> Import Details: `@import '~@riapacheco/yutes/colors.scss'` will need a direct import
+> Import Details: `@import '~@riapacheco/yutes/colors.scss'` will need a direct import if using variables instead of classes
 
 3 theme colors: primary, secondary, accent
 4 state colors: success, warning, danger, info (based on accent color)
