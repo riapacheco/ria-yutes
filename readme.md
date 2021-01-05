@@ -1,25 +1,37 @@
-# @riapacheco/yutes
-
-- 
+- [What is it](#yutes)
+- [Install](#install)
+- [Usage](#usage)
+  - [Padding & Margin](#padding-and-margin)
+  - [Breakpoints](#breakpoints)
+  - [Containers](#containers)
+  - [Flexbox](#flexbox)
+  - [Typography](#typography)
+    - [Weight](#weight)
+    - [Overrides](#overrides)
+  - [Colors](#colors)
+  - [Buttons](#buttons)
+  - [Forms](#forms)
+  - [Cards](#cards)
 
 <br><br>
 
-Yutes is a collection of bare bones scss utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). Feel free to just take the code from any of the files. It's pretty bare bones already but you may just be looking for utility code snippets.
+# Yutes
+
+### What is it?
+
+Yutes is a collection of bare bones __scss__ utility (yutes) classes for basic structure & color experimentation (adjust as you code/go). Feel free to just take the code from any of the files. It's pretty bare bones already but you may just be looking for utility code snippets.
 
 <br><br>
 
-My philosophy experiments with design to come up with a standard _afterwards_. The basic theme of 3 colors (and alt colors) help you figure it out as you go; and the responsive sizing arguments help you add quick media queries to classes as you code. The idea is that with adjustments, you'll be able to find the breakpoints that work for you/the design.
+### Bottom-Up _Helper_ Philosophy
+My philosophy _experiments_ with design to come up with a standard _afterwards_ (bottom up). 
+<br>
+- Basic theme of 3 colors: faster/easier to experiment with a new theme (doesn't assume we all know color theory and can prepare for every scenario)
+- Responsive sizing (per-selector) allows you to add individual adjustments to classes that give you trouble after-the-fact (and eventually find those breakpoints that makes sense _for_ the design)
+- Basic utilities (padding/margin classes,  etc)
+- Some additional files you can use for buttons and such (based on font-size calcs so that they stay responsive with changes)
 
-<br><br>
 
-The `alt-colors` is experimental and meant for creating an alternative `dark-mode` theme. Disregard if you don't want to use. <br>
-
-Example:
-```html
-  <div [ngClass]="(themeService.darkThemeStatus$ | async) ? 'container dark-theme' : 'container' ">
-    Some stuff...
-  </div>
-```
 <br><br><br><br><br>
 
 # Install
