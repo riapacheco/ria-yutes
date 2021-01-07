@@ -33,3 +33,40 @@
       background-blend-mode: lighten | 
   */
 }
+
+@mixin cover-img {
+  background-image: linear-gradient(to bottom, #00000080, #00000020);
+  background-attachment: fixed;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 95vh;
+  position: relative;
+
+  .img-text {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: thin;
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+
+    @include respond-to(tablets) {
+      padding: 2rem;
+    }
+  }
+  .subtext {
+    color: white;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    opacity: 0.6;
+    font-weight: bold;
+  }
+}

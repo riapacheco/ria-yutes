@@ -59,6 +59,8 @@ $nav-btn-base-size: 1rem;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
+  padding-left: 1rem;
+  padding-right: 1rem;
   gap: 1rem;
 
   &.left { justify-content: flex-start; }
