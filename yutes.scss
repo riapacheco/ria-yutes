@@ -150,8 +150,21 @@ nav {
 .dark-theme {
   background-image: linear-gradient(to left, $alt-primary-medium-color, $alt-primary-dark-color);
   background-attachment: fixed;
+  
   color: $alt-text;
 
+  nav,
+  .nav,
+  &.nav,
+  .nav-menu,
+  app-footer,
+  .footer,
+  footer {
+    background-image: linear-gradient(to bottom right , $alt-primary-light-color, $alt-primary-dark-color);
+    background-attachment: fixed;
+    color: $alt-text;
+  }
+  
   .card {
     background-color: $alt-primary-medium-color;
     background-image: linear-gradient(to right, $alt-primary-medium-color, $alt-primary-dark-color);
@@ -165,8 +178,13 @@ nav {
     color: $alt-text;
     background-color: $alt-secondary-medium-color;
   }
+
   input {
     background-color: $alt-primary-dark-color;
     color: $alt-text;
+  }
+
+  .btn {
+    filter: brightness(0.8);
   }
 }
