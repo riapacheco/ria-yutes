@@ -81,6 +81,9 @@ small {
   padding: 0;
   line-height: auto;
 }
+p {
+  line-height: 1.5rem;
+}
 a {
   cursor: pointer;
   text-decoration: none;
@@ -161,5 +164,9 @@ nav {
   code {
     color: $alt-text;
     background-color: $alt-secondary-medium-color;
+  }
+  input {
+    background-color: $alt-primary-dark-color;
+    color: $alt-text;
   }
 }
