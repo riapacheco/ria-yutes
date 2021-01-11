@@ -56,10 +56,6 @@
     justify-content: center;
     align-items: center;
     margin-top: -5rem;
-
-    @include respond-to(tablets) {
-      padding: 2rem;
-    }
   }
   .subtext {
     color: white;

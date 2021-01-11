@@ -1,0 +1,42 @@
+
+footer {
+  background-color: #e9e9e9;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  
+  height: 1.5rem;
+
+
+  .footer-items {
+    display: flex;
+    font-size: 0.86rem;
+    justify-content: flex-start;
+
+    a {
+      padding-right: 1.5rem;
+      padding-left: 0rem;
+    }
+
+    &.right {
+      justify-content: flex-end;
+      
+      a {
+        padding-left: 1.5rem;
+        padding-right: 0rem;
+      }
+    }
+  }
+
+  &.dark-theme {
+    box-shadow: 8px 8px 18px #00000030;
+  }
+}
