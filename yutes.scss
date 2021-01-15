@@ -76,6 +76,12 @@ button {
     outline: unset;
   }
 }
+input[type="file" i]::-webkit-file-upload-button {
+  cursor: pointer !important;
+}
+input[type="file"] {
+  cursor: pointer;
+}
 small {
   margin: 0;
   padding: 0;
