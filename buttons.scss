@@ -1,6 +1,8 @@
 @use './colors.scss';
 @forward './colors.scss';
-
+@use './utilities.scss';
+@forward './utilities.scss';
+@import './utilities.scss';
 @import './colors.scss';
 
 $base-border-radius: 0.2rem;

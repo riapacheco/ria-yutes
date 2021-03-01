@@ -4,11 +4,6 @@
 @import './buttons.scss'; // Button sizes + colors
 @import './custom-yutes/yutes-nav.scss'; // Template for navbar
 
-
-$font-family: 'Nanum Gothic', sans-serif;
-$base-rem: 15px;
-$form-input-field-bg: $accent-light-color;
-
 html {
   font-size: $base-rem;
   font-family: $font-family;

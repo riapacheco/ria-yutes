@@ -36,15 +36,6 @@ Add to your main SCSS file:
   - Adjusts body sizes so that "100%" truly means "100%" when applied to a div
   - Removes scrollbar
   - Adjust images to base them on custom height (no stretching of images)
-<br>
-
-#### What you can do here
-Adjust 3 important variables at top of file:
-```scss
-$font-family: 'Nanum Gothic', sans-serif;
-$base-rem: 15px; // this is reflected in button sizes etc.
-$form-input-field-bg: $accent-light-color; // determines the color of input fields
-```
 <br><br>
 
 ### utilities.scss
@@ -53,6 +44,15 @@ $form-input-field-bg: $accent-light-color; // determines the color of input fiel
 - Provides containers that allows for automatic margins around content 
 - Provides flex-box classes for quicker access as you code
 <br><br>
+
+#### What you can do here
+Adjust 3 important variables at top of file:
+```scss
+$font-family: 'Nanum Gothic', sans-serif;
+$base-rem: 15px; // this is reflected in button sizes etc.
+$form-input-field-bg: $accent-light-color; // determines the color of input fields
+```
+<br>
 
 #### What you can do in your templates
 <br>

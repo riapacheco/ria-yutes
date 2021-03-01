@@ -1,8 +1,10 @@
 @use './colors.scss';
+@use './utilities.scss';
 @forward './colors.scss';
+@forward './utilities.scss';
 
 @import './colors.scss';
-@import './yutes.scss';
+@import './utilities.scss';
 
 $input-field-border-radius: 0.2rem;
 
