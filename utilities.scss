@@ -1,9 +1,4 @@
-/* -------------------------------------------------------------------------- */
-/*                                  CORE VARS                                 */
-/* -------------------------------------------------------------------------- */
-$font-family: 'Nanum Gothic', sans-serif;
-$base-rem: 15px;
-$form-input-field-bg: $accent-light-color;
+@import './variables.scss';
 
 /* -------------------------------------------------------------------------- */
 /*                              PADDING / MARGINS                             */
@@ -27,9 +22,7 @@ $form-input-field-bg: $accent-light-color;
 /* -------------------------------------------------------------------------- */
 /*                                 BREAKPOINTS                                */
 /* -------------------------------------------------------------------------- */
-$break-small: 540px;
-$break-medium: 800px;
-$break-large: 2400px;
+// Breakpoints are defined in 'variables.scss'
 
 @mixin respond-to($media) {
   @if $media == mobile {

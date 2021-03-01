@@ -1,15 +1,7 @@
-@use './colors.scss';
-@forward './colors.scss';
-@use './utilities.scss';
-@forward './utilities.scss';
+@import './variables.scss';
 @import './utilities.scss';
 @import './colors.scss';
 
-$base-border-radius: 0.2rem;
-$base-font-size: 0.95rem;
-$rounded-border-radius: 20px;
-%hover-to-brighten { filter: brightness(1.15); }
-%hover-to-darken { filter: brightness(0.85); }
 
 // Base Level Button Styles
 .btn {

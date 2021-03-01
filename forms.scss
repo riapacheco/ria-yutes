@@ -1,12 +1,6 @@
-@use './colors.scss';
-@use './utilities.scss';
-@forward './colors.scss';
-@forward './utilities.scss';
-
+@import './variables.scss';
 @import './colors.scss';
 @import './utilities.scss';
-
-$input-field-border-radius: 0.2rem;
 
 .form-group { // label + control
   display: flex;

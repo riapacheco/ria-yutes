@@ -19,6 +19,7 @@ Add to your main SCSS file:
 
 ## Files List
 - yutes.scss
+- variables.scss
 - utilities.scss
 - colors.scss
 - forms.scss
@@ -26,7 +27,7 @@ Add to your main SCSS file:
 - custom-yutes/yutes-nav.scss (personal one you don't need to use)
 <br><br>
 
-## What's included in each file
+## What's included
 <br>
 
 ### Main yutes.scss file
@@ -44,15 +45,6 @@ Add to your main SCSS file:
 - Provides containers that allows for automatic margins around content 
 - Provides flex-box classes for quicker access as you code
 <br><br>
-
-#### What you can do here
-Adjust 3 important variables at top of file:
-```scss
-$font-family: 'Nanum Gothic', sans-serif;
-$base-rem: 15px; // this is reflected in button sizes etc.
-$form-input-field-bg: $accent-light-color; // determines the color of input fields
-```
-<br>
 
 #### What you can do in your templates
 <br>
@@ -95,6 +87,8 @@ Starts with flex-direction, specified `nowrap` if elements inside are nowrap, an
 </div>
 ```
 
+#### variables.scss
+Any variables you find (other than colors and margin/padding args, are found here)
 
 <small>
   Note: this scss lib was created with an Angular app (v11+)
