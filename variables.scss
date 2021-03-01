@@ -1,8 +1,8 @@
-// Core vars
+// yutes.scss
 $font-family: 'Nanum Gothic', sans-serif;
 $base-rem: 15px;
 
-// Breakpoint sizes
+// Breakpoint sizes in utilities.scss
 $break-small: 540px;
 $break-medium: 800px;
 $break-large: 2400px;
@@ -14,5 +14,3 @@ $input-field-border-radius: 0.2rem;
 $base-border-radius: 0.2rem;
 $base-font-size: 0.95rem;
 $rounded-border-radius: 20px;
-%hover-to-brighten { filter: brightness(1.15); }
-%hover-to-darken { filter: brightness(0.85); }

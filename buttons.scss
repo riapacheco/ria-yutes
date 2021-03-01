@@ -2,13 +2,16 @@
 @import './utilities.scss';
 @import './colors.scss';
 
+// Pseudo Selectors
+%hover-to-brighten { filter: brightness(1.15); }
+%hover-to-darken { filter: brightness(0.85); }
 
 // Base Level Button Styles
 .btn {
   cursor: pointer;
   display: inline-block;
   padding: 0.5rem 1rem;
-  border-radius: $border-radius;
+  border-radius: $base-border-radius;
   font-size: $base-font-size;
 
   // Rounded

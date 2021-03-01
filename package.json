@@ -1,6 +1,6 @@
 {
   "name": "@riapacheco/yutes",
-  "version": "0.9.3",
+  "version": "0.9.4",
   "description": "Bare bones scss kit utilities for basic structure & color experimentation",
   "main": "index.js",
   "scripts": {},

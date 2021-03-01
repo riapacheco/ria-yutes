@@ -27,8 +27,8 @@
   select {
     font-size: $base-rem;
     height: $base-rem * 1.8;
-    background-color: $form-input-field-bg;
-    border-radius: $input-field-border-radius;
-    padding: $base-rem / 1.3;
+    background-color: $form-input-field-bg; // colors.scss
+    border-radius: $input-field-border-radius; // variables.scss
+    padding: $base-rem / 1.3; // variables.scss
   }
 }
