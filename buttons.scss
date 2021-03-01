@@ -1,7 +1,7 @@
-@import './colors.scss';
-
 @use './colors.scss';
 @forward './colors.scss';
+
+@import './colors.scss';
 
 $base-border-radius: 0.2rem;
 $base-font-size: 0.95rem;
