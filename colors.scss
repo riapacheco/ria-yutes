@@ -1,8 +1,13 @@
 /*
-    Choose 3 colors
+    Colors, alternative colors, utilities
 */
-/* ----------------------------- Main Variables ----------------------------- */
-// Colors
+
+/* -------------------------------------------------------------------------- */
+/*                                   COLORS                                   */
+/* -------------------------------------------------------------------------- */
+/* Color variables and class versions */
+
+/* ----------------------- Primary, Secondary, Accent ----------------------- */
 $primary-color: #b88d9b;
 $primary-light-color: #d398ad;
 $primary-medium-color:  #a27b88;
@@ -19,8 +24,7 @@ $accent-medium-color: #727272;
 $accent-dark-color: #414141;
 $accent-darkest-color: #262626;
 
-
-// States
+/* ---------------------------------- State --------------------------------- */
 $success: #2ecc71;
 $success-light: #7be9a9;
 $success-dark: #156f3b;
@@ -33,69 +37,107 @@ $danger: #ff554c;
 $danger-light: #ffb3af;
 $danger-dark: #a2322c;
 
-$info: $accent-medium-color;
-$info-light: $accent-light-color;
-$info-dark: $accent-dark-color;
+$info: #000000;
+$info-light: #fafafa;
+$info-dark: #000000;
 
-.success {
-  color: $success;
-  &.light { color: $success-light; }
-  &.dark { color: $success-dark; }
-}
-
-.warning {
-  color: $warning;
-  &.light { color: $warning-light; }
-  &.dark { color: $warning-dark; }
-}
-
-.danger {
-  color: $danger;
-  &.light { color: $danger-light; }
-  &.dark { color: $danger-dark; }
-}
-
-.info {
-  color: $info;
-  &.light { color: $info-light; }
-  &.dark { color: $info-dark; }
-}
-
-/* ---------------------------- Impacted Classes ---------------------------- */
-// Add Color
+/* ----------------------------- Class Versions ----------------------------- */
+// Primary, Secondary, Accent Classes
 .primary-color {
   color: $primary-color;
   &.light { color: $primary-light-color }
   &.medium { color: $primary-medium-color }
   &.dark { color: $primary-dark-color }
-
-  // And background
-  &.bg { background-color: $primary-color; }
-  &.light-bg { background-color: $primary-light-color; }
-  &.medium-bg { background-color: $primary-medium-color; }
-  &.dark-bg { background-color: $primary-dark-color; }
 }
+.primary-bg {
+  background-color: $primary-color;
+  &.light { background-color: $primary-light-color };
+  &.medium { background-color: $primary-medium-color }
+  &.dark { background-color: $primary-dark-color }
+}
+
 .secondary-color {
   color: $secondary-color;
   &.light { color: $secondary-light-color }
   &.medium { color: $secondary-medium-color }
   &.dark { color: $secondary-dark-color }
-
-  // Backgrounds
-  &.bg { background-color: $secondary-color; }
-  &.light-bg { background-color: $secondary-light-color; }
-  &.medium-bg { background-color: $secondary-medium-color; }
-  &.dark-bg { background-color: $secondary-dark-color; }
 }
+.secondary-bg {
+  background-color: $secondary-color;
+  &.light { background-color: $secondary-light-color }
+  &.medium { background-color: $secondary-medium-color }
+  &.dark { background-color: $secondary-dark-color }
+}
+
 .accent-color {
   color: $accent-color;
   &.light { color: $accent-light-color }
   &.medium { color: $accent-medium-color }
   &.dark { color: $accent-dark-color }
+}
+.accent-bg {
+  background-color: $accent-color;
+  &.light { background-color: $accent-light-color }
+  &.medium { background-color: $accent-medium-color }
+  &.dark { background-color: $accent-dark-color }
+}
 
-  // Backgrounds
-  &.bg { background-color: $accent-color; }
-  &.light-bg { background-color: $accent-light-color; }
-  &.medium-bg { background-color: $accent-medium-color; }
-  &.dark-bg { background-color: $accent-dark-color; }
+/* -------------------------------------------------------------------------- */
+/*                             ALTERNATIVE COLORS                             */
+/* -------------------------------------------------------------------------- */
+$alt-primary-color: #363539;
+$alt-primary-light-color: #3e3d41;
+$alt-primary-medium-color: #282729;
+$alt-primary-dark-color: #1e1d1f;
+
+$alt-secondary-color: #393131;
+$alt-secondary-light-color: #655c5c;
+$alt-secondary-medium-color: #393737;
+$alt-secondary-dark-color: #2b2727;
+
+$alt-accent-color: white;
+$alt-accent-light-color: white;
+$alt-accent-medium-color: white;
+$alt-accent-dark-color: white;
+
+$alt-text: #b8b8b8;
+
+/* ----------------------------- Class Versions ----------------------------- */
+.alt-primary-color {
+  color: $alt-primary-color;
+  &.light { color: $alt-primary-light-color; }
+  &.medium { color: $alt-primary-medium-color; }
+  &.dark { color: $alt-primary-dark-color; }
+}
+.alt-primary-bg {
+  background-color: $alt-primary-color;
+  &.light { background-color: $alt-primary-light-color; }
+  &.medium { background-color: $alt-primary-medium-color; }
+  &.dark { background-color: $alt-primary-dark-color; }
+}
+
+.alt-secondary-color {
+  color: $alt-secondary-color;
+  &.light { color: $alt-secondary-light-color; }
+  &.medium { color: $alt-secondary-medium-color; }
+  &.dark { color: $alt-secondary-dark-color; }
+}
+.alt-secondary-bg {
+  background-color: $alt-secondary-color;
+  &.light { background-color: $alt-secondary-light-color; }
+  &.medium { background-color: $alt-secondary-medium-color; }
+  &.dark { background-color: $alt-secondary-dark-color; }
+}
+
+.alt-accent { 
+  color: $alt-accent-color; 
+  &.light { color: $alt-accent-light-color; }
+  &.medium { color: $alt-accent-medium-color; }
+  &.dark { color: $alt-accent-dark-color; }
+}
+.alt-accent-bg {
+  background-color: $alt-accent-color; 
+  &.light { background-color: $alt-accent-light-color; }
+  &.medium { background-color: $alt-accent-medium-color; }
+  &.dark { background-color: $alt-accent-dark-color; }
 }

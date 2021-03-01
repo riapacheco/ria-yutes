@@ -1,26 +1,17 @@
-@import './mixins.scss'; // Mixins
-@import './colors.scss'; // 3 main colors + State colors
-@import './typography.scss'; // Includes base font-size, google imports, and heading adjustments
-@import './utilities.scss'; // Padding&Margin, breakpoint args, container-sm, container, and container-lg
-@import './alt-colors.scss'; // 3 alternative colors for .dark-theme (found in main file below)
-@import './cards.scss'; // Card styling 
-@import './buttons.scss'; // Includes button sizes (based on font calcs) and color variation classes
-@import './forms.scss'; // Form control: Sizing based on font calcs + colors
+@import './colors.scss'; // Brand, State, and Alternative color variables/classes
+@import './utilities.scss'; // Margin/Padding Classes, Responsive Mixins, 'Container' Classes, Flexbox
+@import './forms.scss'; // Flexbox for form-groups and bg-colors of controls
+@import './buttons.scss'; // Button sizes + colors
+@import './custom-yutes/yutes-nav.scss'; // Template for navbar
 
-/*
-    For easy import into component style files
-    @use '~@riapacheco/yutes/FILE_NAME.scss' as _abbr;
 
-    OR
-
-    @import '~@riapacheco/yutes/FILE_NAME.scss';
-*/
-
+$font-family: 'Nanum Gothic', sans-serif;
+$base-rem: 15px;
+$form-input-field-bg: $accent-light-color;
 
 html {
   font-size: $base-rem;
   font-family: $font-family;
-  letter-spacing: $default-letter-spacing;
   cursor: default;
 }
 
@@ -41,26 +32,29 @@ html {
   }
 }
 
-/* -------------------------- Browser/Webkit Resets ------------------------- */
-html,
-body {
+/* -------------------------------------------------------------------------- */
+/*                           Browser / Webkit Resets                          */
+/* -------------------------------------------------------------------------- */
+
+// To ensure accurate div adjustments
+html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   box-sizing: border-box;
-
   &::-webkit-scrollbar {
     display: none;
   }
 }
+
 img {
-  // width: 100%;
-  // height: auto !important;
   height: 100%;
   width: auto !important;
 }
+
+// Buttons
 button {
   -webkit-appearance: none;
   background-color: unset;
@@ -78,20 +72,20 @@ button {
     outline: unset;
   }
 }
+
+// Inputs
 input[type="file" i]::-webkit-file-upload-button {
   cursor: pointer !important;
 }
 input[type="file"] {
   cursor: pointer;
 }
-small {
-  margin: 0;
-  padding: 0;
-  line-height: auto;
+input {
+  outline: none;
+  border: none;
 }
-p {
-  line-height: 1.5rem;
-}
+
+// Anchors
 a {
   cursor: pointer;
   text-decoration: none;
@@ -125,15 +119,21 @@ a {
   }
 }
 
+// HTML Elements
+// Small
+small {
+  margin: 0;
+  padding: 0;
+  line-height: auto;
+}
+p {
+  line-height: 1.5rem;
+}
 .list-unstyled {
   list-style-type: none;
   text-decoration: none;
   margin: 0;
   padding: 0;
-}
-input {
-  outline: none;
-  border: none;
 }
 select {
   border: none;
@@ -148,51 +148,4 @@ nav {
   margin: 0;
   padding: 0;
   width: 100%;
-}
-
-
-/* -------------------------------------------------------------------------- */
-/*                                 DARK THEME                                 */
-/* -------------------------------------------------------------------------- */
-
-.dark-theme {
-  background-image: linear-gradient(to left, $alt-primary-medium-color, $alt-primary-dark-color);
-  background-attachment: fixed;
-  
-  color: $alt-text;
-
-  nav,
-  .nav,
-  &.nav,
-  .nav-menu,
-  app-footer,
-  .footer,
-  footer {
-    background-image: linear-gradient(to bottom right , $alt-primary-light-color, $alt-primary-dark-color);
-    background-attachment: fixed;
-    color: $alt-text;
-  }
-  
-  .card {
-    background-color: $alt-primary-medium-color;
-    background-image: linear-gradient(to right, $alt-primary-medium-color, $alt-primary-dark-color);
-    color: $alt-text;
-  }
-  hr {
-    opacity: 0.03;
-    
-  }
-  code {
-    color: $alt-text;
-    background-color: $alt-secondary-medium-color;
-  }
-
-  input {
-    background-color: $alt-primary-dark-color;
-    color: $alt-text;
-  }
-
-  .btn {
-    filter: brightness(0.8);
-  }
 }

@@ -1,5 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                              PADDING / MARGINS                             */
+/* -------------------------------------------------------------------------- */
 
-/* ------------------------ Padding & Margin Classes ------------------------ */
 @each $abbr, $name in ("t": "top", "r": "right", "b": "bottom", "l": "left") {
   @for $i from 1 through 20 {
     .m#{$abbr}-#{$i} {
@@ -7,7 +9,6 @@
     }
   }
 }
-
 @each $abbr, $name in ("t": "top", "r": "right", "b": "bottom", "l": "left") {
   @for $i from 1 through 20 {
     .p#{$abbr}-#{$i} {
@@ -16,87 +17,85 @@
   }
 }
 
-/* -------------------------- Breakpoint Arguments -------------------------- */
-// In the event of NOT using breakpoint observer
-$break-small: 370px;
-$break-medium: 920px;
-$break-large: 1024px;
+/* -------------------------------------------------------------------------- */
+/*                                 BREAKPOINTS                                */
+/* -------------------------------------------------------------------------- */
+$break-small: 540px;
+$break-medium: 800px;
+$break-large: 2400px;
 
 @mixin respond-to($media) {
-  @if $media == smartphones {
+  @if $media == mobile {
     @media only screen and (max-width: $break-small) {
       @content;
     }
-  } @else if $media == tablets {
+  } @else if $media == tablet {
     @media only screen and (min-width: $break-small + 1px) and (max-width: $break-medium) {
       @content;
     }
-  } @else if $media == desktops {
+  } @else if $media == desktop {
     @media only screen and (min-width: $break-medium + 1) {
       @content;
     }
   }
 }
 
-/* ------------------------------- Containers ------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                 CONTAINERS                                 */
+/* -------------------------------------------------------------------------- */
 .container-sm {
   width: 30%;
   margin: auto;
 
-  @include respond-to(tablets) {
-    width: 70%;
+  @include respond-to(tablet) {
+    width: 40%;
   }
-  @include respond-to(smartphones) {
-    width: 95%;
+  @include respond-to(mobile) {
+    width: 90%;
   }
 }
 .container {
   width: 65%;
   margin: auto;
 
-  @include respond-to(tablets) {
-    width: 80%;
+  @include respond-to(tablet) {
+    width: 70%;
   }
-  @include respond-to(smartphones) {
-    width: 95%;
+  @include respond-to(mobile) {
+    width: 90%;
   }
 }
 .container-lg {
   width: 90%;
   margin: auto;
 
-  @include respond-to(tablets) {
+  @include respond-to(tablet) {
     width: 90%;
   }
-  @include respond-to(smartphones) {
+  @include respond-to(mobile) {
     width: 95%;
   }
-}
-.container-mobile {
-  width: 95%;
-  margin: auto;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                                   FLEXBOX                                  */
 /* -------------------------------------------------------------------------- */
-/*
-    Had to add this, since @angular/flex-box doesn't work with Safari
-*/
+
+// Flex direction
 .flex-column { display: flex; flex-direction: column; }
 .flex-row { display: flex; flex-direction: row; }
 
-// Nowrap (wrap is default)
+// If nowrap
 .nowrap { flex-wrap: nowrap; }
 
-// Align Items
+// Align-Items
 .align-start      { align-items: flex-start; }
 .align-end        { align-items: flex-end; }
 .align-center     { align-items: center; }
 .align-stretch    { align-items: stretch; }
 .align-baseline   { align-items: baseline; }
 
-// Align Self
+// Align-Self
 .align-self-start     { align-self: flex-start; }
 .align-self-end       { align-self: flex-end; }
 .align-self-center    { align-self: center; }
@@ -112,7 +111,7 @@ $break-large: 1024px;
 .justify-between  { justify-content: space-between; }
 .justify-around   { justify-content: space-around; }
 
-// Justify Self
+// Justify-Self
 .justify-self-start     { justify-self:flex-start; }
 .justify-self-end       { justify-self: flex-end; }
 .justify-self-center    { justify-self: center; }

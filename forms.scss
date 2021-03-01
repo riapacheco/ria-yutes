@@ -1,72 +1,37 @@
-@use './colors.scss' as _color;
-@use './typography.scss' as _font;
+@import './colors.scss';
 
-$label-text-size: 0.96rem;
-$input-text-size: 0.96rem;
+@use './colors.scss';
+@forward './colors.scss';
 
-.form-group {
+$input-field-border-radius: 0.2rem;
+
+.form-group { // label + control
   display: flex;
   flex-flow: column nowrap;
 
-  label {
-    padding-left: 0.2rem;
-    padding-bottom: 0.2rem;
+  &.row {
+    flex-flow: row nowrap;
+  }
 
-    font-size: $label-text-size;
-    &.sm {
-      font-size: _font.$sm-body-font;
-      text-transform: uppercase;
-      letter-spacing: _font.$loose-letter-spacing;
-    }
-    &.md { font-size: _font.$md-body-font; }
-    &.lg { font-size: _font.$lg-body-font; }
+  label {
+    padding-left: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   input {
     display: inline-block;
     
-    font-size: $input-text-size;
-    height: $input-text-size * 1.8;
-    background-color: _color.$accent-light-color;
-    padding: $input-text-size / 1.4;
-    border-radius: 0.2rem;
-    
-    &.sm {
-      font-size: _font.$sm-body-font;
-      text-transform: uppercase;
-      letter-spacing: _font.$loose-letter-spacing;
-    }
-    &.md { font-size: _font.$md-body-font; }
-    &.lg { font-size: _font.$lg-body-font; }
+    font-size: $base-rem;
+    background-color: $form-input-field-bg;
+    border-radius: $input-field-border-radius;
+    padding: $base-rem / 1.3;
   }
 
   select {
-    font-size: $input-text-size;
-    height: $input-text-size * 1.8;
-    background-color: _color.$accent-light-color;
-    padding: 0.3rem;
-    border-radius: 0.2rem;
-    &.sm {
-      font-size: _font.$md-body-font;
-      &.header {
-        text-transform: uppercase;
-        letter-spacing: _font.$loose-letter-spacing;
-      }
-    }
-    &.md { font-size: _font.$md-body-font; }
-    &.lg { font-size: _font.$lg-body-font; }
-  }
-
-  textarea {
-    font-size: _font.$md-body-font;
-    &.sm {
-      font-size: _font.$md-body-font;
-      &.header {
-        text-transform: uppercase;
-        letter-spacing: _font.$loose-letter-spacing;
-      }
-    }
-    &.md { font-size: _font.$md-body-font; }
-    &.lg { font-size: _font.$lg-body-font; }
+    font-size: $base-rem;
+    height: $base-rem * 1.8;
+    background-color: $form-input-field-bg;
+    border-radius: $input-field-border-radius;
+    padding: $base-rem / 1.3;
   }
 }
