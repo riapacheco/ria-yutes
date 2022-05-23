@@ -16,12 +16,12 @@ html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
 
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: unset;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased !important;
+  -moz-font-smoothing: unset !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-backface-visibility: hidden !important;
+  -moz-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
 
   &:focus {
     outline: none;
