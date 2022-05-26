@@ -24,7 +24,6 @@ Add to your main SCSS file:
 - colors.scss
 - forms.scss
 - buttons.scss
-- custom-yutes/yutes-nav.scss (personal one you don't need to use)
 <br><br>
 
 ## What's included
