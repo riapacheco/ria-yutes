@@ -20,7 +20,7 @@
 The `@riapacheco/yutes` package is a (_really really_) lightweight (and agnostic) `SCSS` pack intended to provide **utilities** similar to those found in common frameworks like `Bootstrap`, but without the rigidness that limits fluid design. 
 
 These utilities are made possible by `Sass` features like `@each` & `@for`, and through intentional design of classes, like the time-intensive [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) classes.
-![Padding and Margin](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/utilities_yutes_Z2nJPrMxi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654488698871)
+![Padding and Margin](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/utilities_yutes_Z2nJPrMxi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654488698871?raw=true)
 
 # TLDR
 This package expedites your workflow with:
@@ -33,7 +33,7 @@ This package expedites your workflow with:
 	* 3-color schemes (`/yutes/colors.scss`)
 	* Button adjustments for`border-radius` and responsive sizing
 
-![Example of Flexbox Classes](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/carbon_flexbox_0i-zF_D84.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489041732)
+![Example of Flexbox Classes](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/carbon_flexbox_0i-zF_D84.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489041732?raw=true)
 
 ---
 
@@ -70,23 +70,23 @@ In your main SCSS file, add:
 
 ## utilities
 In the template ⤵️
-![Utilities.scss in HTML](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/utilitiesHtml_boKxlhxZu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654488880634)
+![Utilities.scss in HTML](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/utilitiesHtml_boKxlhxZu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654488880634?raw=true)
 
 ## colors
 Change colors ⤵️
-![Colors file](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/colorsStateFile_cePCLrHd8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489086879)
+![Colors file](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/colorsStateFile_cePCLrHd8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489086879?raw=true)
 Use classes in your template ⤵️
-![Color Classes](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/colorClasses_DUKwrD7mO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489120721)
+![Color Classes](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/colorClasses_DUKwrD7mO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489120721?raw=true)
 
 ## forms
 In the template ⤵️
-![form in template](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/formGroup_guygngTEE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489168336)
+![form in template](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/formGroup_guygngTEE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489168336?raw=true)
 
 ## buttons
 Configurable in the `buttons.scss` file ⤵️
-![button config section](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/buttonConfigs_an7kAt1uz.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489297185)
+![button config section](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/buttonConfigs_an7kAt1uz.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489297185?raw=true)
 Usage in the `html` template ⤵️
-![button usage in templates](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/buttonHtml_zJGQx5-p7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489328307)
+![button usage in templates](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/buttonHtml_zJGQx5-p7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489328307?raw=true)
 
 
 
