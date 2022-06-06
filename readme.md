@@ -20,7 +20,7 @@
 The `@riapacheco/yutes` package is a (_really really_) lightweight (and agnostic) `SCSS` pack intended to provide **utilities** similar to those found in common frameworks like `Bootstrap`, but without the rigidness that limits fluid design. 
 
 These utilities are made possible by `Sass` features like `@each` & `@for`, and through intentional design of classes, like the time-intensive [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) classes.
-![Padding and Margin](/media/carbon_utilities.svg)
+![Padding and Margin](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/utilities_yutes_Z2nJPrMxi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654488698871)
 
 # TLDR
 This package expedites your workflow with:
@@ -33,7 +33,7 @@ This package expedites your workflow with:
 	* 3-color schemes (`/yutes/colors.scss`)
 	* Button adjustments for`border-radius` and responsive sizing
 
-![Example of Flexbox Classes](/media/flexbox_carbon.svg)
+![Example of Flexbox Classes](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/carbon_flexbox_0i-zF_D84.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489041732)
 
 ---
 
@@ -66,25 +66,27 @@ In your main SCSS file, add:
 ---
 
 # Config and Usage Examples
+> <small> Note: some of the below images did not render correctly resulting in some spaces missing between element selectors and the class, disregard and assume typical application of directive (element) behavior :)  </small>
+
 ## utilities
 In the template ⤵️
-![Utilities.scss in HTML](/media/utilitiesHtml.svg)
+![Utilities.scss in HTML](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/utilitiesHtml_boKxlhxZu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654488880634)
 
 ## colors
 Change colors ⤵️
-![Colors file](/media/colorsStateFile.svg)
+![Colors file](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/colorsStateFile_cePCLrHd8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489086879)
 Use classes in your template ⤵️
-![Color Classes](/media/colorClasses.svg)
+![Color Classes](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/colorClasses_DUKwrD7mO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489120721)
 
 ## forms
 In the template ⤵️
-![form in template](/media/formGroup.svg)
+![form in template](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/formGroup_guygngTEE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489168336)
 
 ## buttons
 Configurable in the `buttons.scss` file ⤵️
-![button config section](/media/buttonConfigs.svg)
+![button config section](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/buttonConfigs_an7kAt1uz.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489297185)
 Usage in the `html` template ⤵️
-![button usage in templates](/media/buttonHtml.svg)
+![button usage in templates](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/buttonHtml_zJGQx5-p7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489328307)
 
 
 
