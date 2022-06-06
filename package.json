@@ -1,9 +1,12 @@
 {
   "name": "@riapacheco/yutes",
-  "version": "2.0.3",
+  "version": "2.1.0",
   "description": "Bare bones scss kit utilities for basic structure & color experimentation",
   "main": "index.js",
   "scripts": {},
   "author": "Ria Pacheco",
-  "license": "Public Domain"
+  "license": "Public Domain",
+  "dependencies": {
+    "14": "^3.1.6"
+  }
 }
