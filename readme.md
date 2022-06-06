@@ -1,122 +1,94 @@
 # Yutes [utilities]
 
-This SCSS package was designed to quickly get up-and-running with:
-1. 3 brand color system (colors.scss), to be adjusted and customized as your app evolves
-2. Basic utilities: stripped webkit default styles, cleaned anti-aliasing, margin and padding arguments (with bootstrap-style names), responsive arguments, etc.
-<br><br>
 
-### Installation & Usage
-Terminal:
+
+#### Skip Ahead
+- [Purpose](#purpose)
+- [TLDR version](#tldr)
+- [Installation](#installation)
+- [Included Files](#included-files)
+- [Config and Usage Examples](#config-and-usage-examples)
+  - [utilities](#utilities)
+  - [colors](#colors)
+  - [forms](#forms)
+  - [buttons](#buttons)
+
+---
+
+
+# Purpose
+The `@riapacheco/yutes` package is a (_really really_) lightweight (and agnostic) `SCSS` pack intended to provide **utilities** similar to those found in common frameworks like `Bootstrap`, but without the rigidness that limits fluid design. 
+
+These utilities are made possible by `Sass` features like `@each` & `@for`, and through intentional design of classes, like the time-intensive [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) classes.
+![Padding and Margin](/media/carbon_utilities.svg)
+
+# TLDR
+This package expedites your workflow with:
+* Ready-made utility classes (e.g. `mr-2` for `margin-right: 2rem;`)
+* Complete **Browser / Webkit** default style <u>overrides</u>, including: 
+  * Blue outlines on inputs
+  * Weird text sizing; and
+  * General element `width`/`height` behaviors that prohibit consistency
+* Freedom to start with bare-bones utilities first, to enable _structure_, before allowing you to evolve personality-driven styles through (optional):
+	* 3-color schemes (`/yutes/colors.scss`)
+	* Button adjustments for`border-radius` and responsive sizing
+
+![Example of Flexbox Classes](/media/flexbox_carbon.svg)
+
+---
+
+
+# Installation
+
+
+To install from NPM
 ```bash
-  npm install @riapacheco/yutes
+$ npm install @riapacheco/yutes
 ```
-Add to your main SCSS file:
+In your main SCSS file, add:
 ```scss
   @import '~@riapacheco/yutes/yutes.scss';
   @import '~@riapacheco/yutes/colors.scss';
 ```
-<br><br>
 
-## Files List
-- yutes.scss
-- utilities.scss
-- variables.scss
-- colors.scss
-- forms.scss
-- buttons.scss
-<br><br>
+---
 
-## What's included
-<br>
+# Included Files
 
-### Main yutes.scss file
-- Imports supporting files to create module
-- Strips webkit/browser styles that impede own styling
-  - Typical elements: inputs, buttons, anchors
-  - Adjusts body sizes so that "100%" truly means "100%" when applied to a div
-  - Removes scrollbar
-  - Adjust images to base them on custom height (no stretching of images)
-<br><br>
+| File | Features | Usage Example Links |
+|:--------:| :-------------| :---- |
+| yutes.scss | 👉  Imports for all helper stylesheets <br> 👉  **Overrides for all browser/webkit default styles from browser:** Unsets `button`, unsets `input`, fixes `img` weird sizing, removes `scrollbar`, removes **active** styles for anchors [`a`], removes padding/margin on `<small>` elements, removes styles on `select` and `textarea`, removes margin/padding from `<nav>` element | <small>none</small> |
+| utilities.scss | 👉  Dynamic `padding` and `margin` classes <br> 👉  Optional containers: (e.g. `.container-sm`, `.container`) for centered narrow content <br> 👉  Flexbox classes for in-template structuring | [utilities](#utilities) |
+| colors.scss | 👉  Three color scheme with various shades <br> 👉  State colors including `$success`, `$warning`, `$danger`, and `$info` (with 3 shades each) <br> 👉  Straight color classes of all, allowing you to change colors and background colors in the HTML template <br> 👉 Note: includes `$form-input-field-bg` for `forms.scss` file | [colors](#colors) |
+|forms.scss | 👉  Enables `form-group` elements to contain stacked groups of labels and inputs or controls <br> 👉 Adjusts `select` element to match rest of styling and dynamically change with `rem` calculations | [forms](#forms) |
+|buttons.scss | 👉  Configurable vars (`$base-border-radius`, `$base-font-size`, and `$rounded-border-radius` <br> 👉  pseudo selectors that enable `hover` effects of brightening or darkening (for flexibility) <br> 👉  Bootstrap-like classes for creating buttons quickly with configuration via chained classes | [buttons](#buttons)
 
-### utilities.scss
-- Provides margin and padding arguments 
-- Supplies a mixin that can adjust individual selectors in your code with responsive changes, according to the breakpoint name you specify
-- Provides containers that allows for automatic margins around content 
-- Provides flex-box classes for quicker access as you code
-<br><br>
+---
 
-##### What you can do in your templates
+# Config and Usage Examples
+## utilities
+In the template ⤵️
+![Utilities.scss in HTML](/media/utilitiesHtml.svg)
 
-###### Adding Margin / Padding as Classes
-Adding `class="mr-1"` will apply `margin-right: 1rem` to an element, adding `class="mb-2"` will applying `margin-bottom: 2rem;` to an element; and so on.
-<br>
+## colors
+Change colors ⤵️
+![Colors file](/media/colorsStateFile.svg)
+Use classes in your template ⤵️
+![Color Classes](/media/colorClasses.svg)
 
-###### Add Media Queries to Individual SCSS Classes
-```scss
-// Your div
-.some-div {
-  width: 60%;
-  margin: auto;
+## forms
+In the template ⤵️
+![form in template](/media/formGroup.svg)
 
-  @include respond-to(mobile) {
-    width: 90%;
-  }
-}
-```
-Note: change breakpoints in the `utilities.scss` file (they're variables)
-<br>
+## buttons
+Configurable in the `buttons.scss` file ⤵️
+![button config section](/media/buttonConfigs.svg)
+Usage in the `html` template ⤵️
+![button usage in templates](/media/buttonHtml.svg)
 
-###### To add containers
-`class="container"`
-<br>
 
-###### To add flexbox
-Starts with flex-direction, specified `nowrap` if elements inside are nowrap, and classed that define keys like 'align-items' and 'justify-content':
-```html
-<div class="flex-row nowrap align-center justify-between">
-  <div>
-    <h2>This is the Title of a Modal
-  </div>
 
-  <!--This 'close' button will appear on the opposite side of the title-->
-  <a (click)="closeModal()">
-    Close
-  </a>
-</div>
-```
-<br><br>
+---
 
-### variables.scss
-Any variables you find (other than colors and margin/padding args, are found here)
-<br><br>
-
-### colors.scss
-- Change the primary, secondary, accent, state, and alternative colors
-- Change the way classes were created 
-<br>
-
-### forms.scss
-Example:
-```html
-<div class="form">
-  <label>First Name</label>
-  <input
-    type="text"
-    name="firstName"
-    class="form-control">
-</div>
-```
-<br><br>
-
-### buttons.scss
-Add buttons with color and color variations:
-```html
-<a class="btn btn-sm primary dark">
-  Click!
-</a>
-```
-<br><br>
-
-<small>
-  Note: this scss lib was created with an Angular app (v11+)
+<small> Remember... it's just a bunch of SCSS files. You always have the option of going into the `node_modules/@riapacheco` file to make all the changes you need!
 </small>

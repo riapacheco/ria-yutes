@@ -1,6 +1,9 @@
-@import './variables.scss';
 @import './utilities.scss';
 @import './colors.scss';
+
+$base-border-radius: 0.2rem;
+$base-font-size: 0.95rem;
+$rounded-border-radius: 20px;
 
 // Pseudo Selectors
 %hover-to-brighten { filter: brightness(1.15); }
