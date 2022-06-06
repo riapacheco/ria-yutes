@@ -50,6 +50,9 @@ In your main SCSS file, add:
   @import '~@riapacheco/yutes/yutes.scss';
   @import '~@riapacheco/yutes/colors.scss';
 ```
+<br><br>
+
+> <small> Due to recent node issues... there's a bunch of files included with this package (`node_modules`) that are not actual dependencies for the package itself; and were only included so it could publish. Feel free to remove these files after installing :) </small>
 
 ---
 
