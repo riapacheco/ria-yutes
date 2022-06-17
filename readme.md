@@ -3,14 +3,14 @@
 
 The `@riapacheco/yutes` package is a _really_ lightweight `SCSS` pack of stylesheets intended to provide **utilities** similar to those found in common frameworks like [**Bootstrap**](https://getbootstrap.com/docs/4.0/utilities/spacing/) (with some slight differences) but without the rigidness that limits fluid design.
 
-<br><br><br>
+<br><br><br><br>
 
 Contents ⤵️
 
 - [Installation](#installation)
 - [Usage](#usage)
 
-<br><br><br>
+<br><br><br><br>
 
 # Installation
 
@@ -34,12 +34,11 @@ Import to your main `SCSS` file**
 </small>
 
 
-<br><br><br>
+<br><br><br><br>
 
 
 # Usage
 
-- [Utilities](#utilities)
 - [Padding](#padding)
 - [Margins](#margins)
 - [Horizontal Centering **(New!)**](#horizontal-centering-new)
@@ -49,14 +48,12 @@ Import to your main `SCSS` file**
 - [Buttons](#buttons)
 - [Resets](#resets)
 
-<br><br><br>
-
-# Utilities 
+<br><br><br><br> 
 
 <!-- --------------------------- Padding | START --------------------------- -->
 
 
-## Padding
+# Padding
 
 Add padding to an element with shorthand classes that specify padding with a `p` followed by direction and size.
 
@@ -105,14 +102,14 @@ Set `direction` with one of the following properties:
 
 <div class="space-sm"></div>
 
-<br><br><br>
+<br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Horizontal Centering_](#horizontal-centering-new)</small>
 
 <!-- --------------------------- Margin | START ---------------------------- -->
 
-## Margins
+# Margins
 
 Add margin values to an element with shorthand classes that specify margin with a `m` followed by direction and size.
 <br><br>
@@ -162,7 +159,7 @@ Set `direction` with one of the following properties:
 
 <div class="space-sm"></div>
 
-<br><br><br>
+<br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Flexbox_](#flexbox)</small>
@@ -170,7 +167,7 @@ Set `direction` with one of the following properties:
 
 <!-- -------------------- Horizontal Centering | START --------------------- -->
 
-## Horizontal Centering (New)
+# Horizontal Centering (New)
 
 Assign a width to an element (e.g. wrappers) that centers horizontally with a shorthand class that adds `mx-auto-` followed by the width `size` in pixels.
 
@@ -212,7 +209,7 @@ Supports width between `1` and `3000` pixels.
 
 <div class="space-sm"></div>
 
-<br><br><br>
+<br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Breakpoints_](#breakpoints)</small>
@@ -220,7 +217,7 @@ Supports width between `1` and `3000` pixels.
 
 <!-- --------------------------- Flexbox | START --------------------------- -->
 
-## Flexbox
+# Flexbox
 Apply flexbox styles to elements with shorthand classes that specify direction, wrapping, item alignment, and contents justification. For refresher on flexbox, visit [this link](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 ##### SYNTAX
@@ -254,7 +251,7 @@ Two buttons should push to opposite directions within a container modal:
   justify-content: space-between;
 -->
 ```
-Result
+Result <br>
 ![Buttons justify-between](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100,w-600/justify-between_sELzDFTQf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655500435763)
 
 <div class="space"></div>
@@ -280,7 +277,7 @@ Two buttons should push to the right:
 -->
 ```
 
-Result:
+Result: <br>
 ![Buttons flex-end](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100,w-600/flex-end_IH68y_3fs.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655500435765)
 
 
@@ -289,7 +286,7 @@ Result:
 
 <div class="space-sm"></div>
 
-<br><br><br>
+<br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Colors_](#colors)</small>
@@ -298,7 +295,7 @@ Result:
 
 <!-- ------------------------- Breakpoints | START ------------------------- -->
 
-## Breakpoints
+# Breakpoints
 
 Add styles to existing classes that only apply when specific `size` is specified.
 
@@ -370,7 +367,7 @@ Feel free to change the breakpoint value inside the `breakpoints.scss` file. The
 
 <div class="space-sm"></div>
 
-<br><br><br>
+<br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Buttons_](#buttons)</small>
@@ -378,7 +375,7 @@ Feel free to change the breakpoint value inside the `breakpoints.scss` file. The
 
 <!-- --------------------------- Colors | START ---------------------------- -->
 
-## Colors
+# Colors
 Access colors from the `colors.scss` file to change the variables below:
 
 #### Primary, Secondary, and Accent
@@ -447,14 +444,14 @@ $danger-dark: #a2322c;
 
 <div class="space-sm"></div>
 
-<br><br><br>
+<br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Forms_](#forms)</small>
 
 <!-- --------------------------- Buttons | START --------------------------- -->
 
-## Buttons
+# Buttons
 Immediately add responsive padding and color to `<button>` and `<a>` elements with shorthand classes that chain additional styles to the element.
 
 ##### SYNTAX
@@ -473,7 +470,7 @@ Immediately add responsive padding and color to `<button>` and `<a>` elements wi
 
 <div class="space-sm"></div>
 
-Result:
+Result: <br>
 ![Rounded Raised Button](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100/raised-rounded_1__rSTWAjIBr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655502002113)
 
 <div class="space-sm"></div>
@@ -495,14 +492,14 @@ Initializer class will always be `btn`
 
 <div class="space-sm"></div>
 
-<br><br><br>
+<br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Resets_](#resets)</small>
 
 <!-- ---------------------------- Forms | START ---------------------------- -->
 
-## Forms
+# Forms
 Stack labels on top of inputs with simple `input` background colors by using the `form-group` class on each group that contains a `<label>` and `<input>` element.
 
 ##### SYNTAX
@@ -527,7 +524,7 @@ Stack labels on top of inputs with simple `input` background colors by using the
 </div>
 
 ```
-Result:
+Result: <br>
 ![Example Form Group](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100,w-700/register_o4EqihR97.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655503032055)
 
 <!-- ----------------------------- Forms | END ----------------------------- -->
@@ -551,7 +548,7 @@ Result:
 
 <!-- --------------------------- Resets | START ---------------------------- -->
 
-## Resets
+# Resets
 The `resets` stylesheet was created to override default webkit / browser styles. It applies the following:
 
 * All elements' `box-sizing` properties are set to `border-box`
@@ -567,7 +564,7 @@ The `resets` stylesheet was created to override default webkit / browser styles.
 
 Note: You can apply `list-unstyled` class to any `ul` or `ol` elements you wish to have styling removed from
 
-<br><br><br>
+<br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>
 
