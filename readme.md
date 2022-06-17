@@ -3,14 +3,14 @@
 
 The `@riapacheco/yutes` package is a _really_ lightweight `SCSS` pack of stylesheets intended to provide **utilities** similar to those found in common frameworks like [**Bootstrap**](https://getbootstrap.com/docs/4.0/utilities/spacing/) (with some slight differences) but without the rigidness that limits fluid design.
 
----
+<br><br><br>
 
 Contents ⤵️
 
 - [Installation](#installation)
 - [Usage](#usage)
 
----
+<br><br><br>
 
 # Installation
 
@@ -34,7 +34,7 @@ Import to your main `SCSS` file**
 </small>
 
 
----
+<br><br><br>
 
 
 # Usage
@@ -49,15 +49,12 @@ Import to your main `SCSS` file**
 - [Buttons](#buttons)
 - [Resets](#resets)
 
-<div class="space dotted"></div>
-
+<br><br><br>
 
 # Utilities 
 
 <!-- --------------------------- Padding | START --------------------------- -->
 
-<small>[_↑ Back to List_](#usage)</small>
-<small>[_↓ Skip to next item: Margins_](#margins)</small>
 
 ## Padding
 
@@ -108,17 +105,17 @@ Set `direction` with one of the following properties:
 
 <div class="space-sm"></div>
 
----
+<br><br><br>
 
-<small>[_↑ Back to List_](#usage)</small>
-<small>[_↓ Skip to next item: Horizontal Centering_](#horizontal-centering-new)</small>
+<small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
+<small>[_↓ Skip to: Horizontal Centering_](#horizontal-centering-new)</small>
 
 <!-- --------------------------- Margin | START ---------------------------- -->
 
 ## Margins
 
 Add margin values to an element with shorthand classes that specify margin with a `m` followed by direction and size.
-<br>
+<br><br>
 
 ##### SYNTAX
 
@@ -165,10 +162,10 @@ Set `direction` with one of the following properties:
 
 <div class="space-sm"></div>
 
----
+<br><br><br>
 
-<small>[_↑ Back to List_](#usage)</small>
-<small>[_↓ Skip to next item: Flexbox_](#flexbox)</small>
+<small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
+<small>[_↓ Skip to: Flexbox_](#flexbox)</small>
 
 
 <!-- -------------------- Horizontal Centering | START --------------------- -->
@@ -215,10 +212,10 @@ Supports width between `1` and `3000` pixels.
 
 <div class="space-sm"></div>
 
----
+<br><br><br>
 
-<small>[_↑ Back to List_](#usage)</small>
-<small>[_↓ Skip to next item: Breakpoints_](#breakpoints)</small>
+<small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
+<small>[_↓ Skip to: Breakpoints_](#breakpoints)</small>
 
 
 <!-- --------------------------- Flexbox | START --------------------------- -->
@@ -292,10 +289,10 @@ Result:
 
 <div class="space-sm"></div>
 
----
+<br><br><br>
 
-<small>[_↑ Back to List_](#usage)</small>
-<small>[_↓ Skip to next item: Colors_](#colors)</small>
+<small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
+<small>[_↓ Skip to: Colors_](#colors)</small>
 
 
 
@@ -373,10 +370,10 @@ Feel free to change the breakpoint value inside the `breakpoints.scss` file. The
 
 <div class="space-sm"></div>
 
----
+<br><br><br>
 
-<small>[_↑ Back to List_](#usage)</small>
-<small>[_↓ Skip to next item: Buttons_](#buttons)</small>
+<small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
+<small>[_↓ Skip to: Buttons_](#buttons)</small>
 
 
 <!-- --------------------------- Colors | START ---------------------------- -->
@@ -450,10 +447,10 @@ $danger-dark: #a2322c;
 
 <div class="space-sm"></div>
 
----
+<br><br><br>
 
-<small>[_↑ Back to List_](#usage)</small>
-<small>[_↓ Skip to next item: Forms_](#forms)</small>
+<small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
+<small>[_↓ Skip to: Forms_](#forms)</small>
 
 <!-- --------------------------- Buttons | START --------------------------- -->
 
@@ -498,10 +495,10 @@ Initializer class will always be `btn`
 
 <div class="space-sm"></div>
 
----
+<br><br><br>
 
-<small>[_↑ Back to List_](#usage)</small>
-<small>[_↓ Skip to next item: Resets_](#resets)</small>
+<small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
+<small>[_↓ Skip to: Resets_](#resets)</small>
 
 <!-- ---------------------------- Forms | START ---------------------------- -->
 
@@ -570,7 +567,7 @@ The `resets` stylesheet was created to override default webkit / browser styles.
 
 Note: You can apply `list-unstyled` class to any `ul` or `ol` elements you wish to have styling removed from
 
----
+<br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>
 
