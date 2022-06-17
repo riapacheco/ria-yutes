@@ -1,99 +1,684 @@
-# Yutes [utilities]
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
+  * { font-smooth: antialiased !important; -webkit-font-smoothing: subpixel-antialiased !important; }
+  html { font-family: "Inter", sans-serif; }
+  body { letter-spacing: 0.03px; }
+  h1 { letter-spacing: -0.04rem; }
+  h2 { letter-spacing: -0.03rem; }
+  h5 { padding-top: 18px;}
+  hr {
+    opacity: 0.2;
+    margin-bottom: 40px !important;
+    margin-top: 40px !important;
+  }
+  .space {
+    display: block;
+    height: 20px;
+  }
+  .space-sm {
+    display: block;
+    height: 5px;
+  }
+  .space.dotted {
+    display: block;
+    width: 100%;
+    border-bottom: 1px dashed #00000020;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+</style>
 
+# Yutes [Utilities]
 
+The `@riapacheco/yutes` package is a _really_ lightweight `SCSS` pack of stylesheets intended to provide **utilities** similar to those found in common frameworks like [**Bootstrap**](https://getbootstrap.com/docs/4.0/utilities/spacing/) (with some slight differences) but without the rigidness that limits fluid design.
 
-#### Skip Ahead
-- [Purpose](#purpose)
-- [TLDR version](#tldr)
+---
+
+Contents ⤵️
+
 - [Installation](#installation)
-- [Included Files](#included-files)
-- [Config and Usage Examples](#config-and-usage-examples)
-  - [utilities](#utilities)
-  - [colors](#colors)
-  - [forms](#forms)
-  - [buttons](#buttons)
+- [Usage](#usage)
 
 ---
-
-
-# Purpose
-The `@riapacheco/yutes` package is a (_really really_) lightweight (and agnostic) `SCSS` pack intended to provide **utilities** similar to those found in common frameworks like `Bootstrap`, but without the rigidness that limits fluid design. 
-
-These utilities are made possible by `Sass` features like `@each` & `@for`, and through intentional design of classes, like the time-intensive [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) classes.
-![Padding and Margin](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/utilities_yutes_Z2nJPrMxi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654488698871?raw=true)
-
-# TLDR
-This package expedites your workflow with:
-* Ready-made utility classes (e.g. `mr-2` for `margin-right: 2rem;`)
-* Complete **Browser / Webkit** default style <u>overrides</u>, including: 
-  * Blue outlines on inputs
-  * Weird text sizing; and
-  * General element `width`/`height` behaviors that prohibit consistency
-* Freedom to start with bare-bones utilities first, to enable _structure_, before allowing you to evolve personality-driven styles through (optional):
-	* 3-color schemes (`/yutes/colors.scss`)
-	* Button adjustments for`border-radius` and responsive sizing
-
-![Example of Flexbox Classes](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/carbon_flexbox_0i-zF_D84.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489041732?raw=true)
-
----
-
 
 # Installation
 
+Install from [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) with command
 
-To install from NPM
 ```bash
-$ npm install @riapacheco/yutes
+  npm install @riapacheco/yutes
 ```
-In your main SCSS file, add:
+
+Import to your main `SCSS` file**
+
 ```scss
-  @import '~@riapacheco/yutes/yutes.scss';
-  @import '~@riapacheco/yutes/colors.scss';
+@import "~@riapacheco/yutes/main.scss";
+@import '~@riapacheco/yutes/breakpoints.scss';
 ```
+
 <br><br>
 
-> <small> Due to recent node issues... there's a bunch of files included with this package (`node_modules`) that are not actual dependencies for the package itself; and were only included so it could publish. Feel free to remove these files after installing :) </small>
+<small>
 
----
-
-# Included Files
-
-| File | Features | Usage Example Links |
-|:--------:| :-------------| :---- |
-| yutes.scss | 👉  Imports for all helper stylesheets <br> 👉  **Overrides for all browser/webkit default styles from browser:** Unsets `button`, unsets `input`, fixes `img` weird sizing, removes `scrollbar`, removes **active** styles for anchors [`a`], removes padding/margin on `<small>` elements, removes styles on `select` and `textarea`, removes margin/padding from `<nav>` element | <small>none</small> |
-| utilities.scss | 👉  Dynamic `padding` and `margin` classes <br> 👉  Optional containers: (e.g. `.container-sm`, `.container`) for centered narrow content <br> 👉  Flexbox classes for in-template structuring | [utilities](#utilities) |
-| colors.scss | 👉  Three color scheme with various shades <br> 👉  State colors including `$success`, `$warning`, `$danger`, and `$info` (with 3 shades each) <br> 👉  Straight color classes of all, allowing you to change colors and background colors in the HTML template <br> 👉 Note: includes `$form-input-field-bg` for `forms.scss` file | [colors](#colors) |
-|forms.scss | 👉  Enables `form-group` elements to contain stacked groups of labels and inputs or controls <br> 👉 Adjusts `select` element to match rest of styling and dynamically change with `rem` calculations | [forms](#forms) |
-|buttons.scss | 👉  Configurable vars (`$base-border-radius`, `$base-font-size`, and `$rounded-border-radius` <br> 👉  pseudo selectors that enable `hover` effects of brightening or darkening (for flexibility) <br> 👉  Bootstrap-like classes for creating buttons quickly with configuration via chained classes | [buttons](#buttons)
-
----
-
-# Config and Usage Examples
-> <small> Note: some of the below images did not render correctly resulting in some spaces missing between element selectors and the class, disregard and assume typical application of directive (element) behavior :)  </small>
-
-## utilities
-In the template ⤵️
-![Utilities.scss in HTML](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/utilitiesHtml_boKxlhxZu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654488880634?raw=true)
-
-## colors
-Change colors ⤵️
-![Colors file](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/colorsStateFile_cePCLrHd8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489086879?raw=true)
-Use classes in your template ⤵️
-![Color Classes](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/colorClasses_DUKwrD7mO.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489120721?raw=true)
-
-## forms
-In the template ⤵️
-![form in template](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/formGroup_guygngTEE.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489168336?raw=true)
-
-## buttons
-Configurable in the `buttons.scss` file ⤵️
-![button config section](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/buttonConfigs_an7kAt1uz.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489297185?raw=true)
-Usage in the `html` template ⤵️
-![button usage in templates](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/buttonHtml_zJGQx5-p7.png?ik-sdk-version=javascript-1.4.3&updatedAt=1654489328307?raw=true)
-
-
-
----
-
-<small> Remember... it's just a bunch of SCSS files. You always have the option of going into the `node_modules/@riapacheco` file to make all the changes you need!
+ **The `breakpoints.scss` import is optional. See the [breakpoints](#breakpoints) section for more details.
 </small>
+
+---
+
+# Usage
+
+- [Utilities](#utilities)
+- [Padding](#padding)
+- [Margins](#margins)
+- [Horizontal Centering **(New!)**](#horizontal-centering-new)
+- [Flexbox](#flexbox)
+- [Breakpoints **(New!)**](#breakpoints)
+- [Colors](#colors)
+- [Buttons](#buttons)
+- [Resets](#resets)
+
+<div class="space dotted"></div>
+
+<div style="width: 100%; display: flex; flex-flow: row-reverse nowrap; align-items: flex-start; justify-content: space-between;">
+
+  <div>
+  
+  <small>[_↑ Back to List_](#usage)</small>
+  </div>
+
+  <small>[_↓ Next item_](#margins)</small>
+</div>
+
+
+# Utilities 
+
+<!-- --------------------------- Padding | START --------------------------- -->
+
+## Padding
+Add padding to an element with shorthand classes that specify padding with a `p` followed by direction and size.
+
+##### SYNTAX
+
+```html
+<div class="p{direction}-{size}"></div>
+```
+
+##### EXAMPLE
+
+```html
+<!-- Adds `padding-top: 8rem;` to this element -->
+<div class="pt-8"></div>
+```
+
+##### COMPILES TO
+
+```scss
+div {
+  // padding-{direction}: {size};
+  padding-top: 8rem;
+}
+```
+
+##### VALUES
+
+Padding `size` is any number between the range of `1` through `30`. These represent multiples of your app's baseline font-size (`rem`) which enables better responsivity.
+
+Set `direction` with one of the following properties:
+| Property | Compiled value |
+|:-:|:-:|
+| `t` | top |
+| `b` | bottom |
+| `l` | left |
+| `r` | right |
+
+<div class="space-sm"></div>
+
+##### CONFIG FILE
+<code>@import '~@riapacheco/yutes/helper_files/_utilities.scss';</code>
+
+<div class="space-sm"></div>
+
+<!-- ---------------------------- Padding | END ---------------------------- -->
+
+<div class="space-sm"></div>
+
+<div class="space dotted"></div>
+
+<div style="
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-start;
+  justify-content: space-between;">
+  <div>
+  
+  <small>[_↑ Back to List_](#usage)</small>
+  </div>
+
+  <small>[_↓ Next item_](#horizontal-centering-new)</small>
+</div>
+
+<!-- --------------------------- Margin | START ---------------------------- -->
+
+## Margins
+
+Add margin values to an element with shorthand classes that specify margin with a `m` followed by direction and size.
+<br>
+
+##### SYNTAX
+
+```html
+<div class="m{direction}-{size}"></div>
+```
+
+##### EXAMPLE
+
+```html
+<!-- Adds `margin-right: 2rem;` to this element -->
+<div class="mr-2"></div>
+```
+
+##### COMPILES TO
+
+```scss
+div {
+  // margin-{direction}: {size};
+  margin-right: 2rem;
+}
+```
+
+##### VALUES
+
+Padding `size` is any number between the range of `1` through `30`. These represent multiples of your app's baseline font-size (`rem`) which enables better responsivity.
+
+Set `direction` with one of the following properties:
+| Property | Compiled value |
+|:-:|:-:|
+| `t` | top |
+| `b` | bottom |
+| `l` | left |
+| `r` | right |
+
+<div class="space-sm"></div>
+
+##### CONFIG FILE
+<code>@import '~@riapacheco/yutes/helper_files/_utilities.scss';</code>
+
+<div class="space-sm"></div>
+
+<!-- ---------------------------- Margin | END ----------------------------- -->
+
+<div class="space-sm"></div>
+
+<div class="space dotted"></div>
+
+<div style="
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-start;
+  justify-content: space-between;">
+  <div>
+  
+  <small>[_↑ Back to List_](#usage)</small>
+  </div>
+
+  <small>[_↓ Next item_](#flexbox)</small>
+</div>
+
+
+<!-- -------------------- Horizontal Centering | START --------------------- -->
+
+## Horizontal Centering (New)
+
+Assign a width to an element (e.g. wrappers) that centers horizontally with a shorthand class that adds `mx-auto-` followed by the width `size` in pixels.
+
+##### SYNTAX
+
+```html
+<div class="mx-auto-{size}px"></div>
+```
+
+##### EXAMPLE
+
+```html
+<div class="mx-auto-650px">This is a good width for tablets</div>
+```
+
+##### COMPILES TO
+
+```scss
+div {
+  // width: {size};
+  width: 650px;
+  margin: auto;
+}
+```
+
+##### VALUES
+
+Supports width between `1` and `3000` pixels.
+
+
+<div class="space-sm"></div>
+
+##### CONFIG FILE
+<code>@import '~@riapacheco/yutes/helper_files/_utilities.scss';</code>
+
+<div class="space-sm"></div>
+
+<!-- --------------------- Horizontal Centering | END ---------------------- -->
+
+<div class="space-sm"></div>
+
+<div class="space dotted"></div>
+
+<div style="
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-start;
+  justify-content: space-between;">
+  <div>
+  
+  <small>[_↑ Back to List_](#usage)</small>
+  </div>
+
+  <small>[_↓ Next item_](#breakpoints)</small>
+</div>
+
+
+<!-- --------------------------- Flexbox | START --------------------------- -->
+
+## Flexbox
+Apply flexbox styles to elements with shorthand classes that specify direction, wrapping, item alignment, and contents justification. For refresher on flexbox, visit [this link](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
+
+##### SYNTAX
+Add 3 - 4 classes to an element
+```html
+<div class="{direction} {nowrap*} {align} {justify}">
+  <div class="element-1"></div>
+  <div class="element-2"></div>
+</div>
+```
+<small>* By default, the element has `flex-wrap: wrap` value and requires a `nowrap` class to override</small>
+
+##### EXAMPLE
+Two buttons should push to opposite directions within a container modal:
+```html
+<div class="flex-row nowrap align-end justify-between">
+
+  <a class="cancel-btn">
+    Cancel
+  </a>
+
+  <a class="save-btn">
+    Save Changes
+  </a>
+</div>
+
+<!-- The above specifies: 
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: space-between;
+-->
+```
+Result
+![Buttons justify-between](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100,w-600/justify-between_sELzDFTQf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655500435763)
+
+<div class="space"></div>
+
+Two buttons should push to the right:
+```html
+<div class="flex-row nowrap align-end justify-end">
+
+  <a class="cancel-btn">
+    Cancel
+  </a>
+
+  <a class="save-btn">
+    Save Changes
+  </a>
+</div>
+
+<!-- The above specifies: 
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  justify-content: flex-end; 
+-->
+```
+
+Result:
+![Buttons flex-end](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100,w-600/flex-end_IH68y_3fs.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655500435765)
+
+
+<!-- ---------------------------- Flexbox | END ---------------------------- -->
+
+
+<div class="space-sm"></div>
+
+<div class="space dotted"></div>
+
+<div style="
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-start;
+  justify-content: space-between;">
+  <div>
+  
+  <small>[_↑ Back to List_](#usage)</small>
+  </div>
+
+  <small>[_↓ Next item_](#colors)</small>
+</div>
+
+
+
+<!-- ------------------------- Breakpoints | START ------------------------- -->
+
+## Breakpoints
+
+Add styles to existing classes that only apply when specific `size` is specified.
+
+##### IMPORT FIRST
+
+Since this is a special `mixin`, you'll have to import the `breakpoints.scss` file to the desired stylesheet.
+
+```scss
+// Top of your stylesheet
+@import "~@riapacheco/yutes/breakpoints.scss";
+```
+
+##### SYNTAX
+
+```scss
+.your-class {
+  @include if-viewport({size}) {
+    // do something
+  }
+}
+```
+
+##### EXAMPLE
+
+Let's say we have a div that contains two anchors (acting as buttons) like this:
+
+```html
+<div class="btn-group">
+  <a>Cancel</a>
+  <a>Save Changes<a>
+</div>
+```
+
+<div class="space-sm"></div>
+
+On bigger screens the buttons are side-by-side, but on smaller screens we want to **stack** them and have each button fill the **full width** of the viewport.
+
+```scss
+@import "~@riapacheco/yutes/breakpoints.scss";
+
+.btn-group {
+  display: flex;
+  flex-direction: row; // keeps the buttons side-by-side
+
+  @include if-viewport(small) {
+    // Stacks the elements
+    flex-direction: column;
+    // Accesses the nested anchors and applies a 100% width
+    a {
+      width: 100%;
+    }
+  }
+}
+```
+
+##### VALUES
+
+|   Arg    | Breakpoint value                     |
+| :------: | :----------------------------------- |
+| `small`  | Area is within `375px`               |
+| `medium` | Area is between `376px` and `1200px` |
+
+##### CONFIG
+
+Feel free to change the breakpoint value inside the `breakpoints.scss` file. The `small` breakpoint can be changed by updating the `$mobile` variable and the `medium` breakpoint can be changed by updating the `$desktop` variable.
+
+<!-- -------------------------- Breakpoints | END -------------------------- -->
+
+
+<div class="space-sm"></div>
+
+<div class="space dotted"></div>
+
+<div style="
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-start;
+  justify-content: space-between;">
+  <div>
+  
+  <small>[_↑ Back to List_](#usage)</small>
+  </div>
+
+  <small>[_↓ Next item_](#buttons)</small>
+</div>
+
+
+<!-- --------------------------- Colors | START ---------------------------- -->
+
+## Colors
+Access colors from the `colors.scss` file to change the variables below:
+
+#### Primary, Secondary, and Accent
+```scss
+$primary-color: #ff5630;
+$primary-light-color: #ff8f73;
+$primary-medium-color: #ff7452;
+$primary-dark-color: #de350b;
+
+$secondary-color: #FF991F;
+$secondary-light-color: #ffa333;
+$secondary-medium-color: #ec870c;
+$secondary-dark-color: #d67b0c;
+
+$accent-color: #999898;
+$accent-light-color: #e9e9e9;
+$accent-medium-color: #727272;
+$accent-dark-color: #414141;
+$accent-darkest-color: #262626;
+```
+
+#### State Colors
+```scss
+$success: #2ecc71;
+$success-light: #7be9a9;
+$success-dark: #156f3b;
+
+$warning: #ffcd28;
+$warning-light: #fce69d;
+$warning-dark: #ac8b1c;
+
+$danger: #ff554c;
+$danger-light: #ffb3af;
+$danger-dark: #a2322c;
+```
+
+#### As Color Classes
+```scss
+.primary-color {
+  color: $primary-color;
+  &.light { color: $primary-light-color }
+  &.medium { color: $primary-medium-color }
+  &.dark { color: $primary-dark-color }
+}
+.primary-bg {
+  background-color: $primary-color;
+  &.light { background-color: $primary-light-color };
+  &.medium { background-color: $primary-medium-color }
+  &.dark { background-color: $primary-dark-color }
+}
+
+.secondary-color {
+  color: $secondary-color;
+  &.light { color: $secondary-light-color }
+  &.medium { color: $secondary-medium-color }
+  &.dark { color: $secondary-dark-color }
+}
+.secondary-bg {
+  background-color: $secondary-color;
+  &.light { background-color: $secondary-light-color }
+  &.medium { background-color: $secondary-medium-color }
+  &
+```
+
+<!-- ---------------------------- Colors | END ----------------------------- -->
+
+<div class="space-sm"></div>
+
+<div class="space dotted"></div>
+
+<div style="
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-start;
+  justify-content: space-between;">
+  <div>
+  
+  <small>[_↑ Back to List_](#usage)</small>
+  </div>
+
+  <small>[_↓ Next item_](#forms)</small>
+</div>
+
+<!-- --------------------------- Buttons | START --------------------------- -->
+
+## Buttons
+Immediately add responsive padding and color to `<button>` and `<a>` elements with shorthand classes that chain additional styles to the element.
+
+##### SYNTAX
+```html
+  <a class="{initializer class} {background color} {additional styles}">
+    Click me
+  <a>
+```
+
+##### EXAMPLE
+```html
+  <a class="btn primary rounded raised">
+    Click me
+  </a>
+```
+
+<div class="space-sm"></div>
+
+Result:
+![Rounded Raised Button](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100/raised-rounded_1__rSTWAjIBr.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655502002113)
+
+<div class="space-sm"></div>
+
+##### VALUES
+Initializer class will always be `btn`
+
+| Class | Value |
+| :-: | :- |
+| `btn` | Required initializer class |
+| `primary` | Changes `background-color` to `$primary-color` |
+| `secondary` | Changes `background-color` to `$secondary-color` |
+| `rounded` | Changes `border-radius` to `$base-border-radius`* |
+| `raised` | Changes `box-shadow` to `4px 6px 12px rgba(0, 0, 0, 0.4)` |
+
+<small>* Value can be changed within the file</small>
+
+<!-- ---------------------------- Buttons | END ---------------------------- -->
+
+<div class="space-sm"></div>
+
+<div class="space dotted"></div>
+
+<div style="
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-start;
+  justify-content: space-between;">
+  <div>
+  
+  <small>[_↑ Back to List_](#usage)</small>
+  </div>
+
+  <small>[_↓ Next item_](#resets)</small>
+</div>
+
+<!-- ---------------------------- Forms | START ---------------------------- -->
+
+## Forms
+Stack labels on top of inputs with simple `input` background colors by using the `form-group` class on each group that contains a `<label>` and `<input>` element.
+
+##### SYNTAX
+```html
+<div class="form-group">
+  <label>First Name</label>
+  <input type="text" name="firstName">
+</div>
+```
+
+##### EXAMPLE
+```html
+
+<div class="form-group">
+  <label>First Name</label>
+  <input type="text" name="firstName">
+</div>
+
+<div class="form-group">
+  <label>Last Name</label>
+  <input type="text" name="lastName">
+</div>
+
+```
+Result:
+![Example Form Group](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100,w-700/register_o4EqihR97.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655503032055)
+
+<!-- ----------------------------- Forms | END ----------------------------- -->
+<div class="space-sm"></div>
+
+<div class="space dotted"></div>
+
+<div style="
+  width: 100%;
+  display: flex;
+  flex-flow: row-reverse nowrap;
+  align-items: flex-start;
+  justify-content: space-between;">
+  <div>
+  
+  <small>[_↑ Back to List_](#usage)</small>
+  </div>
+
+  <!-- <small>[_↓ Next item_](#forms)</small> -->
+</div>
+
+<!-- --------------------------- Resets | START ---------------------------- -->
+
+## Resets
+The `resets` stylesheet was created to override default webkit / browser styles. It applies the following:
+
+* All elements' `box-sizing` properties are set to `border-box`
+* All elements have `antialiased` applied to them for smoother appearance
+* All default `focus` styles (light blue outlines, etc) have been removed
+* All items have been reset to have `height: 100%` and `width: 100%` for uniformity
+* All `img` elements have `width: 100%;` and height `auto` for more predictable sizing
+* All default `button` appearances have been stripped 
+* All default `button` and `anchor`s' `focus` styles have been unset
+* All default `input` styles have been unset
+* The `small` element has been stripped of margin and padding
+* All default `select`, `textarea`, and `nav` elements have been unset
+
+Note: You can apply `list-unstyled` class to any `ul` or `ol` elements you wish to have styling removed from
+
+

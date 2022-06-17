@@ -1,28 +1,26 @@
-/*
-    Colors, alternative colors, utilities
-*/
-
 /* -------------------------------------------------------------------------- */
-/*                                   COLORS                                   */
+/*                                   Colors                                   */
 /* -------------------------------------------------------------------------- */
-/* Color variables and class versions */
 
-/* ----------------------- Primary, Secondary, Accent ----------------------- */
-$primary-color: #b88d9b;
-$primary-light-color: #d398ad;
-$primary-medium-color:  #a27b88;
-$primary-dark-color: #785561;
 
-$secondary-color: #5caca4;
-$secondary-light-color: #b2fef7;
-$secondary-medium-color: #45837e;
-$secondary-dark-color: #284644;
+/* ------------------------ Primary, Secondary Accent ----------------------- */
+$primary-color: #ff5630;
+$primary-light-color: #ff8f73;
+$primary-medium-color: #ff7452;
+$primary-dark-color: #de350b;
+
+$secondary-color: #FF991F;
+$secondary-light-color: #ffa333;
+$secondary-medium-color: #ec870c;
+$secondary-dark-color: #d67b0c;
 
 $accent-color: #999898;
 $accent-light-color: #e9e9e9;
 $accent-medium-color: #727272;
 $accent-dark-color: #414141;
 $accent-darkest-color: #262626;
+
+$text-color: #E5E7EA;
 
 /* ---------------------------------- State --------------------------------- */
 $success: #2ecc71;
@@ -144,3 +142,4 @@ $alt-text: #b8b8b8;
 
 // Other
 $form-input-field-bg: $accent-light-color;
+

@@ -1,0 +1,122 @@
+/* -------------------------------------------------------------------------- */
+/*                              PADDING / MARGINS                             */
+/* -------------------------------------------------------------------------- */
+
+@each $abbr, $name in ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left') {
+  @for $i from 1 through 30 {
+    .m#{$abbr}-#{$i} {
+      margin-#{$name}: 1rem * $i;
+    }
+  }
+}
+@each $abbr, $name in ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left') {
+  @for $i from 1 through 30 {
+    .p#{$abbr}-#{$i} {
+      padding-#{$name}: 1rem * $i;
+    }
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            HORIZONTAL CENTERING                            */
+/* -------------------------------------------------------------------------- */
+
+@for $i from 1 through 3000 {
+  .mx-auto-#{$i}px {
+    width: $i * 1px;
+    margin: auto;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   FLEXBOX                                  */
+/* -------------------------------------------------------------------------- */
+
+// Flex direction
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+// If nowrap
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+// Align-Items
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+.align-stretch {
+  align-items: stretch;
+}
+.align-baseline {
+  align-items: baseline;
+}
+
+// Align-Self
+.align-self-start {
+  align-self: flex-start;
+}
+.align-self-end {
+  align-self: flex-end;
+}
+.align-self-center {
+  align-self: center;
+}
+.align-self-stretch {
+  align-self: stretch;
+}
+.align-self-baseline {
+  align-self: baseline;
+}
+
+// Justify-Content
+.justify-start {
+  justify-content: flex-start;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-stretch {
+  justify-content: stretch;
+}
+.justify-baseline {
+  justify-content: baseline;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
+
+// Justify-Self
+.justify-self-start {
+  justify-self: flex-start;
+}
+.justify-self-end {
+  justify-self: flex-end;
+}
+.justify-self-center {
+  justify-self: center;
+}
+.justify-self-stretch {
+  justify-self: stretch;
+}
+.justify-self-baseline {
+  justify-self: baseline;
+}

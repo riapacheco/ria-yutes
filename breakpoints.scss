@@ -1,0 +1,22 @@
+/* -------------------------------------------------------------------------- */
+/*                             MOBILE RESPONSIVITY                            */
+/* -------------------------------------------------------------------------- */
+
+$mobile: 375px;
+$desktop: 1200px;
+
+@mixin if-viewport($media) {
+  @if $media == small {
+    
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+
+  } @else if $media == medium {
+    
+    @media only screen and (min-width: calc($mobile + 1px)) and (max-width: calc($desktop - 1px)){
+      @content;
+    }
+
+  } 
+}

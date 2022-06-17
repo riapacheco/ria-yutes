@@ -1,0 +1,205 @@
+/** "Inter" **
+    Designed by Rasmus Andersson
+    Distributed by Google
+
+  Optional: Add following to index.html file, within the <head></head> element ⤵️
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@mixin inter-ff {
+  font-family: 'Inter', sans-serif !important;
+}
+.inter-ff {
+  font-family: 'Inter', sans-serif !important;
+}
+
+/** "Roboto Flex"
+    Designed by Font Bureau, David Berlow, Santiago Orozco, Irene Vlachou, Ilya Ruderman, Yury Ostromentsky, Mikhail Strukov
+    Distributed by Google
+    Note: This font utilized Optical Sizes which vastly improves text quality but will increase page load times.
+          Learn more here: https://fonts.google.com/knowledge/choosing_type/choosing_typefaces_that_have_optical_sizes
+    
+    Optional: Add following to index.html file, within the <head></head> element ⤵️
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900;8..144,1000&display=swap');
+@mixin roboto-flex-ff {
+  font-family: 'Roboto Flex', sans-serif !important;
+}
+.roboto-flex-ff {
+  font-family: 'Roboto Flex', sans-serif !important;
+}
+
+/** "Public Sans" **
+    Designed by USWDS, Dan Williams, Pablo Impallari, Rodrigo Fuenzalida
+    Distributed by Google
+
+  Optional: Add following to index.html file, within the <head></head> element ⤵️
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@mixin public-sans-ff {
+  font-family: 'Public Sans', sans-serif !important;
+}
+.public-sans-ff {
+  font-family: 'Public Sans', sans-serif !important;
+}
+
+/** "Open Sans" **
+    Designed by Steve Matteson
+    Distributed by Google
+
+  Optional: Add following to index.html file, within the <head></head> element ⤵️
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@mixin open-sans-ff {
+  font-family: 'Open Sans', sans-serif !important;
+}
+.open-sans-ff {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
+/** "Fira Code" **
+    Designed by The Mozilla Foundation, Telefonica S.A., Nikita Prokopov
+    Distributed by Google
+
+    Optional: Add following to index.html file, within the <head></head> element ⤵️
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+@mixin fira-code-ff {
+  font-family: 'Fira Code', monospace !important;
+}
+.fira-code-ff {
+  font-family: 'Fira Code', monospace !important;
+}
+
+/** "Nanum Gothic"
+    Designed by Sandoll
+    Distributed by Google
+
+    Optional: Add following to index.html file, within the <head></head> element ⤵️
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+@mixin nanum-gothic-ff {
+  font-family: 'Nanum Gothic', sans-serif !important;
+}
+.nanum-gothic-ff {
+  font-family: 'Nanum Gothic', sans-serif !important;
+}
+
+/** "Lato"
+    Designed by Łukasz Dziedzic
+    Distributed by Google
+
+    Optional: Add following to index.html file, within the <head></head> element ⤵️
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@mixin lato-ff {
+  font-family: 'Lato', sans-serif !important;
+}
+.lato-ff {
+  font-family: 'Lato', sans-serif !important;
+}
+
+/** "Montserrat"
+    Designed by Julieta Ulanovsky, Sol Matas, Juan Pablo del Peral, Jacques Le Bailly
+    Distributed by Google
+
+    Optional: Add following to index.html file, within the <head></head> element ⤵️
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@mixin montserrat-ff {
+  font-family: 'Montserrat', sans-serif !important;
+}
+.montserrat-ff {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+/** "Oswald"
+    Designed by Vernon Adams, Kalapi Gajjar, Cyreal
+    Distributed by Google
+
+    Optional: Add following to index.html file, within the <head></head> element ⤵️
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+@mixin oswald-ff {
+  font-family: 'Oswald', sans-serif !important;
+}
+.oswald-ff {
+  font-family: 'Oswald', sans-serif !important;
+}
+
+/** "Source Sans Pro"
+    Designed by Paul D. Hunt
+    Distributed by Google
+    
+    Optional: Add following to index.html file, within the <head></head> element ⤵️
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+@mixin source-sans-pro-ff {
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+.source-sans-pro-ff {
+  font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+/** "Merriweather"
+    Designed by Sorkin Type
+    Distributed by Google
+
+    Optional: Add following to index.html file, within the <head></head> element ⤵️
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@mixin merriweather-ff {
+  font-family: 'Merriweather', serif !important;
+}
+.merriweather-ff {
+  font-family: 'Merriweather', serif !important;
+}
+
+/** "Nunito Sans"
+    Designed by Vernon Adams, Jacques Le Bailly, Manvel Shmavonyan, Alexei Vanyashin
+    Distributed by Google
+
+    Optional: Add following to index.html file, within the <head></head> element ⤵️
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+**********/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+@mixin nunito-sans-ff {
+  font-family: 'Nunito Sans', sans-serif !important;
+}
+.nunito-sans-ff {
+  font-family: 'Nunito Sans', sans-serif !important;
+}
