@@ -1,32 +1,3 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
-  * { font-smooth: antialiased !important; -webkit-font-smoothing: subpixel-antialiased !important; }
-  html { font-family: "Inter", sans-serif; }
-  body { letter-spacing: 0.03px; }
-  h1 { letter-spacing: -0.04rem; }
-  h2 { letter-spacing: -0.03rem; }
-  h5 { padding-top: 18px;}
-  hr {
-    opacity: 0.2;
-    margin-bottom: 40px !important;
-    margin-top: 40px !important;
-  }
-  .space {
-    display: block;
-    height: 20px;
-  }
-  .space-sm {
-    display: block;
-    height: 5px;
-  }
-  .space.dotted {
-    display: block;
-    width: 100%;
-    border-bottom: 1px dashed #00000020;
-    margin-top: 30px;
-    margin-bottom: 20px;
-  }
-</style>
 
 # Yutes [Utilities]
 
@@ -56,14 +27,15 @@ Import to your main `SCSS` file**
 @import '~@riapacheco/yutes/breakpoints.scss';
 ```
 
-<br><br>
 
 <small>
 
  **The `breakpoints.scss` import is optional. See the [breakpoints](#breakpoints) section for more details.
 </small>
 
+
 ---
+
 
 # Usage
 
@@ -79,22 +51,16 @@ Import to your main `SCSS` file**
 
 <div class="space dotted"></div>
 
-<div style="width: 100%; display: flex; flex-flow: row-reverse nowrap; align-items: flex-start; justify-content: space-between;">
-
-  <div>
-  
-  <small>[_↑ Back to List_](#usage)</small>
-  </div>
-
-  <small>[_↓ Next item_](#margins)</small>
-</div>
-
 
 # Utilities 
 
 <!-- --------------------------- Padding | START --------------------------- -->
 
+<small>[_↑ Back to List_](#usage)</small>
+<small>[_↓ Skip to next item: Margins_](#margins)</small>
+
 ## Padding
+
 Add padding to an element with shorthand classes that specify padding with a `p` followed by direction and size.
 
 ##### SYNTAX
@@ -142,21 +108,10 @@ Set `direction` with one of the following properties:
 
 <div class="space-sm"></div>
 
-<div class="space dotted"></div>
+---
 
-<div style="
-  width: 100%;
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  align-items: flex-start;
-  justify-content: space-between;">
-  <div>
-  
-  <small>[_↑ Back to List_](#usage)</small>
-  </div>
-
-  <small>[_↓ Next item_](#horizontal-centering-new)</small>
-</div>
+<small>[_↑ Back to List_](#usage)</small>
+<small>[_↓ Skip to next item: Horizontal Centering_](#horizontal-centering-new)</small>
 
 <!-- --------------------------- Margin | START ---------------------------- -->
 
@@ -210,21 +165,10 @@ Set `direction` with one of the following properties:
 
 <div class="space-sm"></div>
 
-<div class="space dotted"></div>
+---
 
-<div style="
-  width: 100%;
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  align-items: flex-start;
-  justify-content: space-between;">
-  <div>
-  
-  <small>[_↑ Back to List_](#usage)</small>
-  </div>
-
-  <small>[_↓ Next item_](#flexbox)</small>
-</div>
+<small>[_↑ Back to List_](#usage)</small>
+<small>[_↓ Skip to next item: Flexbox_](#flexbox)</small>
 
 
 <!-- -------------------- Horizontal Centering | START --------------------- -->
@@ -271,21 +215,10 @@ Supports width between `1` and `3000` pixels.
 
 <div class="space-sm"></div>
 
-<div class="space dotted"></div>
+---
 
-<div style="
-  width: 100%;
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  align-items: flex-start;
-  justify-content: space-between;">
-  <div>
-  
-  <small>[_↑ Back to List_](#usage)</small>
-  </div>
-
-  <small>[_↓ Next item_](#breakpoints)</small>
-</div>
+<small>[_↑ Back to List_](#usage)</small>
+<small>[_↓ Skip to next item: Breakpoints_](#breakpoints)</small>
 
 
 <!-- --------------------------- Flexbox | START --------------------------- -->
@@ -359,21 +292,10 @@ Result:
 
 <div class="space-sm"></div>
 
-<div class="space dotted"></div>
+---
 
-<div style="
-  width: 100%;
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  align-items: flex-start;
-  justify-content: space-between;">
-  <div>
-  
-  <small>[_↑ Back to List_](#usage)</small>
-  </div>
-
-  <small>[_↓ Next item_](#colors)</small>
-</div>
+<small>[_↑ Back to List_](#usage)</small>
+<small>[_↓ Skip to next item: Colors_](#colors)</small>
 
 
 
@@ -451,21 +373,10 @@ Feel free to change the breakpoint value inside the `breakpoints.scss` file. The
 
 <div class="space-sm"></div>
 
-<div class="space dotted"></div>
+---
 
-<div style="
-  width: 100%;
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  align-items: flex-start;
-  justify-content: space-between;">
-  <div>
-  
-  <small>[_↑ Back to List_](#usage)</small>
-  </div>
-
-  <small>[_↓ Next item_](#buttons)</small>
-</div>
+<small>[_↑ Back to List_](#usage)</small>
+<small>[_↓ Skip to next item: Buttons_](#buttons)</small>
 
 
 <!-- --------------------------- Colors | START ---------------------------- -->
@@ -539,21 +450,10 @@ $danger-dark: #a2322c;
 
 <div class="space-sm"></div>
 
-<div class="space dotted"></div>
+---
 
-<div style="
-  width: 100%;
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  align-items: flex-start;
-  justify-content: space-between;">
-  <div>
-  
-  <small>[_↑ Back to List_](#usage)</small>
-  </div>
-
-  <small>[_↓ Next item_](#forms)</small>
-</div>
+<small>[_↑ Back to List_](#usage)</small>
+<small>[_↓ Skip to next item: Forms_](#forms)</small>
 
 <!-- --------------------------- Buttons | START --------------------------- -->
 
@@ -598,21 +498,10 @@ Initializer class will always be `btn`
 
 <div class="space-sm"></div>
 
-<div class="space dotted"></div>
+---
 
-<div style="
-  width: 100%;
-  display: flex;
-  flex-flow: row-reverse nowrap;
-  align-items: flex-start;
-  justify-content: space-between;">
-  <div>
-  
-  <small>[_↑ Back to List_](#usage)</small>
-  </div>
-
-  <small>[_↓ Next item_](#resets)</small>
-</div>
+<small>[_↑ Back to List_](#usage)</small>
+<small>[_↓ Skip to next item: Resets_](#resets)</small>
 
 <!-- ---------------------------- Forms | START ---------------------------- -->
 
@@ -681,4 +570,7 @@ The `resets` stylesheet was created to override default webkit / browser styles.
 
 Note: You can apply `list-unstyled` class to any `ul` or `ol` elements you wish to have styling removed from
 
+---
+
+<small>[_↑ Back to List_](#usage)</small>
 
