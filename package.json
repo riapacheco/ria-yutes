@@ -1,7 +1,7 @@
 {
   "name": "@riapacheco/yutes",
-  "version": "3.0.4",
-  "description": "Bare bones scss kit utilities for basic structure & color experimentation",
+  "version": "3.0.5",
+  "description": "Utility SCSS stylesheets that enable structure before design",
   "main": "index.js",
   "scripts": {},
   "author": "Ria Pacheco",
