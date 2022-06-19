@@ -4,40 +4,43 @@
 
 
 /* ------------------------ Primary, Secondary Accent ----------------------- */
-$primary-color: #ff5630;
-$primary-light-color: #ff8f73;
-$primary-medium-color: #ff7452;
-$primary-dark-color: #de350b;
+$primary-color: #ff5630 !default;
+$primary-light-color: #ff8f73 !default;
+$primary-medium-color: #ff7452 !default;
+$primary-dark-color: #de350b !default;
 
-$secondary-color: #FF991F;
-$secondary-light-color: #ffa333;
-$secondary-medium-color: #ec870c;
-$secondary-dark-color: #d67b0c;
+$secondary-color: #FF991F !default;
+$secondary-light-color: #ffa333 !default;
+$secondary-medium-color: #ec870c !default;
+$secondary-dark-color: #d67b0c !default;
 
-$accent-color: #999898;
-$accent-light-color: #e9e9e9;
-$accent-medium-color: #727272;
-$accent-dark-color: #414141;
-$accent-darkest-color: #262626;
+$accent-color: #999898 !default;
+$accent-light-color: #e9e9e9 !default;
+$accent-medium-color: #727272 !default;
+$accent-dark-color: #414141 !default;
+$accent-darkest-color: #262626 !default;
 
-$text-color: #E5E7EA;
+$text-color: #E5E7EA !default;
+
+// Other
+$form-input-field-bg: #e8e8e8  !default;
 
 /* ---------------------------------- State --------------------------------- */
-$success: #2ecc71;
-$success-light: #7be9a9;
-$success-dark: #156f3b;
+$success: #2ecc71 !default;
+$success-light: #7be9a9 !default;
+$success-dark: #156f3b !default;
 
-$warning: #ffcd28;
-$warning-light: #fce69d;
-$warning-dark: #ac8b1c;
+$warning: #ffcd28 !default;
+$warning-light: #fce69d !default;
+$warning-dark: #ac8b1c !default;
 
-$danger: #ff554c;
-$danger-light: #ffb3af;
-$danger-dark: #a2322c;
+$danger: #ff554c !default;
+$danger-light: #ffb3af !default;
+$danger-dark: #a2322c !default;
 
-$info: #000000;
-$info-light: #fafafa;
-$info-dark: #000000;
+$info: #000000 !default;
+$info-light: #fafafa !default;
+$info-dark: #000000 !default;
 
 /* ----------------------------- Class Versions ----------------------------- */
 // Primary, Secondary, Accent Classes
@@ -140,6 +143,4 @@ $alt-text: #b8b8b8;
   &.dark { background-color: $alt-accent-dark-color; }
 }
 
-// Other
-$form-input-field-bg: $accent-light-color;
 

@@ -1,16 +1,15 @@
-
 # Yutes [Utilities]
 
 The `@riapacheco/yutes` package is a _really_ lightweight `SCSS` pack of stylesheets intended to provide **utilities** similar to those found in common frameworks like [**Bootstrap**](https://getbootstrap.com/docs/4.0/utilities/spacing/) (with some slight differences) but without the rigidness that limits fluid design.
 
-<br><br><br><br>
+<br><br>
 
 Contents ⤵️
 
 - [Installation](#installation)
 - [Usage](#usage)
 
-<br><br><br><br>
+<br><br>
 
 # Installation
 
@@ -20,38 +19,36 @@ Install from [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and
   npm install @riapacheco/yutes
 ```
 
-Import to your main `SCSS` file**
+Import to your main `SCSS` file\*\*
 
 ```scss
 @import "~@riapacheco/yutes/main.scss";
-@import '~@riapacheco/yutes/breakpoints.scss';
+@import "~@riapacheco/yutes/breakpoints.scss";
 ```
-
 
 <small>
 
- **The `breakpoints.scss` import is optional. See the [breakpoints](#breakpoints) section for more details.
+\*\*The `breakpoints.scss` import is optional. See the [breakpoints](#breakpoints) section for more details.
 </small>
 
-
 <br><br><br><br>
-
 
 # Usage
 
 - [Padding](#padding)
+- [Headings](#headings)
 - [Margins](#margins)
 - [Horizontal Centering **(New!)**](#horizontal-centering-new)
 - [Flexbox](#flexbox)
 - [Breakpoints **(New!)**](#breakpoints)
 - [Colors](#colors)
 - [Buttons](#buttons)
+- [Forms](#forms)
 - [Resets](#resets)
 
-<br><br><br><br> 
+<br><br><br><br>
 
 <!-- --------------------------- Padding | START --------------------------- -->
-
 
 # Padding
 
@@ -94,12 +91,56 @@ Set `direction` with one of the following properties:
 <div class="space-sm"></div>
 
 ##### CONFIG FILE
-<code>@import '~@riapacheco/yutes/helper_files/_utilities.scss';</code>
+
+<code>@import '~@riapacheco/yutes/helper_files/\_utilities.scss';</code>
 
 <div class="space-sm"></div>
 
 <!-- ---------------------------- Padding | END ---------------------------- -->
 
+<div class="space-sm"></div>
+
+<br><br><br><br>
+
+<small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
+<small>[_↓ Skip to: Margins_](#margins)</small>
+
+<!-- -------------------------- Headings | START --------------------------- -->
+
+# Headings
+
+##### VARIABLE SYNTAX
+
+The `headings.scss` file contains variables for styling each heading from `h1` through `h6`. Each heading has a variable that represents it's `font-size`, `line-height`, `letter-spacing`, `font-weight`, and `transform` properties. They're written like this:
+
+```scss
+${headingLevel}-size: 2rem;
+${headingLevel}-height: 2rem;
+${headingLevel}-spacing: -0.05rem;
+${headingLevel}-weight: 700;
+${headingLevel}-transform: uppercase;
+```
+
+##### EXAMPLE
+
+```scss
+$h1-size: 2rem !default;
+$h1-height: 2rem !default;
+$h1-spacing: -0.1rem !default;
+$h1-weight: 700 !default;
+$h1-transform: none !default;
+```
+
+##### TO OVERRIDE
+
+To override these `!default` styles, simply assign a new value to the variable immediately followed by an import of that stylesheet like this:
+
+```scss
+$h1-size: 3rem;
+@import "~@riapacheco/yutes/headings.scss";
+```
+
+<!-- --------------------------- Headings | END ---------------------------- -->
 <div class="space-sm"></div>
 
 <br><br><br><br>
@@ -151,7 +192,8 @@ Set `direction` with one of the following properties:
 <div class="space-sm"></div>
 
 ##### CONFIG FILE
-<code>@import '~@riapacheco/yutes/helper_files/_utilities.scss';</code>
+
+<code>@import '~@riapacheco/yutes/helper_files/\_utilities.scss';</code>
 
 <div class="space-sm"></div>
 
@@ -163,7 +205,6 @@ Set `direction` with one of the following properties:
 
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Flexbox_](#flexbox)</small>
-
 
 <!-- -------------------- Horizontal Centering | START --------------------- -->
 
@@ -197,11 +238,11 @@ div {
 
 Supports width between `1` and `3000` pixels.
 
-
 <div class="space-sm"></div>
 
 ##### CONFIG FILE
-<code>@import '~@riapacheco/yutes/helper_files/_utilities.scss';</code>
+
+<code>@import '~@riapacheco/yutes/helper_files/\_utilities.scss';</code>
 
 <div class="space-sm"></div>
 
@@ -214,34 +255,34 @@ Supports width between `1` and `3000` pixels.
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Breakpoints_](#breakpoints)</small>
 
-
 <!-- --------------------------- Flexbox | START --------------------------- -->
 
 # Flexbox
+
 Apply flexbox styles to elements with shorthand classes that specify direction, wrapping, item alignment, and contents justification. For refresher on flexbox, visit [this link](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
 ##### SYNTAX
+
 Add 3 - 4 classes to an element
+
 ```html
 <div class="{direction} {nowrap*} {align} {justify}">
   <div class="element-1"></div>
   <div class="element-2"></div>
 </div>
 ```
-<small>* By default, the element has `flex-wrap: wrap` value and requires a `nowrap` class to override</small>
+
+<small>\* By default, the element has `flex-wrap: wrap` value and requires a `nowrap` class to override</small>
 
 ##### EXAMPLE
+
 Two buttons should push to opposite directions within a container modal:
+
 ```html
 <div class="flex-row nowrap align-end justify-between">
+  <a class="cancel-btn"> Cancel </a>
 
-  <a class="cancel-btn">
-    Cancel
-  </a>
-
-  <a class="save-btn">
-    Save Changes
-  </a>
+  <a class="save-btn"> Save Changes </a>
 </div>
 
 <!-- The above specifies: 
@@ -251,22 +292,19 @@ Two buttons should push to opposite directions within a container modal:
   justify-content: space-between;
 -->
 ```
+
 Result <br>
 ![Buttons justify-between](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100,w-600/justify-between_sELzDFTQf.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655500435763)
 
 <div class="space"></div>
 
 Two buttons should push to the right:
+
 ```html
 <div class="flex-row nowrap align-end justify-end">
+  <a class="cancel-btn"> Cancel </a>
 
-  <a class="cancel-btn">
-    Cancel
-  </a>
-
-  <a class="save-btn">
-    Save Changes
-  </a>
+  <a class="save-btn"> Save Changes </a>
 </div>
 
 <!-- The above specifies: 
@@ -280,9 +318,7 @@ Two buttons should push to the right:
 Result: <br>
 ![Buttons flex-end](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100,w-600/flex-end_IH68y_3fs.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655500435765)
 
-
 <!-- ---------------------------- Flexbox | END ---------------------------- -->
-
 
 <div class="space-sm"></div>
 
@@ -290,8 +326,6 @@ Result: <br>
 
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Colors_](#colors)</small>
-
-
 
 <!-- ------------------------- Breakpoints | START ------------------------- -->
 
@@ -358,12 +392,16 @@ On bigger screens the buttons are side-by-side, but on smaller screens we want t
 | `small`  | Area is within `375px`               |
 | `medium` | Area is between `376px` and `1200px` |
 
-##### CONFIG
+##### OVERRIDE BREAKPOINTS
 
-Feel free to change the breakpoint value inside the `breakpoints.scss` file. The `small` breakpoint can be changed by updating the `$mobile` variable and the `medium` breakpoint can be changed by updating the `$desktop` variable.
+To override the breakpoint values with your own, simply assign new values to the breakpoint variables (`$mobile` and `$desktop`) followed immediately by an import of the `breakpoints.scss` file:
+
+```scss
+$mobile: 400px;
+@import "~@riapacheco/yutes/breakpoints.scss";
+```
 
 <!-- -------------------------- Breakpoints | END -------------------------- -->
-
 
 <div class="space-sm"></div>
 
@@ -372,20 +410,32 @@ Feel free to change the breakpoint value inside the `breakpoints.scss` file. The
 <small>[_↑ Back to List_](#usage)</small>&nbsp;&nbsp;&nbsp;
 <small>[_↓ Skip to: Buttons_](#buttons)</small>
 
-
 <!-- --------------------------- Colors | START ---------------------------- -->
 
 # Colors
+
 Access colors from the `colors.scss` file to change the variables below:
 
+##### OVERRIDE COLORS
+
+To override any of the below variables: assign the variable with a new value followed by an immediate import of the `colors.scss` stylesheet like so:
+
+```scss
+$primary-color: #999898;
+@import "~@riapacheco/yutes/colors.scss";
+```
+
+##### COLOR VARIABLES ⤵️
+
 #### Primary, Secondary, and Accent
+
 ```scss
 $primary-color: #ff5630;
 $primary-light-color: #ff8f73;
 $primary-medium-color: #ff7452;
 $primary-dark-color: #de350b;
 
-$secondary-color: #FF991F;
+$secondary-color: #ff991f;
 $secondary-light-color: #ffa333;
 $secondary-medium-color: #ec870c;
 $secondary-dark-color: #d67b0c;
@@ -398,6 +448,7 @@ $accent-darkest-color: #262626;
 ```
 
 #### State Colors
+
 ```scss
 $success: #2ecc71;
 $success-light: #7be9a9;
@@ -412,7 +463,14 @@ $danger-light: #ffb3af;
 $danger-dark: #a2322c;
 ```
 
+#### Input Field Color
+
+```scss
+$form-input-field-bg: #e8e8e8;
+```
+
 #### As Color Classes
+
 ```scss
 .primary-color {
   color: $primary-color;
@@ -452,20 +510,22 @@ $danger-dark: #a2322c;
 <!-- --------------------------- Buttons | START --------------------------- -->
 
 # Buttons
+
 Immediately add responsive padding and color to `<button>` and `<a>` elements with shorthand classes that chain additional styles to the element.
 
 ##### SYNTAX
+
 ```html
-  <a class="{initializer class} {background color} {additional styles}">
-    Click me
-  <a>
+<a class="{initializer class} {background color} {additional styles}">
+  Click me
+  <a></a
+></a>
 ```
 
 ##### EXAMPLE
+
 ```html
-  <a class="btn primary rounded raised">
-    Click me
-  </a>
+<a class="btn primary rounded raised"> Click me </a>
 ```
 
 <div class="space-sm"></div>
@@ -476,17 +536,18 @@ Result: <br>
 <div class="space-sm"></div>
 
 ##### VALUES
+
 Initializer class will always be `btn`
 
-| Class | Value |
-| :-: | :- |
-| `btn` | Required initializer class |
-| `primary` | Changes `background-color` to `$primary-color` |
-| `secondary` | Changes `background-color` to `$secondary-color` |
-| `rounded` | Changes `border-radius` to `$base-border-radius`* |
-| `raised` | Changes `box-shadow` to `4px 6px 12px rgba(0, 0, 0, 0.4)` |
+|    Class    | Value                                                     |
+| :---------: | :-------------------------------------------------------- |
+|    `btn`    | Required initializer class                                |
+|  `primary`  | Changes `background-color` to `$primary-color`            |
+| `secondary` | Changes `background-color` to `$secondary-color`          |
+|  `rounded`  | Changes `border-radius` to `$base-border-radius`\*        |
+|  `raised`   | Changes `box-shadow` to `4px 6px 12px rgba(0, 0, 0, 0.4)` |
 
-<small>* Value can be changed within the file</small>
+<small>\* Value can be changed within the file</small>
 
 <!-- ---------------------------- Buttons | END ---------------------------- -->
 
@@ -500,32 +561,43 @@ Initializer class will always be `btn`
 <!-- ---------------------------- Forms | START ---------------------------- -->
 
 # Forms
+
 Stack labels on top of inputs with simple `input` background colors by using the `form-group` class on each group that contains a `<label>` and `<input>` element.
 
 ##### SYNTAX
+
 ```html
 <div class="form-group">
   <label>First Name</label>
-  <input type="text" name="firstName">
+  <input type="text" name="firstName" />
 </div>
 ```
 
 ##### EXAMPLE
-```html
 
+```html
 <div class="form-group">
   <label>First Name</label>
-  <input type="text" name="firstName">
+  <input type="text" name="firstName" />
 </div>
 
 <div class="form-group">
   <label>Last Name</label>
-  <input type="text" name="lastName">
+  <input type="text" name="lastName" />
 </div>
-
 ```
+
 Result: <br>
 ![Example Form Group](https://ik.imagekit.io/fuc9k9ckt2b/yutes_README/tr:q-100,w-700/register_o4EqihR97.png?ik-sdk-version=javascript-1.4.3&updatedAt=1655503032055)
+
+##### OVERRIDE INPUT COLOR
+
+To override input color: assign a new value to the variable `$form-input-field-bg` immediately followed by an import of the `colors.scss` stylesheet:
+
+```scss
+$form-input-field-bg: #ffffff;
+@import "~@riapacheco/yutes/colors.scss";
+```
 
 <!-- ----------------------------- Forms | END ----------------------------- -->
 <div class="space-sm"></div>
@@ -549,22 +621,22 @@ Result: <br>
 <!-- --------------------------- Resets | START ---------------------------- -->
 
 # Resets
+
 The `resets` stylesheet was created to override default webkit / browser styles. It applies the following:
 
-* All elements' `box-sizing` properties are set to `border-box`
-* All elements have `antialiased` applied to them for smoother appearance
-* All default `focus` styles (light blue outlines, etc) have been removed
-* All items have been reset to have `height: 100%` and `width: 100%` for uniformity
-* All `img` elements have `width: 100%;` and height `auto` for more predictable sizing
-* All default `button` appearances have been stripped 
-* All default `button` and `anchor`s' `focus` styles have been unset
-* All default `input` styles have been unset
-* The `small` element has been stripped of margin and padding
-* All default `select`, `textarea`, and `nav` elements have been unset
+- All elements' `box-sizing` properties are set to `border-box`
+- All elements have `antialiased` applied to them for smoother appearance
+- All default `focus` styles (light blue outlines, etc) have been removed
+- All items have been reset to have `height: 100%` and `width: 100%` for uniformity
+- All `img` elements have `width: 100%;` and height `auto` for more predictable sizing
+- All default `button` appearances have been stripped
+- All default `button` and `anchor`s' `focus` styles have been unset
+- All default `input` styles have been unset
+- The `small` element has been stripped of margin and padding
+- All default `select`, `textarea`, and `nav` elements have been unset
 
 Note: You can apply `list-unstyled` class to any `ul` or `ol` elements you wish to have styling removed from
 
 <br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>
-

@@ -2,8 +2,8 @@
 /*                             MOBILE RESPONSIVITY                            */
 /* -------------------------------------------------------------------------- */
 
-$mobile: 375px;
-$desktop: 1200px;
+$mobile: 375px !default;
+$desktop: 1200px !default;
 
 @mixin if-viewport($media) {
   @if $media == small {
