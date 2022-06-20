@@ -1,9 +1,10 @@
 @import '../colors.scss';
 @import 'utilities';
 
-$base-border-radius: 0.2rem;
-$base-font-size: 0.95rem;
-$rounded-border-radius: 20px;
+$base-border-radius: 0.2rem !default;
+$base-font-size: 0.95rem !default;
+$rounded-border-radius: 20px !default;
+$button-padding-tb-lr: 0.5rem 1rem !default;
 
 // Pseudo Selectors
 %hover-to-brighten {
@@ -17,7 +18,7 @@ $rounded-border-radius: 20px;
 .btn {
   cursor: pointer;
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: $button-padding-tb-lr;
   border-radius: $base-border-radius;
   font-size: $base-font-size;
 

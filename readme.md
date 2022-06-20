@@ -8,6 +8,7 @@ Contents ⤵️
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [Config and Override Variables **(New!)**](#config-and-override-variables)
 
 <br><br>
 
@@ -109,16 +110,16 @@ Set `direction` with one of the following properties:
 
 # Headings
 
-##### VARIABLE SYNTAX
+##### SYNTAX
 
 The `headings.scss` file contains variables for styling each heading from `h1` through `h6`. Each heading has a variable that represents it's `font-size`, `line-height`, `letter-spacing`, `font-weight`, and `transform` properties. They're written like this:
 
 ```scss
-${headingLevel}-size: 2rem;
-${headingLevel}-height: 2rem;
-${headingLevel}-spacing: -0.05rem;
-${headingLevel}-weight: 700;
-${headingLevel}-transform: uppercase;
+${heading#}-size: 2rem;
+${heading#}-height: 2rem;
+${heading#}-spacing: -0.05rem;
+${heading#}-weight: 700;
+${heading#}-transform: uppercase;
 ```
 
 ##### EXAMPLE
@@ -640,3 +641,37 @@ Note: You can apply `list-unstyled` class to any `ul` or `ol` elements you wish 
 <br><br><br><br>
 
 <small>[_↑ Back to List_](#usage)</small>
+
+<br><br><br><br>
+
+# Config and Override Variables
+You can override any variables found in this package. To do so, simply assign a new value to the variable (that's consistent to the property type it was created for) and immediately follow this with an import of the stylesheet it's stored in.
+
+##### Example
+```scss
+$primary-color: #123456;
+$secondary-color: #654321;
+@import '~@riapacheco/yutes/colors.scss';
+```
+
+## Variables List
+* For list of all `$color` variables, see the [colors](#colors) section
+* For list of all `$headings` variables, see [headings](#headings) section
+* Note: I'll clean all this up eventually.
+
+| Var | Type | Description | Import after Re-Assignment |
+| :-: | :-: | :- | :- |
+| `$mobile` | `px` | The mobile breakpoint if using [breakpoint mixins](#breakpoints) [default: `375px`] | `@import '~@riapacheco/yutes/breakpoints.scss` |
+| `$desktop` | `px` | The desktop breakpoint if using [breakpoint mixins](#breakpoints) [default: `1200px`] | `@import '~@riapacheco/yutes/breakpoints.scss` |
+| `$base-font-size` | `number` | **Base font size** used in all body text, representing the first multiple of `rem` | `@import '~@riapacheco/yutes/helper_files/_resets.scss';` |
+| `$base-font-family` | `string` | The **base font family for all text** (default: `"Inter", sans-serif;`) | `@import '~@riapacheco/yutes/helper_files/_resets.scss';` |
+| `$input-field-border-radius` | `rem` | The border radius used for all **form inputs** (if used) [Default: `0.2rem`] | `@import '~@riapacheco/yutes/helper_files/_forms.scss';` |
+| `$base-size` | `px` | This is a base size used to calculate **input padding** (`$base-size / 1.3`), `input` / `select` element font size, and `select` height. | `@import '~@riapacheco/yutes/helper_files/_forms.scss';` |
+| `$label-font-size` | `rem` | The font size of **input labels** | `@import '~@riapacheco/yutes/helper_files/_forms.scss';` |
+| `$label-padding-left` | `rem` | Padding added to the left of **input labels** | `@import '~@riapacheco/yutes/helper_files/_forms.scss';` |
+| `$label-padding-bottom` | `rem` | Padding added to the bottom of **input labels** | `@import '~@riapacheco/yutes/helper_files/_forms.scss';` |
+| `$base-border-radius` | `rem` | The border radius of all **buttons** (if used) | `@import '~@riapacheco/yutes/helper_files/_buttons.scss;` |
+| `$base-font-size` | `rem` | The base **font size of all buttons** (if used) | `@import '~@riapacheco/yutes/helper_files/_buttons.scss;` |
+| `$rounded-border-radius` | `rem` | The border radius of **all _rounded_ buttons** (if used) | `@import '~@riapacheco/yutes/helper_files/_buttons.scss;` |
+| `$button-padding-tb-lr` | `rem` (chained) | Padding applied to all buttons expressed with two `rem` values, whereby the first value represents the `top` and `bottom` padding; and the second value represents the `left` and `right` value | `@import '~@riapacheco/yutes/helper_files/_buttons.scss;`
+

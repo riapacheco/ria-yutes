@@ -1,8 +1,11 @@
 @import '../colors.scss';
 @import 'utilities';
 
-$input-field-border-radius: 0.2rem;
-$base-size: 15px;
+$input-field-border-radius: 0.2rem !default;
+$base-size: 15px !default;
+$label-font-size: 0.96rem !default;
+$label-padding-left: 0.5rem !default;
+$label-padding-bottom: 0.5rem !default;
 
 .form-group {
   // label + control
@@ -14,15 +17,16 @@ $base-size: 15px;
   }
 
   label {
-    padding-left: 0.5rem;
-    padding-bottom: 0.5rem;
+    font-size: $label-font-size;
+    padding-left: $label-padding-left;
+    padding-bottom: $label-padding-bottom;
   }
 
   input {
     display: inline-block;
 
     font-size: $base-size;
-    background-color: $form-input-field-bg;
+    background-color: $form-input-field-bg; // colors.scss
     border-radius: $input-field-border-radius;
     padding: $base-size / 1.3;
   }
@@ -30,7 +34,7 @@ $base-size: 15px;
   select {
     font-size: $base-size;
     height: $base-size * 1.8;
-    background-color: $form-input-field-bg; // colors.scss
+    background-color: $form-input-field-bg;
     border-radius: $input-field-border-radius;
     padding: $base-size / 1.3;
   }
