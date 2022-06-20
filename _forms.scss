@@ -1,0 +1,40 @@
+@import './override';
+
+.form-group {
+  display: flex;
+  flex-flow: column nowrap;
+
+  &:last-child { margin-bottom: none; }
+
+  &.row { flex-flow: row nowrap; }
+
+  label {
+    font-size: $form-label-font-size;
+    line-height: $form-label-font-size;
+    font-family: $form-label-font-family;
+    padding-left: $form-label-padding-left;
+    padding-bottom: $form-label-padding-bottom;
+    font-weight: $form-label-font-weight;
+    letter-spacing: $form-label-letter-spacing;
+  }
+
+  input {
+    font-family: $form-input-font-family;
+    background-color: $form-input-bg-color;
+    border-radius: $form-control-border-radius;
+    min-height: $form-control-min-height;
+    font-size: $form-control-font-size;
+    line-height: $form-control-font-size;
+    padding-left: $form-input-padding-left;
+  }
+
+  select {
+    font-family: $form-select-font-family;
+    background-color: $form-select-bg-color;
+    border-radius: $form-control-border-radius;
+    min-height: $form-control-min-height;
+    font-size: $form-control-font-size;
+    line-height: $form-control-font-size;
+  }
+}
+

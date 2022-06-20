@@ -1,9 +1,5 @@
-/* -------------------------------------------------------------------------- */
-/*                                   DEFAULT                                  */
-/* -------------------------------------------------------------------------- */
+@import './override';
 
-$base-font-size: 16px !default;
-$base-font-family: "Inter", sans-serif !default;
 
 * {
   // Border Box
@@ -32,9 +28,6 @@ $base-font-family: "Inter", sans-serif !default;
 // To ensure accurate div adjustments
 html,
 body {
-  // Defaults (can override)
-  font-size: $base-font-size;
-  font-family: $base-font-family;
   cursor: default;
   -webkit-font-smoothing: antialiased !important;
   font-smooth: antialiased !important;

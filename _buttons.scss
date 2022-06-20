@@ -1,0 +1,68 @@
+@import './override';
+
+%hover-to-brighten { filter: $hover-filter-bright; }
+%hover-to-darken { filter: $hover-filter-dark; }
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  font-size: $button-font-size;
+  line-height: $button-font-size;
+  padding: $button-padding-top-bottom $button-padding-left-right;
+  border-radius: $button-border-radius;
+  
+  &.rounded { border-radius: $pill-button-border-radius; }
+  &.raised {
+    box-shadow: $button-raised-box-shadow;
+    &:hover { box-shadow: $button-raised-box-shadow-hover; }
+    &:active { box-shadow: $button-raised-box-shadow-active; }
+  }
+
+  &.hover-to-lighten {
+    &:hover {
+      @extend %hover-to-brighten;
+      cursor: pointer;
+    }
+  }
+
+  &.hover-to-darken {
+    &:hover {
+      @extend %hover-to-darken;
+      cursor: pointer;
+    }
+  }
+
+  &.primary {
+    background-color: $primary-color;
+    color: $button-primary-font-color;
+
+    &.alt-primary-text-color { color: $button-primary-font-color-alt; }
+
+    &.light { background-color: $primary-light-color; }
+    &.medium { background-color: $primary-medium-color; }
+    &.dark {background-color: $primary-dark-color; }
+  }
+
+  &.secondary {
+    background-color: $secondary-color;
+    color: $button-secondary-font-color;
+
+    &.alt-secondary-text-color { color: $button-secondary-font-color-alt; }
+
+    &.light { background-color: $secondary-light-color; }
+    &.medium { background-color: $secondary-medium-color; }
+    &.dark { background-color: $secondary-dark-color; }
+  }
+
+  &.accent {
+    background-color: $accent-color;
+    color: $button-accent-font-color;
+
+    &.alt-accent-text-color { color: $button-accent-font-color-alt; }
+
+    &.light { background-color: $accent-light-color; }
+    &.medium { background-color: $accent-medium-color; }
+    &.dark { background-color: $accent-dark-color; }
+  }
+}

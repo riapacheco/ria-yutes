@@ -1,0 +1,42 @@
+@import './override';
+
+/* ----------------------------- Class Versions ----------------------------- */
+// Primary, Secondary, Accent Classes
+.primary-color {
+  color: $primary-color;
+  &.light { color: $primary-light-color }
+  &.medium { color: $primary-medium-color }
+  &.dark { color: $primary-dark-color }
+}
+.primary-bg {
+  background-color: $primary-color;
+  &.light { background-color: $primary-light-color };
+  &.medium { background-color: $primary-medium-color }
+  &.dark { background-color: $primary-dark-color }
+}
+
+.secondary-color {
+  color: $secondary-color;
+  &.light { color: $secondary-light-color }
+  &.medium { color: $secondary-medium-color }
+  &.dark { color: $secondary-dark-color }
+}
+.secondary-bg {
+  background-color: $secondary-color;
+  &.light { background-color: $secondary-light-color }
+  &.medium { background-color: $secondary-medium-color }
+  &.dark { background-color: $secondary-dark-color }
+}
+
+.accent-color {
+  color: $accent-color;
+  &.light { color: $accent-light-color }
+  &.medium { color: $accent-medium-color }
+  &.dark { color: $accent-dark-color }
+}
+.accent-bg {
+  background-color: $accent-color;
+  &.light { background-color: $accent-light-color }
+  &.medium { background-color: $accent-medium-color }
+  &.dark { background-color: $accent-dark-color }
+}

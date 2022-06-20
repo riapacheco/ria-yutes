@@ -1,1 +1,18 @@
-@import './helper_files/__yutes-dir.scss';
+@import './_yutes-dir';
+
+* {
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-smoothing: antialiased !important;
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-smooth: antialiased !important;
+}
+
+html, body {
+  font-size: $base-rem-size;
+  line-height: auto;
+  font-family: $base-font-family;
+  letter-spacing: $base-letter-spacing;
+}

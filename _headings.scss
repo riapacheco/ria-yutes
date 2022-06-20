@@ -1,0 +1,49 @@
+@import './override';
+
+h1 {
+  font-size: $h1-size;
+  line-height: $h1-height;
+  letter-spacing: $h1-spacing;
+  font-weight: $h1-weight;
+  text-transform: $h1-transform;
+}
+
+h2 {
+  font-size: $h2-size;
+  line-height: $h2-height;
+  letter-spacing: $h2-spacing;
+  font-weight: $h2-weight;
+  text-transform: $h2-transform;
+}
+
+h3 {
+  font-size: $h3-size;
+  line-height: $h3-height;
+  letter-spacing: $h3-spacing;
+  font-weight: $h3-weight;
+  text-transform: $h3-transform;
+}
+
+h4 {
+  font-size: $h4-size;
+  line-height: $h4-height;
+  letter-spacing: $h4-spacing;
+  font-weight: $h4-weight;
+  text-transform: $h4-transform;
+}
+
+h5 {
+  font-size: $h5-size;
+  line-height: $h5-height;
+  letter-spacing: $h5-spacing;
+  font-weight: $h5-weight;
+  text-transform: $h5-transform;
+}
+
+h6 {
+  font-size: $h6-size;
+  line-height: $h6-height;
+  letter-spacing: $h6-spacing;
+  font-weight: $h6-weight;
+  text-transform: $h6-transform;
+}
