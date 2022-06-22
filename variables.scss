@@ -18,7 +18,7 @@ TABLE OF CONTENTS
 
 $base-rem-size: 15.5px !default;
 $base-font-family: "Inter", sans-serif !default;
-$base-letter-spacing: -0.02rem;
+$base-letter-spacing: -0.02rem !default;
 
 
 /* -------------------------------------------------------------------------- */
@@ -32,25 +32,25 @@ $margin-max-rem-multiple: 30 !default; // maximum multiple of margin `rem` that 
 /* -------------------------------------------------------------------------- */
 /*                                 (3) COLORS                                 */
 /* -------------------------------------------------------------------------- */
+// Main colors from each shade palette are between the medium and light shades
 
 /* --------------------------------- PRIMARY -------------------------------- */
-$primary-color: #ff5630 !default;
-$primary-light-color: #ff8f73 !default;
-$primary-medium-color: #ff7452 !default;
-$primary-dark-color: #de350b !default;
+$primary-light-color: #FFD753 !default;
+$primary-color: #FFC400 !default;
+$primary-medium-color: #FFAB00 !default;
+$primary-dark-color: #FF991F !default;
 
 /* -------------------------------- SECONDARY ------------------------------- */
-$secondary-color: #FF991F !default;
-$secondary-light-color: #ffa333 !default;
-$secondary-medium-color: #ec870c !default;
-$secondary-dark-color: #d67b0c !default;
+$secondary-light-color: #79E2F2 !default;
+$secondary-color: #00C7E6 !default;
+$secondary-medium-color: #00B8D9 !default;
+$secondary-dark-color: #00A3BF !default;
 
 /* --------------------------------- ACCENT --------------------------------- */
-$accent-color: #999898 !default;
-$accent-light-color: #e9e9e9 !default;
-$accent-medium-color: #727272 !default;
-$accent-dark-color: #414141 !default;
-$accent-darkest-color: #262626 !default;
+$accent-light-color: #FFBDAD !default;
+$accent-color: #FF8F73 !default;
+$accent-medium-color: #FF7452 !default;
+$accent-dark-color: #FF5630 !default;
 
 
 /* -------------------------------------------------------------------------- */

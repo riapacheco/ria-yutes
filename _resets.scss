@@ -1,4 +1,4 @@
-@import './override';
+@import './variables';
 
 
 * {
@@ -22,7 +22,7 @@
 }
 
 /* -------------------------------------------------------------------------- */
-/*                          Browser Webkit Overrides                          */
+/*                          Browser Webkit imports                          */
 /* -------------------------------------------------------------------------- */
 
 // To ensure accurate div adjustments

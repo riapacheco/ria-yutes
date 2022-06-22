@@ -1,4 +1,4 @@
-@import './override';
+@import './variables';
 
 %hover-to-brighten { filter: $hover-filter-bright; }
 %hover-to-darken { filter: $hover-filter-dark; }
@@ -37,7 +37,7 @@
     background-color: $primary-color;
     color: $button-primary-font-color;
 
-    &.alt-primary-text-color { color: $button-primary-font-color-alt; }
+    &.primary-alt-text { color: $button-primary-font-color-alt; }
 
     &.light { background-color: $primary-light-color; }
     &.medium { background-color: $primary-medium-color; }
@@ -48,7 +48,7 @@
     background-color: $secondary-color;
     color: $button-secondary-font-color;
 
-    &.alt-secondary-text-color { color: $button-secondary-font-color-alt; }
+    &.secondary-alt-text { color: $button-secondary-font-color-alt; }
 
     &.light { background-color: $secondary-light-color; }
     &.medium { background-color: $secondary-medium-color; }
@@ -59,7 +59,7 @@
     background-color: $accent-color;
     color: $button-accent-font-color;
 
-    &.alt-accent-text-color { color: $button-accent-font-color-alt; }
+    &.accent-alt-text { color: $button-accent-font-color-alt; }
 
     &.light { background-color: $accent-light-color; }
     &.medium { background-color: $accent-medium-color; }
