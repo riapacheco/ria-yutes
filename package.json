@@ -1,6 +1,6 @@
 {
   "name": "@riapacheco/yutes",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Utility SCSS stylesheets that enable structure before design",
   "main": "index.js",
   "scripts": {},
