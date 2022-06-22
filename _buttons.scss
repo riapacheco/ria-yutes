@@ -12,6 +12,7 @@
   padding: $button-padding-top-bottom $button-padding-left-right;
   border-radius: $button-border-radius;
   background-color: $primary-dark-color;
+  color: $button-primary-font-color;
   
   &.rounded { border-radius: $pill-button-border-radius; }
   &.raised {
