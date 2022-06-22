@@ -6,6 +6,7 @@ The `@riapacheco/yutes` package is a _really_ lightweight `SCSS` pack of stylesh
 Contents ⤵️
 
 - [Installation](#installation)
+- [Browser Resets](#browser-resets)
 - [Usage](#usage)
 - [Config Variables](#config-variables)
 
@@ -104,6 +105,32 @@ Test drive a font family by applying its class to an element containing text. Fo
 
 <br><br>
 
+### Horizontal Centering
+
+Specify a container width to create a centered container. 
+
+##### SYNTAX
+
+```html
+<div class="mx-auto-{size}px">
+  This is a container
+</div>
+```
+
+##### VALUES
+
+Specify a `size` between `1` and `3000`. The value is translated to `pixels`.
+
+##### EXAMPLE
+
+```HTML
+<div class="mx-auto-700px">
+  This is a good size for iPads
+</div>
+```
+
+<br><br>
+
 ### Padding & Margin
 
 ##### SYNTAX
@@ -117,15 +144,15 @@ Test drive a font family by applying its class to an element containing text. Fo
 See [config variables](#config-variables) section to override the **size range**
 
 | Prefix | Direction | Translation | Compiles to       | Size Range |
-| :---------: | :---------: | ----------- | ----------------- | ---------- |
-| `p` | `t`       | `top`       | `padding-top:`    | `1` - `30` |
-| `p` | `r`       | `right`     | `padding-right:`  | `1` - `30` |
-| `p` | `b`       | `bottom`    | `padding-bottom:` | `1` - `30` |
-| `p` | `l`       | `left`      | `padding-left:`   | `1` - `30` |
-| `m` | `t`       | `top`       | `margin-top:`    | `1` - `30` |
-| `m` | `r`       | `right`     | `margin-right:`  | `1` - `30` |
-| `m` | `b`       | `bottom`    | `margin-bottom:` | `1` - `30` |
-| `m` | `l`       | `left`      | `margin-left:`   | `1` - `30` |
+| :----: | :-------: | ----------- | ----------------- | ---------- |
+|  `p`   |    `t`    | `top`       | `padding-top:`    | `1` - `30` |
+|  `p`   |    `r`    | `right`     | `padding-right:`  | `1` - `30` |
+|  `p`   |    `b`    | `bottom`    | `padding-bottom:` | `1` - `30` |
+|  `p`   |    `l`    | `left`      | `padding-left:`   | `1` - `30` |
+|  `m`   |    `t`    | `top`       | `margin-top:`     | `1` - `30` |
+|  `m`   |    `r`    | `right`     | `margin-right:`   | `1` - `30` |
+|  `m`   |    `b`    | `bottom`    | `margin-bottom:`  | `1` - `30` |
+|  `m`   |    `l`    | `left`      | `margin-left:`    | `1` - `30` |
 
 ##### EXAMPLE
 
@@ -165,7 +192,7 @@ Must import the following to any encapsulated stylesheets first
 
 See [config variables](#config-variables) section to override the **breakpoint widths** 
 
-| {size} | Description                                                  |
+| {size}   | Description                                                  |
 | -------- | ------------------------------------------------------------ |
 | `small`  | Applies your assigned styles if viewport between `0px` and `375px` |
 | `medium` | Applies your assigned styles if viewport between `376px` and `1200px` |
@@ -266,7 +293,9 @@ See [config variables](#config-variables) section to override the **color variab
 
 The following properties have been set from `h1` to `h6`: 
 
-`font-size`, `line-height`, `letter-spacing`, `font-weight`, and `text-transform`
+```
+font-size`, `line-height`, `letter-spacing`, `font-weight`, and `text-transform
+```
 
 ##### VALUES
 
@@ -313,17 +342,20 @@ Note: any classes listed within `< >` and given a `?` are optional
 
 | Class(es)                               | Syntax Position | Compiles to \|\| General description                         |
 | --------------------------------------- | --------------- | ------------------------------------------------------------ |
-| `primary`                               | `{color}`       | `background-color: $primary-color`                           |
+| `primary`                               | `{color}`       | `background-color: $primary-dark-color`                      |
+| `primary default`                       | `{color}`       | `background-color: $primary-color`                           |
 | `primary light`                         | `{color}`       | `background-color: $primary-light-color`                     |
 | `primary medium`                        | `{color}`       | `background-color: $primary-medium-color`                    |
 | `primary dark`                          | `{color}`       | `background-color: $primary-dark-color`                      |
 | `primary <shade?> primary-alt-text`     | `{color}`       | `background-color: $primary` <br>`color: $button-primary-font-color-alt` |
-| `secondary`                             | `{color}`       | `background-color: $secondary-color`                         |
+| `secondary`                             | `{color}`       | `background-color: $secondary-medium-color`                  |
+| `secondary default`                     | `{color}`       | `background-color: $secondary-color`                         |
 | `secondary light`                       | `{color}`       | `background-color: $secondary-light-color`                   |
 | `secondary medium`                      | `{color}`       | `background-color: $secondary-medium-color`                  |
 | `secondary dark`                        | `{color}`       | `background-color: $secondary-dark-color`                    |
 | `secondary <shade?> secondary-alt-text` | `{color}`       | `background-color: $secondary` <br>`color: $button-secondary-font-color-alt` |
-| `accent`                                | `{color}`       | `background-color: $accent-color`                            |
+| `accent`                                | `{color}`       | `background-color: $accent-medium-color`                     |
+| `accent default`                        | `{color}`       | `background-color: $accent-color`                            |
 | `accent light`                          | `{color}`       | `background-color: $accent-light-color`                      |
 | `accent medium`                         | `{color}`       | `background-color: $accent-medium-color`                     |
 | `accent dark`                           | `{color}`       | `background-color: $accent-dark-color`                       |
@@ -350,6 +382,7 @@ Note: any classes listed within `< >` and given a `?` are optional
 # Config Variables
 
 ### How it works
+
 To override any variables, in your main `SCSS` file re-assign the variable **BEFORE** importing the `~@riapacheco/yutes/main.scss` file (and `variables.scss` file just to be safe!) like this:
 
 ```scss
@@ -368,6 +401,7 @@ $h2-size: 2rem;
 
 Copy some or all of the following into your main file (in this order) and change the values as you please
 Note: your `$base-rem-size` value determines the overall sizing of all elements impacted by this package.
+
 ```scss
 $base-rem-size: 15.5px;
 $base-font-family: "Inter", sans-serif;
@@ -554,4 +588,3 @@ $form-label-letter-spacing: auto;
 @import '~@riapacheco/yutes/main.scss';
 @import '~@riapacheco/yutes/variables.scss';
 ```
-
