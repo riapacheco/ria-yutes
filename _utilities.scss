@@ -30,6 +30,14 @@
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                              VISUAL DEBUGGING                              */
+/* -------------------------------------------------------------------------- */
+.find-red { border: 1px solid red; }
+.find-blue { border: 1px solid rgb(57, 57, 255); }
+.find-green { border: 1px solid rgb(23, 130, 23); }
+.find-purple { border: 1px solid rgb(204, 99, 204); }
+.find-grey { border: 1px solid grey; }
 
 /* -------------------------------------------------------------------------- */
 /*                                   GLOBALS                                  */
