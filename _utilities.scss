@@ -39,6 +39,16 @@
 .find-purple { border: 1px solid rgb(204, 99, 204); }
 .find-grey { border: 1px solid grey; }
 
+// Remove ability for cursor to highlight
+.no-highlighting {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
 /* -------------------------------------------------------------------------- */
 /*                                   GLOBALS                                  */
 /* -------------------------------------------------------------------------- */
