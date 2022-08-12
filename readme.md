@@ -599,6 +599,8 @@ $form-label-letter-spacing: auto;
 Things like `margin-block-start` and `margin-inline-start` are impacted by typography dimensions (e.g. sometimes a lowercase `I` might be taller than a capital `G`) and line-height. 
 I created a new stylesheet for my favorite font (`Inter`) called `inter-mixins.scss`. 
 
+> Warning: I do <strong>not</strong> use the `<p>` element in my work and instead add text in regular o' `<div>`s. Applying body text to `<p>` elements will not likely render changes added from the `@mixing inter-body-text` mixin (unless directly applied). 
+
 ### What it does
 Provides `@mixins` for the following classes:
 * CSS import for `Inter` font from Google's API
