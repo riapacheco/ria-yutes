@@ -595,18 +595,16 @@ $form-label-letter-spacing: auto;
 
 # Latest Updates
 
-## New Inter Optimized Stylesheet
+## **New Inter Optimized Stylesheet**
 Things like `margin-block-start` and `margin-inline-start` are impacted by typography dimensions (e.g. sometimes a lowercase `I` might be taller than a capital `G`) and line-height. 
 I created a new stylesheet for my favorite font (`Inter`) called `inter-mixins.scss`. 
 
-What it does:
-* Provides `@mixins` for the following classes:
- * CSS import for `Inter` font from Google's API
- * `html`
-  * The `html` class is given a `10px` base font-size to better control all elements that use `rem` for sizing
- * `body`
-  * The `body` class is given a `1.6rem` base font-size to ensure actual body font-sizing is readable / ideal
- * `h1` to `h6`
+### What it does
+Provides `@mixins` for the following classes:
+* CSS import for `Inter` font from Google's API
+* `html`: given a `10px` base font-size to better control all elements that use `rem` for sizing
+* `body`: given a `1.6rem` base font-size to ensure actual body font-sizing is readable / ideal
+* `h1` to `h6`
 
 ### Mobile Adjustments
 The `body`, and headers `h1` to `h4` have associated mobile versions. These are new `@mixins` which have the same name but include `-mobile` as suffix. 
@@ -624,18 +622,12 @@ html {
 
 body {
   @include inter-body-text;
-  
-  @include if-viewport(small) {
-    @include inter-body-text-mobile;
-  }
+  @include if-viewport(small) { @include inter-body-text-mobile; }
 }
 
 h1 {
   @include inter-h1;
-
-  @include if-viewport(small) {
-    @include inter-h1-mobile;
-  }
+  @include if-viewport(small) { @include inter-h1-mobile; }
 }
 
 // and so on and so forth -- EXCLUDING h5 and h6 for mobile versions
