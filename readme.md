@@ -2,6 +2,32 @@
 
 The `@riapacheco/yutes` package is a _really_ lightweight `SCSS` pack of stylesheets intended to provide **utilities** similar to those found in common frameworks like [**Bootstrap**](https://getbootstrap.com/docs/4.0/utilities/spacing/) (with some slight differences) but without the rigidness that limits fluid design.
 
+As an example of how this is achieved (especially for those familiar with libraries like `Bootstrap` and `Tailwind CSS`), here's some samples on how they were created with SCSS features:
+```SCSS
+// Enabling the 'pt-1' [padding-top: 1] shorthand classes | (_utilities.scss)
+@each $abbr, $name in ('t': 'top', 'r': 'right', 'b': 'bottom', 'l': 'left') {
+  @for $i from 1 through $margin-max-rem-multiple {
+    .p#{$abbr}-#{$i} {
+      padding-#{$name}: 1rem * $i;
+    }
+  }
+}
+
+// Enabling breakpoint logic | (breakpoints.scss)
+@mixin if-viewport($media) {
+  @if $media == small {
+    @media only screen and (max-width: $mobile) {
+      @content;
+    }
+  } @else if $media == medium {
+    @media only screen and (min-width: calc($mobile + 1px)) and (max-width: calc($desktop - 1px)){
+      @content;
+    }
+  } 
+}
+```
+
+---
 
 Contents ⤵️
 
@@ -599,7 +625,11 @@ $form-label-letter-spacing: auto;
 Things like `margin-block-start` and `margin-inline-start` are impacted by typography dimensions (e.g. sometimes a lowercase `I` might be taller than a capital `G`) and line-height. 
 I created a new stylesheet for my favorite font (`Inter`) called `inter-mixins.scss`. 
 
+---
+
 <small> **Warning**: I do <strong>NOT</strong> use the `<p>` element in my work and instead add text to `<div>` elements I adjust later. Applying body text to `<p>` elements will not likely render the properties derived from `@mixin inter-body-text` <i>unless</i> applied directly to the `<p>` element. </small>
+
+---
 
 ### What it does
 Provides `@mixins` for the following classes:
