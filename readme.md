@@ -9,6 +9,8 @@ Contents ⤵️
 - [Browser Resets](#browser-resets)
 - [Usage](#usage)
 - [Config Variables](#config-variables)
+- [Latest Updates](#latest-updates)
+  - [New Inter Optimized Stylesheet](#new-inter-optimized-stylesheet)
 
 <br><br>
 
@@ -587,4 +589,55 @@ $form-label-letter-spacing: auto;
 
 @import '~@riapacheco/yutes/main.scss';
 @import '~@riapacheco/yutes/variables.scss';
+```
+
+---
+
+# Latest Updates
+
+## New Inter Optimized Stylesheet
+Things like `margin-block-start` and `margin-inline-start` are impacted by typography dimensions (e.g. sometimes a lowercase `I` might be taller than a capital `G`) and line-height. 
+I created a new stylesheet for my favorite font (`Inter`) called `inter-mixins.scss`. 
+
+What it does:
+* Provides `@mixins` for the following classes:
+ * CSS import for `Inter` font from Google's API
+ * `html`
+  * The `html` class is given a `10px` base font-size to better control all elements that use `rem` for sizing
+ * `body`
+  * The `body` class is given a `1.6rem` base font-size to ensure actual body font-sizing is readable / ideal
+ * `h1` to `h6`
+
+### Mobile Adjustments
+The `body`, and headers `h1` to `h4` have associated mobile versions. These are new `@mixins` which have the same name but include `-mobile` as suffix. 
+Easiest way to use these (apart from programmatically detecting resizing in your app's framework) is to import the `breakpoints.scss` stylesheet to apply them in the same place that you apply the original `@mixins`. 
+
+Here's an example of how one might set up their `styles.scss` (main SCSS file):
+```SCSS
+@import '~@riapacheco/yutes/main.scss';           // resets, smoothing, and utility shorthand classes access
+@import '~@riapacheco/yutes/breakpoints.scss';    // access breakpoint logic
+@import '~@riapacheco/yutes/inter-mixins.scss';   // new sizing/adjustments for "Inter" font
+
+html {
+  @include inter-html-text;
+}
+
+body {
+  @include inter-body-text;
+  
+  @include if-viewport(small) {
+    @include inter-body-text-mobile;
+  }
+}
+
+h1 {
+  @include inter-h1;
+
+  @include if-viewport(small) {
+    @include inter-h1-mobile;
+  }
+}
+
+// and so on and so forth -- EXCLUDING h5 and h6 for mobile versions
+
 ```
