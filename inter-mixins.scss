@@ -1,0 +1,125 @@
+// Adjusted for INTER
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+*/
+
+@mixin inter-html-text {
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+@mixin inter-body-text {
+  font-size: 1.6rem;
+  letter-spacing: 0.01rem;
+  line-height: 1.6rem;
+}
+
+@mixin inter-body-text-mobile {
+  font-size: 1.35rem;
+  line-height: 1.8;
+}
+
+@mixin inter-h1 {
+  // Assumes that html font-size is 10; and
+  // body font-size is 1.6rem
+  font-size: 5.6rem;
+  line-height: 5.6rem;
+  letter-spacing: -0.15rem;
+  margin-block-start: -5px;
+  margin-block-end: 5px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased !important;
+}
+@mixin inter-h1-mobile {
+  font-size: 2.75rem;
+  // Rest is unchanged
+}
+@mixin inter-h2 {
+  // Assumes that html font-size is 10; and
+  // body font-size is 1.6rem
+  font-size: 3.6rem;
+  line-height: 3.6rem;
+  letter-spacing: -0.10rem;
+  font-weight: 700;
+  margin-block-start: -3px;
+  margin-block-end: 5px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+@mixin inter-h2-mobile {
+  font-size: 2.3rem;
+  // Rest is unchanged
+}
+
+@mixin inter-h3 {
+  // Assumes that html font-size is 10; and
+  // body font-size is 1.6rem
+  font-size: 2.8rem;
+  line-height: 2.8rem;
+  letter-spacing: -0.07rem;
+  margin-block-start: -1px;
+  margin-block-end: 3px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+@mixin inter-h3-mobile {
+  font-size: 1.9rem;
+  // Rest is unchanged
+}
+
+@mixin inter-h4 {
+  // Assumes that html font-size is 10; and
+  // body font-size is 1.6rem
+  font-size: 2.3rem;
+  line-height: 2.3rem;
+  letter-spacing: -0.05rem;
+  font-weight: 600;
+  margin-block-start: -1px;
+  margin-block-end: 2px;
+  margin-inline-start: 0px;
+  margin-inline-end: 1px;
+  -webkit-font-smoothing: antialiased !important;
+}
+@mixin inter-h4-mobile {
+  font-size: 1.9rem;
+  font-weight: 500;
+  // Rest is unchanged
+}
+@mixin inter-h5 {
+  // Assumes that html font-size is 10; and
+  // body font-size is 1.6rem
+  font-size: 1.9rem;
+  line-height: 1.9rem;
+  font-weight: 700;
+  margin-block-start: -1px;
+  margin-block-end: 2px;
+  margin-inline-start: 0px;
+  margin-inline-end: 1px;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+@mixin inter-h6 {
+  // Assumes that html font-size is 10; and
+  // body font-size is 1.6rem
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  letter-spacing: 0.13rem;
+  margin-block-start: 1px;
+  margin-block-end: 2px;
+  margin-inline-start: 1px;
+  margin-inline-end: 1px;
+  -webkit-font-smoothing: antialiased !important;
+}
