@@ -359,35 +359,61 @@ See [config variables](#config-variables) section to override **form element sty
 This style will always require the initializer `btn` class followed by chained `{color}` classes or chained `{add-on}` classes
 
 ```html
-<a class="btn {color} {add-on} "
+<a class="btn {size} {color} {add-on} "
 ```
 
 ##### VALUES
 
-See [config variables](#config-variables) section to override **button styles**
+For full details on configuring variables, go to [config variables](#config-variables) section.
 
-Note: any classes listed within `< >` and given a `?` are optional
+##### BUTTON UPDATES
+###### Primary, Secondary, and Accent Base Colors
+For easier / quick implementation, and for those NOT wanting multiple shades of a button color, you can now update your primary, secondary, and accent buttons with simple variables instead of relying on the actual `$primary-color` variables in your palette. However, this will not impact the other class shades (e.g `<color_type> light`) as they are still part of the overall color scheme. 
+```scss
+// Variables found in the variables.scss file
+// Configured in your main SCSS file BEFORE importing the package
+$button-primary-color: $primary-dark-color;
+$button-secondary-color: $secondary-medium-color;
+$button-accent-color: $accent-medium-color;
+```
+For more details, see [config variables](#config-variables) section.
+
+###### Sizing
+Since there's value in having alternative small and large buttons, there are now variables to adjust these sizes utilizing the `transform: scale(x)` property.
+```scss
+// Variables found in the variables.scss file
+// Configured in your main SCSS file BEFORE importing the package
+$button-sm-size: scale(0.8);
+$button-lg-size: scale(1.15);
+```
+For more details, see [config variables](#config-variables) section.
+
+Notes:
+* Any classes listed within `< >` and given a `?` are optional
+* If the property listed is a variable (starts with a `$`) this indicates both the value AND how the variable you can override in your main stylesheet.
 
 | Class(es)                               | Syntax Position | Compiles to \|\| General description                         |
 | --------------------------------------- | --------------- | ------------------------------------------------------------ |
-| `primary`                               | `{color}`       | `background-color: $primary-dark-color`                      |
+| `primary`                               | `{color}`       | `$button-primary-color: $primary-dark-color`                      |
 | `primary default`                       | `{color}`       | `background-color: $primary-color`                           |
 | `primary light`                         | `{color}`       | `background-color: $primary-light-color`                     |
 | `primary medium`                        | `{color}`       | `background-color: $primary-medium-color`                    |
 | `primary dark`                          | `{color}`       | `background-color: $primary-dark-color`                      |
 | `primary <shade?> primary-alt-text`     | `{color}`       | `background-color: $primary` <br>`color: $button-primary-font-color-alt` |
-| `secondary`                             | `{color}`       | `background-color: $secondary-medium-color`                  |
+| `secondary`                             | `{color}`       | `$button-secondary-color: $secondary-medium-color`                  |
 | `secondary default`                     | `{color}`       | `background-color: $secondary-color`                         |
 | `secondary light`                       | `{color}`       | `background-color: $secondary-light-color`                   |
 | `secondary medium`                      | `{color}`       | `background-color: $secondary-medium-color`                  |
 | `secondary dark`                        | `{color}`       | `background-color: $secondary-dark-color`                    |
 | `secondary <shade?> secondary-alt-text` | `{color}`       | `background-color: $secondary` <br>`color: $button-secondary-font-color-alt` |
-| `accent`                                | `{color}`       | `background-color: $accent-medium-color`                     |
+| `accent`                                | `{color}`       | `$button-accent-color: $accent-medium-color`                     |
 | `accent default`                        | `{color}`       | `background-color: $accent-color`                            |
 | `accent light`                          | `{color}`       | `background-color: $accent-light-color`                      |
 | `accent medium`                         | `{color}`       | `background-color: $accent-medium-color`                     |
 | `accent dark`                           | `{color}`       | `background-color: $accent-dark-color`                       |
 | `accent <shade?> accent-alt-text`       | `{color}`       | `background-color: $accent` <br>`color: $button-accent-font-color-alt` |
+| `sm` | `{size}` | `$button-sm-size: scale(0.8)` |
+| `lg` | `{size}` | `$button-lg-size: scale(1.15)` |
 | `rounded`                               | `{add-on}`      | Pill style button (`20px` border radius)                     |
 | `raised`                                | `{add-on}`      | Applies a box-shadow (and adjustments to box-shadow on `hover` and when `active`) |
 | `hover-to-lighten`                      | `{add-on}`      | Applies a `brightness` filter on `hover` that increases brightness by `15%` |
@@ -434,6 +460,7 @@ Note: your `$base-rem-size` value determines the overall sizing of all elements 
 $base-rem-size: 15.5px;
 $base-font-family: "Inter", sans-serif;
 $base-letter-spacing: -0.02rem;
+$button-primary-color: pink;
 
 @import '~@riapacheco/yutes/main.scss';
 @import '~@riapacheco/yutes/variables.scss';
@@ -562,6 +589,15 @@ $button-font-size: 1rem;
 $button-border-radius: 0.2rem;
 $button-padding-top-bottom: 0.8rem;
 $button-padding-left-right: 1.2rem;
+
+/* ------------------------------ BUTTON SIZING ----------------------------- */ // NEW!
+$button-sm-size: scale(0.8) !default;
+$button-lg-size: scale(1.15) !default;
+
+/* ---------------------------- COLOR ATTRIBUTES ---------------------------- */ // NEW!
+$button-primary-color: $primary-dark-color;
+$button-secondary-color: $secondary-medium-color;
+$button-accent-color: $accent-medium-color;
 
 /* ------------------------ ADDITIONAL BTN ATTRIBUTES ----------------------- */
 $pill-button-border-radius: 20px;

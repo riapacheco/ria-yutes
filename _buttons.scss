@@ -13,6 +13,10 @@
   border-radius: $button-border-radius;
   background-color: $primary-dark-color;
   color: $button-primary-font-color;
+
+  /* -------------------------- NEW ADDITIONAL SIZES -------------------------- */
+  &.sm { transform: $button-sm-size; }
+  &.lg { transform: $button-lg-size; }
   
   &.rounded { border-radius: $pill-button-border-radius; }
   &.raised {
@@ -20,7 +24,6 @@
     &:hover { box-shadow: $button-raised-box-shadow-hover; }
     &:active { box-shadow: $button-raised-box-shadow-active; }
   }
-
   &.hover-to-lighten {
     &:hover {
       @extend %hover-to-brighten;
@@ -35,8 +38,11 @@
     }
   }
 
+  /*
+    Changes to main color variables applied here. January 12, 2023
+  */
   &.primary {
-    background-color: $primary-dark-color;
+    background-color: $button-primary-color;
     color: $button-primary-font-color;
 
     &.primary-alt-text { color: $button-primary-font-color-alt; }
@@ -47,7 +53,7 @@
   }
 
   &.secondary {
-    background-color: $secondary-medium-color;
+    background-color: $button-secondary-color;
     color: $button-secondary-font-color;
 
     &.secondary-alt-text { color: $button-secondary-font-color-alt; }
@@ -59,7 +65,7 @@
   }
 
   &.accent {
-    background-color: $accent-medium-color;
+    background-color: $button-accent-color;
     color: $button-accent-font-color;
 
     &.accent-alt-text { color: $button-accent-font-color-alt; }

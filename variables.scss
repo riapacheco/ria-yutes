@@ -16,9 +16,9 @@ TABLE OF CONTENTS
 /*                                  (1) BASE                                  */
 /* -------------------------------------------------------------------------- */
 
-$base-rem-size: 15.5px !default;
-$base-font-family: "Inter", sans-serif !default;
-$base-letter-spacing: -0.02rem !default;
+$base-rem-size: 15.5px !default;                    // Can be changed by setting your own HTML and body classes in your main SCSS file, WITHOUT having to change this variable.
+$base-font-family: "Inter", sans-serif !default;    // Can be changed by setting your own HTML and body classes in your main SCSS file, WITHOUT having to change this variable.
+$base-letter-spacing: -0.02rem !default;            // Can be changed by setting your own HTML and body classes in your main SCSS file, WITHOUT having to change this variable.
 
 
 /* -------------------------------------------------------------------------- */
@@ -166,13 +166,14 @@ $button-border-radius: 0.2rem !default;
 $button-padding-top-bottom: 0.8rem !default;
 $button-padding-left-right: 1.2rem !default;
 
-/* ------------------------ ADDITIONAL BTN ATTRIBUTES ----------------------- */
-$pill-button-border-radius: 20px !default;
-$hover-filter-bright: brightness(1.15) !default;
-$hover-filter-dark: brightness(0.85) !default;
-$button-raised-box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4) !default;
-$button-raised-box-shadow-hover: 4px 6px 12px rgba(0, 0, 0, 0.2) !default;
-$button-raised-box-shadow-active: 4px 6px 12px rgba(0, 0, 0, 0.1) !default;
+/* ------------------------------ BUTTON SIZING ----------------------------- */ // NEW!
+$button-sm-size: scale(0.8) !default;
+$button-lg-size: scale(1.15) !default;
+
+/* ---------------------------- COLOR ATTRIBUTES ---------------------------- */ // NEW!
+$button-primary-color: $primary-dark-color !default;
+$button-secondary-color: $secondary-medium-color !default;
+$button-accent-color: $accent-medium-color !default;
 
 /* ----------------------- FONT COLORS & ALTERNATIVES ----------------------- */
 $button-primary-font-color: white !default;
@@ -182,3 +183,10 @@ $button-secondary-font-color-alt: black !default;
 $button-accent-font-color: white !default;
 $button-accent-font-color-alt: black !default;
 
+/* ------------------------ ADDITIONAL BTN ATTRIBUTES ----------------------- */
+$pill-button-border-radius: 20px !default;
+$hover-filter-bright: brightness(1.15) !default;
+$hover-filter-dark: brightness(0.85) !default;
+$button-raised-box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.4) !default;
+$button-raised-box-shadow-hover: 4px 6px 12px rgba(0, 0, 0, 0.2) !default;
+$button-raised-box-shadow-active: 4px 6px 12px rgba(0, 0, 0, 0.1) !default;
