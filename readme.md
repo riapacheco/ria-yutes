@@ -27,7 +27,18 @@ As an example of how this is achieved (especially for those familiar with librar
 }
 ```
 
-> Simplified buttons so that they don't rely on the color palette and instead can be changed with three variables. You can also add `sm` after `btn` for smaller buttons and `lg` after `btn` for larger. These are based on a `scale()` property which you can also override. To skip the documentation and see it in action, watch this <a href="https://youtu.be/0x2-kAcmf0c" target=_blank>demo video</a>!
+<br>
+
+> Simplified buttons so that they don't rely on the color palette and instead can be changed with three variables. You can also add `sm` after `btn` for smaller buttons and `lg` after `btn` for larger. These are based on a `scale()` property which you can also override. To skip the documentation and see it in action, watch this:
+
+<div style="position:relative;width:fit-content;height:fit-content;">
+            <a style="position:absolute;top:20px;right:1rem;opacity:0.8;" href="https://clipchamp.com/watch/nRbqffyd43U?utm_source=embed&utm_medium=embed&utm_campaign=watch">
+                <img style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
+            </a>
+            <iframe allow="autoplay;" allowfullscreen style="border:none" src="https://clipchamp.com/watch/nRbqffyd43U/embed" width="640" height="360"></iframe>
+        </div>
+
+<br>
 
 ---
 
