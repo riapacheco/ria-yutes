@@ -27,6 +27,8 @@ As an example of how this is achieved (especially for those familiar with librar
 }
 ```
 
+> Simplified buttons so that they don't rely on the color palette and instead can be changed with three variables. You can also add `sm` after `btn` for smaller buttons and `lg` after `btn` for larger. These are based on a `scale()` property which you can also override. To skip the documentation and see it in action, watch this <a href="https://youtu.be/0x2-kAcmf0c" target=_blank>demo video</a>!
+
 ---
 
 Contents ⤵️
