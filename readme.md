@@ -51,7 +51,7 @@ Install from [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and
 In your main `SCSS` file
 
 ```scss
-@import "~@riapacheco/yutes/main.scss";
+@import "@riapacheco/yutes/main.scss";
 ```
 
 <br>
@@ -61,13 +61,13 @@ In your main `SCSS` file
 To use [breakpoints](#breakpoints) in encapsulated stylesheet
 
 ```scss
-@import "~@riapacheco/yutes/breakpoints.scss";
+@import "@riapacheco/yutes/breakpoints.scss";
 ```
 
 To use [colors](#colors) and to [override](#how-to-override) in encapsulated stylesheet
 
 ```scss
-@import '~@riapacheco/yutes/variables.scss';
+@import '@riapacheco/yutes/variables.scss';
 ```
 
 <br><br>
